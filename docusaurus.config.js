@@ -10,20 +10,15 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'La Maitresse Loutre',
+  tagline: 'Concours Professeur des Écoles',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  url: 'https://lamaitresseloutre.github.io',
+  baseUrl: '/CRPE-2026/',
+  
+  organizationName: 'LamaitresseLoutre',
+  projectName: 'CRPE-2026',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -83,9 +78,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'La Maitresse Loutre',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'CRPE 2026 Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -93,7 +88,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '📚 Fiches de révision',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
