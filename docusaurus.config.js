@@ -1,19 +1,13 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '🦦 La Maîtresse Loutre',
-  tagline: 'Préparation CRPE 2026 avec douceur et efficacité',
+  title: 'La Maîtresse Loutre',
+  tagline: 'Préparation CRPE 2026 - Tu vas réussir Marie ! 💪',
   favicon: 'img/favicon.ico',
 
+  // Configuration GitHub Pages
   url: 'https://torvator.github.io',
   baseUrl: '/LamaitresseLoutre/',
   
@@ -35,8 +29,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: '/', // Les docs deviennent la racine du site
         },
-        blog: false,
+        blog: false, // Pas de blog
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -47,17 +42,19 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      // Couleurs par défaut
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
+      
+      // Barre de navigation
       navbar: {
-        title: 'La Maîtresse Loutre',
+        title: '🦦 La Maîtresse Loutre',
         logo: {
           alt: 'Loutre studieuse',
-          src: 'logo-loutre.jpg',
+          src: 'img/logo-loutre.jpg',
         },
         items: [
           {
@@ -66,44 +63,23 @@ const config = {
             position: 'left',
             label: '📚 Mes fiches',
           },
+          {
+            to: '/',
+            label: '🏠 Accueil',
+            position: 'left',
+          },
         ],
+        hideOnScroll: false,
       },
+      
+      // Pied de page simplifié
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Navigation',
-            items: [
-              {
-                label: '🏠 Accueil',
-                to: '/docs/intro',
-              },
-              {
-                label: '📚 Toutes les fiches',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Matières',
-            items: [
-              {
-                label: '📝 Français',
-                to: '/docs/intro',
-              },
-              {
-                label: '🔢 Mathématiques',
-                to: '/docs/intro',
-              },
-              {
-                label: '🌍 Pluridisciplinaire',
-                to: '/docs/intro',
-              },
-            ],
-          },
-        ],
-        copyright: `🦦 Préparation CRPE 2026 - Tu vas réussir Marie ! 💪✨`,
+        links: [],
+        copyright: `🦦 Préparation CRPE 2026 - Bon courage Marie ! 💪✨`,
       },
+      
+      // Thème de code
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
