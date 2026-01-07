@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import { useAuth } from '../utils/useAuth';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 const FICHES = {
   'Français': [
@@ -135,7 +136,7 @@ function ListeFiches({ fiches, titre, statut, couleur }) {
   );
 }
 
-export default function Suivi() {
+function SuiviContent() {
   const [stats, setStats] = useState({});
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
@@ -201,56 +202,14 @@ export default function Suivi() {
 
   if (loading) {
     return (
-      <Layout title="Suivi de progression" description="Suivi de ta progression CRPE">
-        <div style={{
-          maxWidth: '1000px',
-          margin: '4rem auto',
-          padding: '0 2rem',
-          textAlign: 'center',
-        }}>
-          <p style={{ fontSize: '1.2rem' }}>Chargement de ta progression...</p>
-        </div>
-      </Layout>
-    );
-  }
-
-  if (!user) {
-    return (
-      <Layout title="Suivi de progression" description="Suivi de ta progression CRPE">
-        <div style={{
-          maxWidth: '600px',
-          margin: '4rem auto',
-          padding: '0 2rem',
-        }}>
-          <div style={{
-            backgroundColor: 'white',
-            padding: '3rem',
-            borderRadius: '16px',
-            boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
-            textAlign: 'center',
-          }}>
-            <h1 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>🔒 Connexion requise</h1>
-            <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
-              Tu dois te connecter pour voir ta progression !
-            </p>
-            <a
-              href="/login"
-              style={{
-                display: 'inline-block',
-                padding: '0.75rem 2rem',
-                backgroundColor: '#ff9a9e',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: '20px',
-                fontWeight: '600',
-                fontSize: '1rem',
-              }}
-            >
-              Se connecter
-            </a>
-          </div>
-        </div>
-      </Layout>
+      <div style={{
+        maxWidth: '1000px',
+        margin: '4rem auto',
+        padding: '0 2rem',
+        textAlign: 'center',
+      }}>
+        <p style={{ fontSize: '1.2rem' }}>Chargement de ta progression...</p>
+      </div>
     );
   }
 
@@ -261,120 +220,128 @@ export default function Suivi() {
   const totalEnCours = Object.values(statsParMatiere).reduce((acc, s) => acc + (s?.enCours || 0), 0);
 
   return (
-    <Layout title="Suivi de progression" description="Suivi de ta progression CRPE">
+    <div style={{
+      maxWidth: '1000px',
+      margin: '2rem auto',
+      padding: '0 2rem',
+    }}>
+      {/* En-tête */}
       <div style={{
-        maxWidth: '1000px',
-        margin: '2rem auto',
-        padding: '0 2rem',
+        background: 'linear-gradient(135deg, #ffecd2 0%, #ffcbb3 25%, #ffb6b9 50%, #ffc9cb 75%, #ffd89b 100%)',
+        padding: '2rem',
+        borderRadius: '16px',
+        marginBottom: '2rem',
+        textAlign: 'center',
       }}>
-        {/* En-tête */}
-        <div style={{
-          background: 'linear-gradient(135deg, #ffecd2 0%, #ffcbb3 25%, #ffb6b9 50%, #ffc9cb 75%, #ffd89b 100%)',
-          padding: '2rem',
-          borderRadius: '16px',
-          marginBottom: '2rem',
-          textAlign: 'center',
-        }}>
-          <h1 style={{ color: '#3d3d3d', marginBottom: '1rem' }}>
-            📊 Suivi de Progression
-          </h1>
-          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>
-            Continue comme ça Marie ! 💪
-          </p>
-        </div>
-
-        {/* Progression globale */}
-        <div style={{
-          backgroundColor: 'white',
-          padding: '2rem',
-          borderRadius: '16px',
-          boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
-          marginBottom: '2rem',
-        }}>
-          <h2 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>
-            🎯 Progression Globale
-          </h2>
-          
-          <BarreProgression
-            label="Toutes matières"
-            total={totalFiches}
-            maitrise={totalMaitrise}
-            enCours={totalEnCours}
-          />
-        </div>
-
-        {/* Progression par matière */}
-        <div style={{
-          backgroundColor: 'white',
-          padding: '2rem',
-          borderRadius: '16px',
-          boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
-          marginBottom: '2rem',
-        }}>
-          <h2 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>
-            📚 Par Matière
-          </h2>
-          
-          {Object.entries(statsParMatiere).map(([matiere, stat]) => (
-            <BarreProgression
-              key={matiere}
-              label={matiere}
-              total={stat.total}
-              maitrise={stat.maitrise}
-              enCours={stat.enCours}
-            />
-          ))}
-        </div>
-
-        {/* Listes de fiches par statut */}
-        <div style={{
-          backgroundColor: 'white',
-          padding: '2rem',
-          borderRadius: '16px',
-          boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
-        }}>
-          <h2 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>
-            📝 Détail des Fiches
-          </h2>
-          
-          <ListeFiches
-            fiches={toutesLesFiches.maitrisees || []}
-            titre="🟢 Fiches Maîtrisées"
-            statut="MAITRISE"
-            couleur="#6bcf7f"
-          />
-          
-          <ListeFiches
-            fiches={toutesLesFiches.enCours || []}
-            titre="🟡 Fiches En Cours"
-            statut="EN_COURS"
-            couleur="#ffd93d"
-          />
-          
-          <ListeFiches
-            fiches={toutesLesFiches.nonCommencees || []}
-            titre="🔴 Fiches Non Commencées"
-            statut="NON_COMMENCE"
-            couleur="#ff6b6b"
-          />
-        </div>
-
-        {/* Message motivant */}
-        <div style={{
-          marginTop: '2rem',
-          padding: '2rem',
-          backgroundColor: '#fff9f0',
-          borderRadius: '12px',
-          textAlign: 'center',
-        }}>
-          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>
-            {totalMaitrise === 0 && "🦦 C'est parti ! Commence par une première fiche !"}
-            {totalMaitrise > 0 && totalMaitrise < totalFiches && 
-              `🦦 Super travail ! Tu as déjà maîtrisé ${totalMaitrise} fiche${totalMaitrise > 1 ? 's' : ''} !`}
-            {totalMaitrise === totalFiches && "🎉 BRAVO ! Tu as maîtrisé toutes les fiches ! 🦦"}
-          </p>
-        </div>
+        <h1 style={{ color: '#3d3d3d', marginBottom: '1rem' }}>
+          📊 Suivi de Progression
+        </h1>
+        <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>
+          Continue comme ça Marie ! 💪
+        </p>
       </div>
-    </Layout>
+
+      {/* Progression globale */}
+      <div style={{
+        backgroundColor: 'white',
+        padding: '2rem',
+        borderRadius: '16px',
+        boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
+        marginBottom: '2rem',
+      }}>
+        <h2 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>
+          🎯 Progression Globale
+        </h2>
+        
+        <BarreProgression
+          label="Toutes matières"
+          total={totalFiches}
+          maitrise={totalMaitrise}
+          enCours={totalEnCours}
+        />
+      </div>
+
+      {/* Progression par matière */}
+      <div style={{
+        backgroundColor: 'white',
+        padding: '2rem',
+        borderRadius: '16px',
+        boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
+        marginBottom: '2rem',
+      }}>
+        <h2 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>
+          📚 Par Matière
+        </h2>
+        
+        {Object.entries(statsParMatiere).map(([matiere, stat]) => (
+          <BarreProgression
+            key={matiere}
+            label={matiere}
+            total={stat.total}
+            maitrise={stat.maitrise}
+            enCours={stat.enCours}
+          />
+        ))}
+      </div>
+
+      {/* Listes de fiches par statut */}
+      <div style={{
+        backgroundColor: 'white',
+        padding: '2rem',
+        borderRadius: '16px',
+        boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
+      }}>
+        <h2 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>
+          📝 Détail des Fiches
+        </h2>
+        
+        <ListeFiches
+          fiches={toutesLesFiches.maitrisees || []}
+          titre="🟢 Fiches Maîtrisées"
+          statut="MAITRISE"
+          couleur="#6bcf7f"
+        />
+        
+        <ListeFiches
+          fiches={toutesLesFiches.enCours || []}
+          titre="🟡 Fiches En Cours"
+          statut="EN_COURS"
+          couleur="#ffd93d"
+        />
+        
+        <ListeFiches
+          fiches={toutesLesFiches.nonCommencees || []}
+          titre="🔴 Fiches Non Commencées"
+          statut="NON_COMMENCE"
+          couleur="#ff6b6b"
+        />
+      </div>
+
+      {/* Message motivant */}
+      <div style={{
+        marginTop: '2rem',
+        padding: '2rem',
+        backgroundColor: '#fff9f0',
+        borderRadius: '12px',
+        textAlign: 'center',
+      }}>
+        <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>
+          {totalMaitrise === 0 && "🦦 C'est parti ! Commence par une première fiche !"}
+          {totalMaitrise > 0 && totalMaitrise < totalFiches && 
+            `🦦 Super travail ! Tu as déjà maîtrisé ${totalMaitrise} fiche${totalMaitrise > 1 ? 's' : ''} !`}
+          {totalMaitrise === totalFiches && "🎉 BRAVO ! Tu as maîtrisé toutes les fiches ! 🦦"}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function Suivi() {
+  return (
+    <ProtectedRoute title="Suivi de progression" description="Suivi de ta progression CRPE">
+      <Layout title="Suivi de progression" description="Suivi de ta progression CRPE">
+        <SuiviContent />
+      </Layout>
+    </ProtectedRoute>
   );
 }

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
 import { useAuth } from '../utils/useAuth';
-import { useHistory } from '@docusaurus/router';
+import { useHistory, useLocation } from '@docusaurus/router';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -13,6 +13,16 @@ export default function Login() {
   const [mode, setMode] = useState('login'); // 'login' ou 'signup'
   const { user } = useAuth();
   const history = useHistory();
+  const location = useLocation();
+
+  // Rediriger vers l'accueil si déjà connecté
+  useEffect(() => {
+    if (user) {
+      // Vérifier s'il y a une page de retour demandée
+      const from = location.state?.from || '/';
+      history.push(from);
+    }
+  }, [user, history, location]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,8 +35,7 @@ export default function Login() {
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
       }
-      // Rediriger vers la page d'accueil
-      history.push('/');
+      // La redirection se fera automatiquement via useEffect
     } catch (err) {
       console.error('Erreur:', err);
       if (err.code === 'auth/invalid-credential') {
@@ -35,6 +44,8 @@ export default function Login() {
         setError('Cet email est déjà utilisé');
       } else if (err.code === 'auth/weak-password') {
         setError('Le mot de passe doit contenir au moins 6 caractères');
+      } else if (err.code === 'auth/invalid-email') {
+        setError('Email invalide');
       } else {
         setError('Une erreur est survenue. Réessayez.');
       }
@@ -46,7 +57,7 @@ export default function Login() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      history.push('/');
+      history.push('/login');
     } catch (err) {
       console.error('Erreur déconnexion:', err);
     }
@@ -67,35 +78,47 @@ export default function Login() {
             boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
             textAlign: 'center',
           }}>
-            <h1 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>🦦 Connecté !</h1>
+            <h1 style={{ color: '#ff9a9e', marginBottom: '2rem' }}>🦦 Connectée !</h1>
             
             <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
               Tu es connectée en tant que : <br />
               <strong>{user.email}</strong>
             </p>
 
-            <button
-              onClick={handleLogout}
-              style={{
-                padding: '0.75rem 2rem',
-                backgroundColor: '#ff6b6b',
-                color: 'white',
-                border: 'none',
-                borderRadius: '20px',
-                fontWeight: '600',
-                cursor: 'pointer',
-                fontSize: '1rem',
-                marginBottom: '1rem',
-              }}
-            >
-              Se déconnecter
-            </button>
-
-            <p style={{ marginTop: '2rem' }}>
-              <a href="/" style={{ color: '#ff9a9e', textDecoration: 'none', fontWeight: '600' }}>
-                → Retour à l'accueil
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
+              <a
+                href="/"
+                style={{
+                  padding: '0.75rem 2rem',
+                  backgroundColor: '#ff9a9e',
+                  color: 'white',
+                  textDecoration: 'none',
+                  border: 'none',
+                  borderRadius: '20px',
+                  fontWeight: '600',
+                  fontSize: '1rem',
+                  display: 'inline-block',
+                }}
+              >
+                🏠 Retour à l'accueil
               </a>
-            </p>
+
+              <button
+                onClick={handleLogout}
+                style={{
+                  padding: '0.75rem 2rem',
+                  backgroundColor: '#ff6b6b',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '20px',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  fontSize: '1rem',
+                }}
+              >
+                🚪 Se déconnecter
+              </button>
+            </div>
           </div>
         </div>
       </Layout>
@@ -140,6 +163,7 @@ export default function Login() {
                   borderRadius: '8px',
                   border: '2px solid #ffe5e6',
                   fontSize: '1rem',
+                  boxSizing: 'border-box',
                 }}
               />
             </div>
@@ -165,8 +189,14 @@ export default function Login() {
                   borderRadius: '8px',
                   border: '2px solid #ffe5e6',
                   fontSize: '1rem',
+                  boxSizing: 'border-box',
                 }}
               />
+              {mode === 'signup' && (
+                <small style={{ color: '#666', fontSize: '0.85rem' }}>
+                  Minimum 6 caractères
+                </small>
+              )}
             </div>
 
             {error && (
@@ -204,7 +234,10 @@ export default function Login() {
 
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <button
-              onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
+              onClick={() => {
+                setMode(mode === 'login' ? 'signup' : 'login');
+                setError('');
+              }}
               style={{
                 background: 'none',
                 border: 'none',

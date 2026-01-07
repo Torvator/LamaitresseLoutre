@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useAuth } from '../utils/useAuth';
+import { Redirect } from '@docusaurus/router';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -63,7 +65,7 @@ function HomepageContent() {
           textAlign: 'center',
         }}>
           <h3 style={{color: '#ff9a9e', marginBottom: '1rem'}}>🚀 Prête à commencer ?</h3>
-          <p style={{fontSize: '1.2rem'}}>Les fiches de révision arrivent bientôt !</p>
+          <p style={{fontSize: '1.2rem'}}>Les fiches de révision sont prêtes !</p>
           <p style={{fontSize: '1.5rem', marginTop: '1rem'}}>💪 Bon courage Marie !</p>
         </div>
       </div>
@@ -73,9 +75,33 @@ function HomepageContent() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+  const { user, loading } = useAuth();
+
+  // Si en cours de chargement, afficher un loader
+  if (loading) {
+    return (
+      <Layout title="Accueil" description="Site de préparation au CRPE 2026">
+        <div style={{
+          maxWidth: '600px',
+          margin: '4rem auto',
+          padding: '0 2rem',
+          textAlign: 'center',
+        }}>
+          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>Chargement...</p>
+        </div>
+      </Layout>
+    );
+  }
+
+  // Si non connecté, rediriger vers login
+  if (!user) {
+    return <Redirect to="/login" />;
+  }
+
+  // Si connecté, afficher la page d'accueil
   return (
     <Layout
-      title={`Accueil`}
+      title="Accueil"
       description="Site de préparation au CRPE 2026">
       <HomepageHeader />
       <HomepageContent />
