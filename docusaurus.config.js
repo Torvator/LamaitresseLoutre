@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'La Maitresse Loutre',
-  tagline: 'Concours Professeur des Écoles',
-  favicon: 'img/favicon.ico',
+  title: '🦦 La Maîtresse Loutre',
+  tagline: 'Préparation CRPE 2026 avec douceur et efficacité',
+  favicon: 'img/logo-loutre.png',
 
   url: 'https://torvator.github.io',
   baseUrl: '/LamaitresseLoutre/',
@@ -20,12 +20,13 @@ const config = {
   organizationName: 'torvator',
   projectName: 'LamaitresseLoutre',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
   onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  i18n: {
+    defaultLocale: 'fr',
+    locales: ['fr'],
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -78,71 +79,57 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'La Maitresse Loutre',
-        logo: {
-          alt: 'CRPE 2026 Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: '📚 Fiches de révision',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
+  title: 'La Maîtresse Loutre',
+  logo: {
+    alt: 'Loutre studieuse',
+    src: 'img/logo-loutre.png',
+  },
+  items: [
+    {
+      type: 'docSidebar',
+      sidebarId: 'tutorialSidebar',
+      position: 'left',
+      label: '📚 Mes fiches',
+    },
+    {
+      label: '🎯 Progression',
+      to: '/progression',
+      position: 'left',
+    },
+  ],
+},
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
+  style: 'dark',
+  links: [
+    {
+      title: 'Ressources',
+      items: [
+        {
+          label: 'Fiches de révision',
+          to: '/docs/intro',
+        },
+      ],
+    },
+    {
+      title: 'Matières',
+      items: [
+        {
+          label: '📝 Français',
+          to: '/docs/francais',
+        },
+        {
+          label: '🔢 Mathématiques',
+          to: '/docs/mathematiques',
+        },
+        {
+          label: '🌍 Pluridisciplinaire',
+          to: '/docs/pluridisciplinaire',
+        },
+      ],
+    },
+  ],
+  copyright: `🦦 Préparation CRPE 2026 - Tu vas réussir Marie ! 💪✨`,
+},
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

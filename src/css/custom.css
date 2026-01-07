@@ -6,25 +6,68 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Couleur principale : rose-orange pastel */
+  --ifm-color-primary: #ff9a9e;
+  --ifm-color-primary-dark: #ff7e84;
+  --ifm-color-primary-darker: #ff6f76;
+  --ifm-color-primary-darkest: #ff4851;
+  --ifm-color-primary-light: #ffb6b8;
+  --ifm-color-primary-lighter: #ffc5c6;
+  --ifm-color-primary-lightest: #ffe5e6;
+  
+  /* Arrière-plan doux */
+  --ifm-background-color: #fffbf5;
+  --ifm-navbar-background-color: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  
+  /* Texte */
+  --ifm-font-color-base: #4a4a4a;
+  
+  /* Code blocks */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Liens */
+  --ifm-link-color: #ff6b6b;
+  --ifm-link-hover-color: #ff8787;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Mode sombre adapté */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ffb3ba;
+  --ifm-color-primary-dark: #ff9a9e;
+  --ifm-color-primary-darker: #ff8b90;
+  --ifm-color-primary-darkest: #ff6472;
+  --ifm-color-primary-light: #ffccd0;
+  --ifm-color-primary-lighter: #ffdbe0;
+  --ifm-color-primary-lightest: #fff2f4;
+  
+  --ifm-background-color: #2d2424;
+  --ifm-font-color-base: #ffe5e6;
+}
+
+/* Navbar avec dégradé pastel */
+.navbar {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ffd89b 100%) !important;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
+}
+
+/* Footer doux */
+.footer {
+  background: linear-gradient(135deg, #ffd89b 0%, #fcb69f 50%, #ffecd2 100%);
+}
+
+/* Sidebar pastel */
+.menu {
+  background-color: #fffbf5;
+}
+
+/* Boutons arrondis et doux */
+.button {
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(255, 182, 193, 0.2);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
 }
