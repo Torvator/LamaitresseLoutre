@@ -67,6 +67,11 @@ const config = {
             label: '💬 Commentaires',
             position: 'left',
           },
+          {
+            to: '/profil',
+            label: '👤 Profil',
+            position: 'right',
+          },
         ],
         hideOnScroll: false,
       },
