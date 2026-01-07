@@ -14,11 +14,11 @@ const config = {
   tagline: 'Concours Professeur des Écoles',
   favicon: 'img/favicon.ico',
 
-  url: 'https://lamaitresseloutre.github.io',
-  baseUrl: '/CRPE-2026/',
+  url: 'https://torvator.github.io',
+  baseUrl: '/LamaitresseLoutre/',
   
-  organizationName: 'LamaitresseLoutre',
-  projectName: 'CRPE-2026',
+  organizationName: 'torvator',
+  projectName: 'LamaitresseLoutre',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
