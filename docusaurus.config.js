@@ -67,11 +67,6 @@ const config = {
             label: '💬 Commentaires',
             position: 'left',
           },
-          {
-            to: '/login',
-            label: '🔑 Connexion',
-            position: 'right',
-          },
         ],
         hideOnScroll: false,
       },

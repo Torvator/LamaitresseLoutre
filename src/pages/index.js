@@ -2,16 +2,67 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '../utils/useAuth';
-import { Redirect } from '@docusaurus/router';
+import { Redirect, useHistory } from '@docusaurus/router';
+import { signOut } from 'firebase/auth';
+import { auth } from '../utils/firebase';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const { user } = useAuth();
+  const history = useHistory();
+
+  const handleLogout = async () => {
+    if (confirm('Es-tu sûre de vouloir te déconnecter ?')) {
+      try {
+        await signOut(auth);
+        history.push('/login');
+      } catch (err) {
+        console.error('Erreur déconnexion:', err);
+      }
+    }
+  };
+
   return (
     <header style={{
-      padding: '4rem 0',
+      padding: '4rem 0 2rem 0',
       textAlign: 'center',
       background: 'linear-gradient(135deg, #ffecd2 0%, #ffcbb3 25%, #ffb6b9 50%, #ffc9cb 75%, #ffd89b 100%)',
+      position: 'relative',
     }}>
+      {/* Bouton de déconnexion en haut à droite */}
+      {user && (
+        <div style={{
+          position: 'absolute',
+          top: '1rem',
+          right: '1rem',
+        }}>
+          <button
+            onClick={handleLogout}
+            style={{
+              padding: '0.5rem 1.5rem',
+              backgroundColor: '#ff6b6b',
+              color: 'white',
+              border: 'none',
+              borderRadius: '20px',
+              fontWeight: '600',
+              cursor: 'pointer',
+              fontSize: '0.9rem',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = '#ff5252';
+              e.target.style.transform = 'scale(1.05)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = '#ff6b6b';
+              e.target.style.transform = 'scale(1)';
+            }}
+          >
+            🚪 Déconnexion
+          </button>
+        </div>
+      )}
+
       <div style={{maxWidth: '800px', margin: '0 auto', padding: '0 2rem'}}>
         <h1 style={{
           fontSize: '3rem',
@@ -27,6 +78,15 @@ function HomepageHeader() {
         }}>
           {siteConfig.tagline}
         </p>
+        {user && (
+          <p style={{
+            fontSize: '1rem',
+            color: '#666',
+            marginTop: '1rem',
+          }}>
+            Connectée en tant que : <strong>{user.email}</strong>
+          </p>
+        )}
       </div>
     </header>
   );
