@@ -27,7 +27,10 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false,
+        docs: {
+          sidebarPath: './sidebars.js',
+          routeBasePath: 'fiches',
+        },
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
@@ -49,14 +52,25 @@ const config = {
         title: '🦦 La Maîtresse Loutre',
         items: [
           {
-            to: '/fiches',
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
             label: '📚 Mes Fiches',
+          },
+          {
+            to: '/suivi',
+            label: '📊 Suivi',
             position: 'left',
           },
           {
             to: '/commentaires',
             label: '💬 Commentaires',
             position: 'left',
+          },
+          {
+            to: '/login',
+            label: '🔑 Connexion',
+            position: 'right',
           },
         ],
         hideOnScroll: false,

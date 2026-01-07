@@ -1,72 +1,26 @@
 ---
 sidebar_position: 1
-slug: /
 ---
 
-# 🦦 Bienvenue dans ton espace CRPE, Marie !
+# 🦦 Mes Fiches de Révision
 
-Cet espace a été créé spécialement pour t'accompagner dans ta préparation au **Concours de Recrutement de Professeurs des Écoles**.
+Bienvenue dans ton espace de fiches ! Utilise le menu à gauche pour naviguer entre les différentes matières.
 
-:::tip 💡 Astuce de la loutre studieuse
-Révise régulièrement, en petites sessions, plutôt qu'en marathon ! Ton cerveau retient mieux. 🧠✨
-:::
+## 📚 Organisation
 
----
+Tes fiches sont organisées par matière :
 
-## 📅 Ton planning de préparation
+- **📝 Français** : Grammaire, orthographe, conjugaison
+- **🔢 Mathématiques** : Calculs, géométrie, problèmes
+- **🌍 Pluridisciplinaire** : Histoire-Géo, Sciences, Arts
 
-### 🌸 Janvier - Février : Les fondations
-- **Français** : Grammaire, conjugaison, orthographe
-- **Mathématiques** : Calculs, géométrie, problèmes
-- **Objectif** : Maîtriser le socle cycle 4
+## 💡 Comment utiliser les fiches ?
 
-### 🌼 Mars : Entraînement intensif
-- Sujets blancs en conditions réelles
-- Corrections détaillées
-- Identification des points faibles
+Chaque fiche dispose d'un **indicateur de progression** en haut :
+- 🔴 **Non commencé** : Tu n'as pas encore travaillé cette fiche
+- 🟡 **En cours** : Tu es en train de l'étudier
+- 🟢 **Maîtrisé** : Tu maîtrises le sujet !
 
-### 🌻 Avril : Les épreuves écrites
-- **Concours L3** (priorité)
-- **Concours M2** (double chance !)
+Clique sur le statut pour le changer et suivre ta progression dans l'onglet **📊 Suivi**.
 
-### 🌺 Mai - Juin : Les oraux
-- Préparation de la leçon
-- Travail sur les valeurs de la République
-- Simulations d'entretien
-
----
-
-## 🎯 Tes objectifs
-
-| Concours | Objectif | Stratégie |
-|----------|----------|-----------|
-| **L3** 🎓 | 12/20 minimum | Maîtriser cycle 4 + éviter l'éliminatoire |
-| **M2** 📚 | Bonus | Approfondir didactique + double chance |
-
----
-
-## 📊 Ta progression actuelle
-
-**Français** : 🦦⚪⚪⚪⚪ (0/5)  
-**Mathématiques** : 🦦⚪⚪⚪⚪ (0/5)  
-**Pluridisciplinaire** : 🦦⚪⚪⚪⚪ (0/5)  
-**Oraux** : 🦦⚪⚪⚪⚪ (0/5)
-
----
-
-## 🚀 Par où commencer ?
-
-Choisis une matière dans le menu à gauche et commence doucement ! 
-
-**La loutre te conseille de commencer par** :
-1. 📝 [Français - Les accords de base](/docs/francais/grammaire)
-2. 🔢 [Mathématiques - Les fractions](/docs/mathematiques/calculs)
-
----
-
-:::note 💖 Message de motivation
-Chaque petite révision te rapproche de ton rêve de devenir professeure des écoles.  
-Tu es capable ! La loutre croit en toi ! 🦦✨
-:::
-
-**Bon courage Ma Loutre ! 💪🌈**
+Bon courage ! 💪
