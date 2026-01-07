@@ -43,42 +43,17 @@ function HomepageContent() {
         borderRadius: '16px',
         boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
       }}>
-        <h2 style={{color: '#ff9a9e', marginBottom: '2rem'}}>🦦 Bienvenue Marie !</h2>
         
-        <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem'}}>
-          Bienvenue sur ton espace personnel de préparation au <strong>CRPE 2026</strong>.
+        <p style={{
+          fontSize: '1.2rem', 
+          lineHeight: '1.8', 
+          marginBottom: '2rem',
+          textAlign: 'center',
+          color: '#4a4a4a',
+        }}>
+          Puisse ce site créé avec amour et consommation électrique bien trop élevée t'aider dans ton souhait de réussir tes concours. 
+          Tu y retrouveras tes fiches dans l'onglet <strong>📚 Mes Fiches</strong>, et l'onglet <strong>💬 Commentaires</strong> pour me tenir à jour de tes besoins de modification du site ou des fiches.
         </p>
-
-        <h3 style={{color: '#3d3d3d', marginTop: '2rem', marginBottom: '1rem'}}>📅 Planning général</h3>
-        <ul style={{fontSize: '1.1rem', lineHeight: '1.8'}}>
-          <li><strong>Janvier-Février</strong> : Fondations (Français + Mathématiques)</li>
-          <li><strong>Mars</strong> : Entraînement intensif</li>
-          <li><strong>Avril</strong> : Épreuves écrites (L3 + M2)</li>
-          <li><strong>Mai-Juin</strong> : Oraux (si admissible)</li>
-        </ul>
-
-        <h3 style={{color: '#3d3d3d', marginTop: '2rem', marginBottom: '1rem'}}>🎯 Tes objectifs</h3>
-        
-        <h4 style={{color: '#ff9a9e', marginTop: '1.5rem'}}>Concours L3 (priorité)</h4>
-        <ul style={{fontSize: '1.1rem', lineHeight: '1.8'}}>
-          <li>✅ Maîtriser le socle cycle 4</li>
-          <li>✅ Éviter les notes éliminatoires</li>
-          <li>✅ Score cible : <strong>12/20 minimum</strong> partout</li>
-        </ul>
-
-        <h4 style={{color: '#ff9a9e', marginTop: '1.5rem'}}>Concours M2 (bonus)</h4>
-        <ul style={{fontSize: '1.1rem', lineHeight: '1.8'}}>
-          <li>✅ Approfondir la didactique</li>
-          <li>✅ Double chance de réussite !</li>
-        </ul>
-
-        <h3 style={{color: '#3d3d3d', marginTop: '2rem', marginBottom: '1rem'}}>📊 Progression actuelle</h3>
-        <div style={{fontSize: '1.1rem', lineHeight: '2'}}>
-          <p><strong>Français</strong> : 🦦⚪⚪⚪⚪ (0/5)</p>
-          <p><strong>Mathématiques</strong> : 🦦⚪⚪⚪⚪ (0/5)</p>
-          <p><strong>Pluridisciplinaire</strong> : 🦦⚪⚪⚪⚪ (0/5)</p>
-          <p><strong>Oraux</strong> : 🦦⚪⚪⚪⚪ (0/5)</p>
-        </div>
 
         <div style={{
           marginTop: '3rem',

@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'La Maîtresse Loutre',
+  title: '🦦 La Maîtresse Loutre',
   tagline: 'Préparation CRPE 2026 - Tu vas réussir Marie ! 💪',
   favicon: 'img/favicon.ico',
 
@@ -14,7 +14,7 @@ const config = {
   organizationName: 'torvator',
   projectName: 'LamaitresseLoutre',
 
-  onBrokenLinks: 'warn', // On met en warning pour ne pas bloquer le build
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -27,8 +27,8 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false, // On désactive complètement les docs pour l'instant
-        blog: false, // Pas de blog
+        docs: false,
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -41,17 +41,24 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: false,
+        disableSwitch: true, // Désactive le bouton mode sombre
         respectPrefersColorScheme: false,
       },
       
       navbar: {
         title: '🦦 La Maîtresse Loutre',
-        logo: {
-          alt: 'Loutre studieuse',
-          src: 'img/logo-loutre.jpg',
-        },
-        items: [], // Navbar vide pour l'instant
+        items: [
+          {
+            to: '/fiches',
+            label: '📚 Mes Fiches',
+            position: 'left',
+          },
+          {
+            to: '/commentaires',
+            label: '💬 Commentaires',
+            position: 'left',
+          },
+        ],
         hideOnScroll: false,
       },
       
