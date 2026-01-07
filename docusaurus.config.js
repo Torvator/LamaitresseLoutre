@@ -23,17 +23,10 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // CORRECTION : Un seul i18n, en français
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr'],
-  },
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
   },
 
   presets: [
@@ -43,26 +36,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // CORRECTION : Supprimer l'editUrl pour ne pas avoir le lien "Edit this page"
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // CORRECTION : Désactiver le blog
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -76,60 +52,57 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
         respectPrefersColorScheme: true,
       },
       navbar: {
-  title: 'La Maîtresse Loutre',
-  logo: {
-    alt: 'Loutre studieuse',
-    src: 'img/logo-loutre.png',
-  },
-  items: [
-    {
-      type: 'docSidebar',
-      sidebarId: 'tutorialSidebar',
-      position: 'left',
-      label: '📚 Mes fiches',
-    },
-    {
-      label: '🎯 Progression',
-      to: '/progression',
-      position: 'left',
-    },
-  ],
-},
+        title: 'La Maîtresse Loutre',
+        logo: {
+          alt: 'Loutre studieuse',
+          src: 'img/logo-loutre.png',
+        },
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: '📚 Mes fiches',
+          },
+        ],
+      },
       footer: {
-  style: 'dark',
-  links: [
-    {
-      title: 'Ressources',
-      items: [
-        {
-          label: 'Fiches de révision',
-          to: '/docs/intro',
-        },
-      ],
-    },
-    {
-      title: 'Matières',
-      items: [
-        {
-          label: '📝 Français',
-          to: '/docs/francais',
-        },
-        {
-          label: '🔢 Mathématiques',
-          to: '/docs/mathematiques',
-        },
-        {
-          label: '🌍 Pluridisciplinaire',
-          to: '/docs/pluridisciplinaire',
-        },
-      ],
-    },
-  ],
-  copyright: `🦦 Préparation CRPE 2026 - Tu vas réussir Marie ! 💪✨`,
-},
+        style: 'dark',
+        links: [
+          {
+            title: 'Ressources',
+            items: [
+              {
+                label: 'Fiches de révision',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: 'Matières',
+            items: [
+              {
+                label: '📝 Français',
+                to: '/docs/category/français',
+              },
+              {
+                label: '🔢 Mathématiques',
+                to: '/docs/category/mathématiques',
+              },
+              {
+                label: '🌍 Pluridisciplinaire',
+                to: '/docs/category/pluridisciplinaire',
+              },
+            ],
+          },
+        ],
+        copyright: `🦦 Préparation CRPE 2026 - Tu vas réussir Marie ! 💪✨`,
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
