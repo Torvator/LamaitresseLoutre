@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcrpe_2026=globalThis.webpackChunkcrpe_2026||[]).push([[2516],{3018(e){e.exports=JSON.parse('{"metadata":{"permalink":"/LamaitresseLoutre/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

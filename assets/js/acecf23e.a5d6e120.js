@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcrpe_2026=globalThis.webpackChunkcrpe_2026||[]).push([[1903],{1912(e){e.exports=JSON.parse('{"blogBasePath":"/LamaitresseLoutre/blog","blogTitle":"Blog","authorsListPath":"/LamaitresseLoutre/blog/authors"}')}}]);
