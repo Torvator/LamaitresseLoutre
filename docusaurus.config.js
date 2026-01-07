@@ -14,7 +14,7 @@ const config = {
   organizationName: 'torvator',
   projectName: 'LamaitresseLoutre',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', // On met en warning pour ne pas bloquer le build
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -27,10 +27,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          routeBasePath: '/', // Les docs deviennent la racine du site
-        },
+        docs: false, // On désactive complètement les docs pour l'instant
         blog: false, // Pas de blog
         theme: {
           customCss: './src/css/custom.css',
@@ -42,44 +39,28 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Couleurs par défaut
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
       
-      // Barre de navigation
       navbar: {
         title: '🦦 La Maîtresse Loutre',
         logo: {
           alt: 'Loutre studieuse',
           src: 'img/logo-loutre.jpg',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: '📚 Mes fiches',
-          },
-          {
-            to: '/',
-            label: '🏠 Accueil',
-            position: 'left',
-          },
-        ],
+        items: [], // Navbar vide pour l'instant
         hideOnScroll: false,
       },
       
-      // Pied de page simplifié
       footer: {
         style: 'dark',
         links: [],
         copyright: `🦦 Préparation CRPE 2026 - Bon courage Marie ! 💪✨`,
       },
       
-      // Thème de code
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

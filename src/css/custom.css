@@ -1,73 +1,299 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Thème "La Maîtresse Loutre"
+ * Couleurs pastel : rose-orange-jaune
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  /* Couleur principale : rose-orange pastel */
-  --ifm-color-primary: #ff9a9e;
-  --ifm-color-primary-dark: #ff7e84;
-  --ifm-color-primary-darker: #ff6f76;
-  --ifm-color-primary-darkest: #ff4851;
-  --ifm-color-primary-light: #ffb6b8;
-  --ifm-color-primary-lighter: #ffc5c6;
-  --ifm-color-primary-lightest: #ffe5e6;
-  
-  /* Arrière-plan doux */
-  --ifm-background-color: #fffbf5;
-  --ifm-navbar-background-color: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-  
-  /* Texte */
-  --ifm-font-color-base: #4a4a4a;
-  
-  /* Code blocks */
-  --ifm-code-font-size: 95%;
-  
-  /* Liens */
-  --ifm-link-color: #ff6b6b;
-  --ifm-link-hover-color: #ff8787;
-}
-
-/* Mode sombre adapté */
-[data-theme='dark'] {
-  --ifm-color-primary: #ffb3ba;
+  /* Couleurs principales - Pastel rose-pêche */
+  --ifm-color-primary: #ffb6b9;
   --ifm-color-primary-dark: #ff9a9e;
   --ifm-color-primary-darker: #ff8b90;
   --ifm-color-primary-darkest: #ff6472;
-  --ifm-color-primary-light: #ffccd0;
-  --ifm-color-primary-lighter: #ffdbe0;
-  --ifm-color-primary-lightest: #fff2f4;
+  --ifm-color-primary-light: #ffc9cb;
+  --ifm-color-primary-lighter: #ffd8da;
+  --ifm-color-primary-lightest: #fff0f1;
+  
+  /* Arrière-plan doux crème */
+  --ifm-background-color: #fffdf7;
+  --ifm-background-surface-color: #fff9f0;
+  
+  /* Texte */
+  --ifm-font-color-base: #4a4a4a;
+  --ifm-heading-color: #3d3d3d;
+  
+  /* Liens */
+  --ifm-link-color: #ff9a9e;
+  --ifm-link-hover-color: #ff7e84;
+  
+  /* Code */
+  --ifm-code-font-size: 95%;
+  --ifm-code-background: #fff0f1;
+  
+  /* Bordures arrondies */
+  --ifm-global-radius: 12px;
+  --ifm-button-border-radius: 20px;
+}
+
+/* Mode sombre adapté (optionnel) */
+[data-theme='dark'] {
+  --ifm-color-primary: #ffb6b9;
+  --ifm-color-primary-dark: #ff9a9e;
+  --ifm-color-primary-darker: #ff8b90;
+  --ifm-color-primary-darkest: #ff6472;
+  --ifm-color-primary-light: #ffc9cb;
+  --ifm-color-primary-lighter: #ffd8da;
+  --ifm-color-primary-lightest: #fff0f1;
   
   --ifm-background-color: #2d2424;
+  --ifm-background-surface-color: #3a3030;
   --ifm-font-color-base: #ffe5e6;
 }
 
-/* Navbar avec dégradé pastel */
+/* ========================================
+   NAVBAR - Dégradé pastel rose-orange-jaune
+   ======================================== */
 .navbar {
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ffd89b 100%) !important;
-  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
+  background: linear-gradient(135deg, 
+    #ffecd2 0%,      /* Jaune pastel */
+    #ffcbb3 25%,     /* Orange clair */
+    #ffb6b9 50%,     /* Rose pastel */
+    #ffc9cb 75%,     /* Rose clair */
+    #ffd89b 100%     /* Retour jaune */
+  ) !important;
+  box-shadow: 0 2px 12px rgba(255, 182, 185, 0.25);
+  border-bottom: 2px solid rgba(255, 154, 158, 0.2);
 }
 
-/* Footer doux */
-.footer {
-  background: linear-gradient(135deg, #ffd89b 0%, #fcb69f 50%, #ffecd2 100%);
+.navbar__title {
+  font-weight: 700;
+  color: #3d3d3d !important;
 }
 
-/* Sidebar pastel */
+.navbar__item {
+  color: #4a4a4a !important;
+  font-weight: 500;
+}
+
+.navbar__link:hover {
+  color: #ff6472 !important;
+}
+
+/* ========================================
+   SIDEBAR - Doux et aéré
+   ======================================== */
 .menu {
-  background-color: #fffbf5;
+  background-color: #fffdf7;
+  padding: 1rem;
 }
 
-/* Boutons arrondis et doux */
+.theme-doc-sidebar-container {
+  background: linear-gradient(180deg, #fff9f0 0%, #fffdf7 100%);
+  border-right: 1px solid #ffe5e6;
+}
+
+.menu__link {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background-color: #fff0f1;
+  color: #ff7e84;
+}
+
+.menu__link--active {
+  background: linear-gradient(135deg, #ffb6b9 0%, #ffc9cb 100%);
+  color: white;
+  font-weight: 600;
+}
+
+/* ========================================
+   CONTENU PRINCIPAL
+   ======================================== */
+.main-wrapper {
+  background-color: #fffdf7;
+}
+
+article {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 182, 185, 0.1);
+}
+
+/* Titres avec couleur douce */
+h1, h2, h3, h4, h5, h6 {
+  color: #3d3d3d;
+}
+
+h1 {
+  color: #ff9a9e;
+  font-weight: 700;
+}
+
+/* ========================================
+   BOUTONS - Arrondis et doux
+   ======================================== */
 .button {
   border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(255, 182, 193, 0.2);
+  box-shadow: 0 4px 8px rgba(255, 182, 185, 0.2);
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
+  box-shadow: 0 6px 16px rgba(255, 182, 185, 0.3);
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #ffb6b9 0%, #ff9a9e 100%);
+  border: none;
+  color: white;
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, #ff9a9e 0%, #ff7e84 100%);
+}
+
+/* ========================================
+   FOOTER - Dégradé inversé
+   ======================================== */
+.footer {
+  background: linear-gradient(135deg, 
+    #ffd89b 0%,      /* Jaune */
+    #ffc9cb 25%,     /* Rose clair */
+    #ffb6b9 50%,     /* Rose pastel */
+    #ffcbb3 75%,     /* Orange */
+    #ffecd2 100%     /* Jaune */
+  );
+  color: #3d3d3d;
+  padding: 2rem 0;
+}
+
+.footer__copyright {
+  color: #3d3d3d;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ========================================
+   CARDS & CONTENEURS
+   ======================================== */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(255, 182, 185, 0.15);
+  border: 1px solid #ffe5e6;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(255, 182, 185, 0.25);
+  transform: translateY(-4px);
+}
+
+/* ========================================
+   TABLES
+   ======================================== */
+table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th {
+  background: linear-gradient(135deg, #ffb6b9 0%, #ffc9cb 100%);
+  color: white;
+}
+
+tr:hover {
+  background-color: #fff9f0;
+}
+
+/* ========================================
+   ADMONITIONS (Boîtes d'alerte)
+   ======================================== */
+.admonition {
+  border-radius: 12px;
+  border-left: 4px solid #ffb6b9;
+}
+
+.admonition-note {
+  border-left-color: #ffb6b9;
+  background-color: #fff9f0;
+}
+
+.admonition-tip {
+  border-left-color: #ffd89b;
+  background-color: #fffdf7;
+}
+
+.admonition-warning {
+  border-left-color: #ffcbb3;
+  background-color: #fff9f0;
+}
+
+/* ========================================
+   PAGINATION
+   ======================================== */
+.pagination-nav__link {
+  border-radius: 12px;
+  border: 2px solid #ffe5e6;
+  transition: all 0.3s ease;
+}
+
+.pagination-nav__link:hover {
+  background: linear-gradient(135deg, #fff9f0 0%, #fffdf7 100%);
+  border-color: #ffb6b9;
+  transform: scale(1.02);
+}
+
+/* ========================================
+   RESPONSIVE - Mobile
+   ======================================== */
+@media (max-width: 996px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  article {
+    padding: 1rem;
+  }
+  
+  .footer {
+    padding: 1.5rem 0;
+  }
+}
+
+/* ========================================
+   ANIMATIONS DOUCES
+   ======================================== */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Petite animation au survol des liens */
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffb6b9;
+  text-decoration-thickness: 2px;
+}
+
+/* ========================================
+   SCROLLBAR personnalisée (optionnel)
+   ======================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff9f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffb6b9 0%, #ffc9cb 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff9a9e 0%, #ffb6b9 100%);
 }
