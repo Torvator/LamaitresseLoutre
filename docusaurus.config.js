@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: '🦦 La Maîtresse Loutre',
   tagline: 'Préparation CRPE 2026 avec douceur et efficacité',
-  favicon: 'img/logo-loutre.png',
+  favicon: 'img/favicon.ico',
 
   url: 'https://torvator.github.io',
   baseUrl: '/LamaitresseLoutre/',
@@ -23,7 +23,6 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // CORRECTION : Un seul i18n, en français
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr'],
@@ -36,9 +35,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // CORRECTION : Supprimer l'editUrl pour ne pas avoir le lien "Edit this page"
         },
-        blog: false, // CORRECTION : Désactiver le blog
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -49,7 +47,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         defaultMode: 'light',
@@ -60,7 +57,7 @@ const config = {
         title: 'La Maîtresse Loutre',
         logo: {
           alt: 'Loutre studieuse',
-          src: 'img/logo-loutre.png',
+          src: 'logo-loutre.jpg',
         },
         items: [
           {
@@ -75,10 +72,14 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Ressources',
+            title: 'Navigation',
             items: [
               {
-                label: 'Fiches de révision',
+                label: '🏠 Accueil',
+                to: '/docs/intro',
+              },
+              {
+                label: '📚 Toutes les fiches',
                 to: '/docs/intro',
               },
             ],
@@ -88,15 +89,15 @@ const config = {
             items: [
               {
                 label: '📝 Français',
-                to: '/docs/category/français',
+                to: '/docs/intro',
               },
               {
                 label: '🔢 Mathématiques',
-                to: '/docs/category/mathématiques',
+                to: '/docs/intro',
               },
               {
                 label: '🌍 Pluridisciplinaire',
-                to: '/docs/category/pluridisciplinaire',
+                to: '/docs/intro',
               },
             ],
           },
