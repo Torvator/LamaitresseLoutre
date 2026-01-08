@@ -1,32 +1,128 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import ProtectedRoute from '../components/ProtectedRoute';
 import { useAuth } from '../utils/useAuth';
+import { collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from 'firebase/firestore';
+import { db } from '../utils/firebase';
+
+// 🔑 EMAIL ADMIN - Changez par votre email
+const ADMIN_EMAIL = 'pro.alexis.costa@google.com';
+
+function MessageBubble({ message, isAdmin, isOwnMessage }) {
+  const bubbleColor = isAdmin ? '#ff9a9e' : '#6bcf7f';
+  const bgColor = isOwnMessage ? bubbleColor : '#f5f5f5';
+  const textColor = isOwnMessage ? 'white' : '#4a4a4a';
+  const align = isOwnMessage ? 'flex-end' : 'flex-start';
+
+  return (
+    <div style={{
+      display: 'flex',
+      justifyContent: align,
+      marginBottom: '1rem',
+    }}>
+      <div style={{
+        maxWidth: '70%',
+        padding: '1rem',
+        backgroundColor: bgColor,
+        color: textColor,
+        borderRadius: '12px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+          marginBottom: '0.5rem',
+        }}>
+          <strong style={{ fontSize: '0.9rem' }}>
+            {isAdmin ? '👨‍💼 Admin' : '👤 ' + message.userEmail.split('@')[0]}
+          </strong>
+          {isAdmin && (
+            <span style={{
+              fontSize: '0.7rem',
+              padding: '0.2rem 0.5rem',
+              backgroundColor: 'rgba(255,255,255,0.3)',
+              borderRadius: '8px',
+            }}>
+              ADMIN
+            </span>
+          )}
+        </div>
+        <p style={{ margin: '0 0 0.5rem 0', fontSize: '1rem', lineHeight: '1.5' }}>
+          {message.texte}
+        </p>
+        <small style={{ fontSize: '0.8rem', opacity: 0.8 }}>
+          {message.date ? new Date(message.date.toDate()).toLocaleString('fr-FR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          }) : 'Envoi en cours...'}
+        </small>
+      </div>
+    </div>
+  );
+}
 
 function CommentairesContent() {
-  const [commentaire, setCommentaire] = useState('');
-  const [commentaires, setCommentaires] = useState([]);
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [sending, setSending] = useState(false);
   const { user } = useAuth();
 
-  const handleSubmit = (e) => {
+  const isAdmin = user?.email === ADMIN_EMAIL;
+
+  // Écouter les messages en temps réel
+  useEffect(() => {
+    if (!user) return;
+
+    const q = query(
+      collection(db, 'commentaires'),
+      orderBy('date', 'asc')
+    );
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const messagesData = [];
+      snapshot.forEach((doc) => {
+        messagesData.push({ id: doc.id, ...doc.data() });
+      });
+      setMessages(messagesData);
+      setLoading(false);
+    }, (error) => {
+      console.error('Erreur chargement messages:', error);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, [user]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (commentaire.trim()) {
-      setCommentaires([
-        {
-          id: Date.now(),
-          texte: commentaire,
-          date: new Date().toLocaleDateString('fr-FR'),
-        },
-        ...commentaires,
-      ]);
-      setCommentaire('');
-      alert('Commentaire enregistré ! (Pour l\'instant, ils ne sont pas sauvegardés en ligne)');
+    if (!message.trim() || sending) return;
+
+    setSending(true);
+    try {
+      await addDoc(collection(db, 'commentaires'), {
+        texte: message,
+        userEmail: user.email,
+        userId: user.uid,
+        isAdmin: isAdmin,
+        date: serverTimestamp(),
+      });
+      setMessage('');
+    } catch (error) {
+      console.error('Erreur envoi message:', error);
+      alert('Erreur lors de l\'envoi du message');
+    } finally {
+      setSending(false);
     }
   };
 
   return (
     <div style={{
-      maxWidth: '800px',
+      maxWidth: '900px',
       margin: '2rem auto',
       padding: '0 2rem',
     }}>
@@ -38,30 +134,63 @@ function CommentairesContent() {
         textAlign: 'center',
       }}>
         <h1 style={{ color: '#3d3d3d', marginBottom: '1rem' }}>
-          💬 Commentaires
+          💬 Messagerie
         </h1>
         <p style={{ fontSize: '1.1rem', color: '#4a4a4a' }}>
-          Partage tes besoins de modification du site ou des fiches
+          {isAdmin ? 'Espace admin - Répondez aux utilisateurs' : 'Communiquez avec l\'administrateur'}
         </p>
       </div>
 
+      {/* Zone de messages */}
       <div style={{
         backgroundColor: 'white',
         padding: '2rem',
         borderRadius: '16px',
         boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
         marginBottom: '2rem',
+        minHeight: '400px',
+        maxHeight: '600px',
+        overflowY: 'auto',
       }}>
-        <h2 style={{ color: '#ff9a9e', marginBottom: '1.5rem' }}>
-          Nouveau commentaire
+        {loading ? (
+          <div style={{ textAlign: 'center', padding: '2rem' }}>
+            <p style={{ color: '#666' }}>Chargement des messages...</p>
+          </div>
+        ) : messages.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '2rem' }}>
+            <p style={{ color: '#666', fontSize: '1.1rem' }}>
+              Aucun message pour le moment. Soyez le premier à écrire !
+            </p>
+          </div>
+        ) : (
+          messages.map((msg) => (
+            <MessageBubble
+              key={msg.id}
+              message={msg}
+              isAdmin={msg.isAdmin}
+              isOwnMessage={msg.userId === user.uid}
+            />
+          ))
+        )}
+      </div>
+
+      {/* Formulaire d'envoi */}
+      <div style={{
+        backgroundColor: 'white',
+        padding: '2rem',
+        borderRadius: '16px',
+        boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
+      }}>
+        <h2 style={{ color: '#ff9a9e', marginBottom: '1.5rem', fontSize: '1.3rem' }}>
+          {isAdmin ? '💬 Répondre' : '✉️ Nouveau message'}
         </h2>
 
         <form onSubmit={handleSubmit}>
           <textarea
-            value={commentaire}
-            onChange={(e) => setCommentaire(e.target.value)}
-            placeholder="Écris ton commentaire ou ta suggestion ici..."
-            rows={5}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder={isAdmin ? "Écrivez votre réponse..." : "Écrivez votre message à l'admin..."}
+            rows={4}
             style={{
               width: '100%',
               padding: '1rem',
@@ -74,70 +203,55 @@ function CommentairesContent() {
             }}
           />
 
-          <button
-            type="submit"
-            style={{
-              marginTop: '1rem',
-              padding: '0.75rem 2rem',
-              backgroundColor: '#ff9a9e',
-              color: 'white',
-              border: 'none',
-              borderRadius: '20px',
-              fontWeight: '600',
-              cursor: 'pointer',
-              fontSize: '1rem',
-            }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = '#ff7e84';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#ff9a9e';
-            }}
-          >
-            ✉️ Envoyer
-          </button>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginTop: '1rem',
+          }}>
+            <small style={{ color: '#666' }}>
+              Connecté en tant que : <strong>{user.email}</strong>
+              {isAdmin && <span style={{ color: '#ff9a9e' }}> (Admin)</span>}
+            </small>
+
+            <button
+              type="submit"
+              disabled={sending || !message.trim()}
+              style={{
+                padding: '0.75rem 2rem',
+                backgroundColor: sending ? '#ccc' : (isAdmin ? '#ff9a9e' : '#6bcf7f'),
+                color: 'white',
+                border: 'none',
+                borderRadius: '20px',
+                fontWeight: '600',
+                cursor: sending ? 'not-allowed' : 'pointer',
+                fontSize: '1rem',
+              }}
+              onMouseOver={(e) => {
+                if (!sending && message.trim()) {
+                  e.target.style.transform = 'scale(1.05)';
+                }
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'scale(1)';
+              }}
+            >
+              {sending ? 'Envoi...' : '📤 Envoyer'}
+            </button>
+          </div>
         </form>
       </div>
 
-      {commentaires.length > 0 && (
-        <div style={{
-          backgroundColor: 'white',
-          padding: '2rem',
-          borderRadius: '16px',
-          boxShadow: '0 4px 12px rgba(255, 182, 185, 0.15)',
-        }}>
-          <h2 style={{ color: '#ff9a9e', marginBottom: '1.5rem' }}>
-            Mes commentaires ({commentaires.length})
-          </h2>
-
-          {commentaires.map((c) => (
-            <div
-              key={c.id}
-              style={{
-                padding: '1rem',
-                backgroundColor: '#fff9f0',
-                borderRadius: '8px',
-                marginBottom: '1rem',
-                borderLeft: '4px solid #ff9a9e',
-              }}
-            >
-              <p style={{ margin: '0 0 0.5rem 0', fontSize: '1rem' }}>{c.texte}</p>
-              <small style={{ color: '#666' }}>{c.date}</small>
-            </div>
-          ))}
-        </div>
-      )}
-
+      {/* Info temps réel */}
       <div style={{
         marginTop: '2rem',
-        padding: '1.5rem',
+        padding: '1rem',
         backgroundColor: '#fff9f0',
         borderRadius: '12px',
         textAlign: 'center',
       }}>
         <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>
-          💡 <strong>Note :</strong> Les commentaires ne sont pas encore sauvegardés en ligne.
-          Cette fonctionnalité sera ajoutée prochainement !
+          ✨ <strong>Messages en temps réel</strong> - Les nouveaux messages apparaissent automatiquement
         </p>
       </div>
     </div>
@@ -146,8 +260,8 @@ function CommentairesContent() {
 
 export default function Commentaires() {
   return (
-    <ProtectedRoute title="Commentaires" description="Zone de commentaires">
-      <Layout title="Commentaires" description="Zone de commentaires">
+    <ProtectedRoute title="Messagerie" description="Zone de messagerie">
+      <Layout title="Messagerie" description="Zone de messagerie">
         <CommentairesContent />
       </Layout>
     </ProtectedRoute>
