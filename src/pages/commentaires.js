@@ -5,14 +5,30 @@ import { useAuth } from '../utils/useAuth';
 import { collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 
-// 🔑 EMAIL ADMIN - Changez par votre email
-const ADMIN_EMAIL = 'pro.alexis.costa@google.com';
+// 🔑 EMAIL ADMIN
+const ADMIN_EMAIL = 'pro.alexis.costa@gmail.com';
 
 function MessageBubble({ message, isAdmin, isOwnMessage }) {
   const bubbleColor = isAdmin ? '#ff9a9e' : '#6bcf7f';
   const bgColor = isOwnMessage ? bubbleColor : '#f5f5f5';
   const textColor = isOwnMessage ? 'white' : '#4a4a4a';
   const align = isOwnMessage ? 'flex-end' : 'flex-start';
+
+  // Gestion sécurisée de la date
+  let dateDisplay = 'Envoi en cours...';
+  if (message.date && message.date.toDate) {
+    try {
+      dateDisplay = new Date(message.date.toDate()).toLocaleString('fr-FR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    } catch (e) {
+      dateDisplay = 'Date invalide';
+    }
+  }
 
   return (
     <div style={{
@@ -35,7 +51,7 @@ function MessageBubble({ message, isAdmin, isOwnMessage }) {
           marginBottom: '0.5rem',
         }}>
           <strong style={{ fontSize: '0.9rem' }}>
-            {isAdmin ? '👨‍💼 Admin' : '👤 ' + message.userEmail.split('@')[0]}
+            {isAdmin ? '👨‍💼 Admin' : '👤 ' + (message.userEmail ? message.userEmail.split('@')[0] : 'Utilisateur')}
           </strong>
           {isAdmin && (
             <span style={{
@@ -52,13 +68,7 @@ function MessageBubble({ message, isAdmin, isOwnMessage }) {
           {message.texte}
         </p>
         <small style={{ fontSize: '0.8rem', opacity: 0.8 }}>
-          {message.date ? new Date(message.date.toDate()).toLocaleString('fr-FR', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-          }) : 'Envoi en cours...'}
+          {dateDisplay}
         </small>
       </div>
     </div>
@@ -78,24 +88,29 @@ function CommentairesContent() {
   useEffect(() => {
     if (!user) return;
 
-    const q = query(
-      collection(db, 'commentaires'),
-      orderBy('date', 'asc')
-    );
+    try {
+      const q = query(
+        collection(db, 'commentaires'),
+        orderBy('date', 'asc')
+      );
 
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const messagesData = [];
-      snapshot.forEach((doc) => {
-        messagesData.push({ id: doc.id, ...doc.data() });
+      const unsubscribe = onSnapshot(q, (snapshot) => {
+        const messagesData = [];
+        snapshot.forEach((doc) => {
+          messagesData.push({ id: doc.id, ...doc.data() });
+        });
+        setMessages(messagesData);
+        setLoading(false);
+      }, (error) => {
+        console.error('Erreur chargement messages:', error);
+        setLoading(false);
       });
-      setMessages(messagesData);
-      setLoading(false);
-    }, (error) => {
-      console.error('Erreur chargement messages:', error);
-      setLoading(false);
-    });
 
-    return () => unsubscribe();
+      return () => unsubscribe();
+    } catch (error) {
+      console.error('Erreur initialisation:', error);
+      setLoading(false);
+    }
   }, [user]);
 
   const handleSubmit = async (e) => {
@@ -114,7 +129,7 @@ function CommentairesContent() {
       setMessage('');
     } catch (error) {
       console.error('Erreur envoi message:', error);
-      alert('Erreur lors de l\'envoi du message');
+      alert('Erreur lors de l\'envoi du message. Vérifiez les règles Firebase.');
     } finally {
       setSending(false);
     }
