@@ -5,9 +5,13 @@ import { auth } from '../utils/firebase';
 import { useAuth } from '../utils/useAuth';
 import { redirectTo, ROUTES } from '../utils/routes';
 
+// 🔑 CODE D'INVITATION - Vous pouvez le changer ici
+const CODE_INVITATION = 'CRPE2026';
+
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [codeInvitation, setCodeInvitation] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [mode, setMode] = useState('login'); // 'login' ou 'signup'
@@ -27,8 +31,15 @@ export default function Login() {
 
     try {
       if (mode === 'login') {
+        // Mode connexion : pas besoin de code
         await signInWithEmailAndPassword(auth, email, password);
       } else {
+        // Mode inscription : vérifier le code d'invitation
+        if (codeInvitation !== CODE_INVITATION) {
+          setError('Code d\'invitation incorrect');
+          setLoading(false);
+          return;
+        }
         await createUserWithEmailAndPassword(auth, email, password);
       }
       // La redirection se fera automatiquement via useEffect
@@ -195,6 +206,39 @@ export default function Login() {
               )}
             </div>
 
+            {/* Champ code d'invitation (uniquement en mode inscription) */}
+            {mode === 'signup' && (
+              <div style={{ marginBottom: '1.5rem' }}>
+                <label style={{
+                  display: 'block',
+                  marginBottom: '0.5rem',
+                  fontWeight: '600',
+                  color: '#4a4a4a',
+                }}>
+                  Code d'invitation 🔑
+                </label>
+                <input
+                  type="text"
+                  value={codeInvitation}
+                  onChange={(e) => setCodeInvitation(e.target.value)}
+                  required
+                  placeholder="Demandez le code à l'administrateur"
+                  style={{
+                    width: '100%',
+                    padding: '0.75rem',
+                    borderRadius: '8px',
+                    border: '2px solid #ffd89b',
+                    fontSize: '1rem',
+                    boxSizing: 'border-box',
+                    backgroundColor: '#fffdf7',
+                  }}
+                />
+                <small style={{ color: '#666', fontSize: '0.85rem', marginTop: '0.25rem', display: 'block' }}>
+                  Le code d'invitation est requis pour créer un compte
+                </small>
+              </div>
+            )}
+
             {error && (
               <div style={{
                 padding: '0.75rem',
@@ -233,6 +277,7 @@ export default function Login() {
               onClick={() => {
                 setMode(mode === 'login' ? 'signup' : 'login');
                 setError('');
+                setCodeInvitation('');
               }}
               style={{
                 background: 'none',
