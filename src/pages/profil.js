@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@theme/Layout';
 import { useAuth } from '../utils/useAuth';
 import { signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
-import { useHistory, Redirect } from '@docusaurus/router';
+import { useHistory } from '@docusaurus/router';
 
 export default function Profil() {
   const { user, loading } = useAuth();
   const history = useHistory();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      history.push('/login');
+    }
+  }, [user, loading, history]);
 
   const handleLogout = async () => {
     try {
@@ -36,7 +42,18 @@ export default function Profil() {
   }
 
   if (!user) {
-    return <Redirect to="/login" />;
+    return (
+      <Layout title="Profil" description="Mon profil">
+        <div style={{
+          maxWidth: '600px',
+          margin: '4rem auto',
+          padding: '0 2rem',
+          textAlign: 'center',
+        }}>
+          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>Redirection...</p>
+        </div>
+      </Layout>
+    );
   }
 
   return (

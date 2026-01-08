@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '../utils/useAuth';
-import { Redirect, useHistory } from '@docusaurus/router';
+import { useHistory } from '@docusaurus/router';
 import { signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
 
@@ -136,6 +136,13 @@ function HomepageContent() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   const { user, loading } = useAuth();
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      history.push('/login');
+    }
+  }, [user, loading, history]);
 
   // Si en cours de chargement, afficher un loader
   if (loading) {
@@ -153,9 +160,20 @@ export default function Home() {
     );
   }
 
-  // Si non connecté, rediriger vers login
+  // Si non connecté, afficher un message de redirection
   if (!user) {
-    return <Redirect to="/login" />;
+    return (
+      <Layout title="Accueil" description="Site de préparation au CRPE 2026">
+        <div style={{
+          maxWidth: '600px',
+          margin: '4rem auto',
+          padding: '0 2rem',
+          textAlign: 'center',
+        }}>
+          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>Redirection vers la page de connexion...</p>
+        </div>
+      </Layout>
+    );
   }
 
   // Si connecté, afficher la page d'accueil

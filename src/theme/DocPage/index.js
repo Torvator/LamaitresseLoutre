@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { useAuth } from '../utils/useAuth';
-import Layout from '@theme/Layout';
+import DocPage from '@theme-original/DocPage';
+import { useAuth } from '../../utils/useAuth';
 import { useHistory } from '@docusaurus/router';
+import Layout from '@theme/Layout';
 
-export default function ProtectedRoute({ children, title, description }) {
+export default function DocPageWrapper(props) {
   const { user, loading } = useAuth();
   const history = useHistory();
 
@@ -15,7 +16,7 @@ export default function ProtectedRoute({ children, title, description }) {
 
   if (loading) {
     return (
-      <Layout title={title} description={description}>
+      <Layout>
         <div style={{
           maxWidth: '600px',
           margin: '4rem auto',
@@ -30,7 +31,7 @@ export default function ProtectedRoute({ children, title, description }) {
 
   if (!user) {
     return (
-      <Layout title={title} description={description}>
+      <Layout>
         <div style={{
           maxWidth: '600px',
           margin: '4rem auto',
@@ -43,5 +44,5 @@ export default function ProtectedRoute({ children, title, description }) {
     );
   }
 
-  return children;
+  return <DocPage {...props} />;
 }
