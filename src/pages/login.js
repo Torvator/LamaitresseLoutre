@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
 import { useAuth } from '../utils/useAuth';
-import { useHistory, useLocation } from '@docusaurus/router';
+import { redirectTo, ROUTES } from '../utils/routes';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -12,17 +12,13 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [mode, setMode] = useState('login'); // 'login' ou 'signup'
   const { user } = useAuth();
-  const history = useHistory();
-  const location = useLocation();
 
   // Rediriger vers l'accueil si déjà connecté
   useEffect(() => {
     if (user) {
-      // Vérifier s'il y a une page de retour demandée
-      const from = location.state?.from || '/';
-      history.push(from);
+      redirectTo(ROUTES.HOME);
     }
-  }, [user, history, location]);
+  }, [user]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,7 +53,7 @@ export default function Login() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      history.push('/login');
+      redirectTo(ROUTES.LOGIN);
     } catch (err) {
       console.error('Erreur déconnexion:', err);
     }
@@ -87,7 +83,7 @@ export default function Login() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
               <a
-                href="/"
+                href="/LamaitresseLoutre/"
                 style={{
                   padding: '0.75rem 2rem',
                   backgroundColor: '#ff9a9e',
