@@ -44,7 +44,7 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: true, // Désactive le bouton mode sombre
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       
