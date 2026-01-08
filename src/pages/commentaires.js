@@ -80,9 +80,27 @@ function CommentairesContent() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
 
+  // Vérification sécurisée de l'admin
   const isAdmin = user?.email === ADMIN_EMAIL;
+
+  // Attendre que l'authentification soit chargée
+  if (authLoading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '4rem' }}>
+        <p style={{ color: '#666', fontSize: '1.2rem' }}>Chargement...</p>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div style={{ textAlign: 'center', padding: '4rem' }}>
+        <p style={{ color: '#666', fontSize: '1.2rem' }}>Vous devez être connecté</p>
+      </div>
+    );
+  }
 
   // Écouter les messages en temps réel
   useEffect(() => {
