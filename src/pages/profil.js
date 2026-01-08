@@ -3,23 +3,21 @@ import Layout from '@theme/Layout';
 import { useAuth } from '../utils/useAuth';
 import { signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
-import { useHistory } from '@docusaurus/router';
+import { redirectTo, ROUTES } from '../utils/routes';
 
 export default function Profil() {
   const { user, loading } = useAuth();
-  const history = useHistory();
 
   useEffect(() => {
     if (!loading && !user) {
-      history.push('/login');
+      redirectTo(ROUTES.LOGIN);
     }
-  }, [user, loading, history]);
+  }, [user, loading]);
 
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      // Redirection forcée
-      window.location.href = '/LamaitresseLoutre/login';
+      redirectTo(ROUTES.LOGIN);
     } catch (err) {
       console.error('Erreur déconnexion:', err);
       alert('Erreur lors de la déconnexion');
@@ -131,7 +129,7 @@ export default function Profil() {
 
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
             <a
-              href="/"
+              href="/LamaitresseLoutre/"
               style={{
                 color: '#ff9a9e',
                 textDecoration: 'none',

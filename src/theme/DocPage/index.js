@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
 import DocPage from '@theme-original/DocPage';
 import { useAuth } from '../../utils/useAuth';
-import { useHistory } from '@docusaurus/router';
+import { redirectTo, ROUTES } from '../../utils/routes';
 import Layout from '@theme/Layout';
 
 export default function DocPageWrapper(props) {
   const { user, loading } = useAuth();
-  const history = useHistory();
 
   useEffect(() => {
     if (!loading && !user) {
-      history.push('/login');
+      redirectTo(ROUTES.LOGIN);
     }
-  }, [user, loading, history]);
+  }, [user, loading]);
 
   if (loading) {
     return (
@@ -38,7 +37,7 @@ export default function DocPageWrapper(props) {
           padding: '0 2rem',
           textAlign: 'center',
         }}>
-          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>Redirection...</p>
+          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>Redirection vers la connexion...</p>
         </div>
       </Layout>
     );

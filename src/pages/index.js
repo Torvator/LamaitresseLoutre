@@ -2,20 +2,19 @@ import React, { useEffect } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '../utils/useAuth';
-import { useHistory } from '@docusaurus/router';
+import { redirectTo, ROUTES } from '../utils/routes';
 import { signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   const { user } = useAuth();
-  const history = useHistory();
 
   const handleLogout = async () => {
     if (confirm('Es-tu sûre de vouloir te déconnecter ?')) {
       try {
         await signOut(auth);
-        history.push('/login');
+        redirectTo(ROUTES.LOGIN);
       } catch (err) {
         console.error('Erreur déconnexion:', err);
       }
@@ -29,7 +28,6 @@ function HomepageHeader() {
       background: 'linear-gradient(135deg, #ffecd2 0%, #ffcbb3 25%, #ffb6b9 50%, #ffc9cb 75%, #ffd89b 100%)',
       position: 'relative',
     }}>
-      {/* Bouton de déconnexion en haut à droite */}
       {user && (
         <div style={{
           position: 'absolute',
@@ -136,15 +134,13 @@ function HomepageContent() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   const { user, loading } = useAuth();
-  const history = useHistory();
 
   useEffect(() => {
     if (!loading && !user) {
-      history.push('/login');
+      redirectTo(ROUTES.LOGIN);
     }
-  }, [user, loading, history]);
+  }, [user, loading]);
 
-  // Si en cours de chargement, afficher un loader
   if (loading) {
     return (
       <Layout title="Accueil" description="Site de préparation au CRPE 2026">
@@ -160,7 +156,6 @@ export default function Home() {
     );
   }
 
-  // Si non connecté, afficher un message de redirection
   if (!user) {
     return (
       <Layout title="Accueil" description="Site de préparation au CRPE 2026">
@@ -170,13 +165,12 @@ export default function Home() {
           padding: '0 2rem',
           textAlign: 'center',
         }}>
-          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>Redirection vers la page de connexion...</p>
+          <p style={{ fontSize: '1.2rem', color: '#4a4a4a' }}>Redirection vers la connexion...</p>
         </div>
       </Layout>
     );
   }
 
-  // Si connecté, afficher la page d'accueil
   return (
     <Layout
       title="Accueil"
