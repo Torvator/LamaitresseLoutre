@@ -5,15 +5,18 @@
 const sidebars = {
   tutorialSidebar: [
     'intro',
-    {
-      type: 'category',
-      label: '📝 Français',
-      items: [
-        'francais/test1',
-        'francais/test2',
-        'francais/test3',
-      ],
-    },
+  {
+  type: 'category',
+  label: '📝 Français',
+  collapsed: false,
+  items: [
+    'francais/grammaire',
+    'francais/lecture',
+    'francais/culture-litteraire',
+    'francais/expression-ecrite',
+    'francais/expression-orale',
+    ],
+  },
     {
       type: 'category',
       label: '🔢 Mathématiques',

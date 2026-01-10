@@ -9,29 +9,13 @@ import ProtectedRoute from '../components/ProtectedRoute';
 // OBJET FICHES COMPLET - TOUTES LES MATIÈRES
 // ========================================
 const FICHES = {
-  'Français': [
-    // Grammaire et étude de la langue
-    { id: 'francais-classes-de-mots', nom: 'Classes de mots', url: '/fiches/francais/classes-de-mots' },
-    { id: 'francais-fonctions-grammaticales', nom: 'Fonctions grammaticales', url: '/fiches/francais/fonctions-grammaticales' },
-    { id: 'francais-conjugaison', nom: 'Conjugaison', url: '/fiches/francais/conjugaison' },
-    { id: 'francais-types-phrases', nom: 'Types et formes de phrases', url: '/fiches/francais/types-phrases' },
-    { id: 'francais-orthographe', nom: 'Orthographe', url: '/fiches/francais/orthographe' },
-    { id: 'francais-lexique', nom: 'Lexique et vocabulaire', url: '/fiches/francais/lexique' },
-    
-    // Lecture et compréhension
-    { id: 'francais-lecture-litterale', nom: 'Lecture littérale', url: '/fiches/francais/lecture-litterale' },
-    { id: 'francais-lecture-inferentielle', nom: 'Lecture inférentielle', url: '/fiches/francais/lecture-inferentielle' },
-    { id: 'francais-genres-textuels', nom: 'Genres textuels', url: '/fiches/francais/genres-textuels' },
-    
-    // Culture littéraire
-    { id: 'francais-roman', nom: 'Le roman', url: '/fiches/francais/roman' },
-    { id: 'francais-poesie', nom: 'La poésie', url: '/fiches/francais/poesie' },
-    { id: 'francais-theatre', nom: 'Le théâtre', url: '/fiches/francais/theatre' },
-    
-    // Expression
-    { id: 'francais-expression-ecrite', nom: 'Expression écrite', url: '/fiches/francais/expression-ecrite' },
-    { id: 'francais-expression-orale', nom: 'Expression orale', url: '/fiches/francais/expression-orale' },
-  ],
+'Français': [
+  { id: 'francais-grammaire', nom: 'Grammaire et étude de la langue', url: '/francais/grammaire' },
+  { id: 'francais-lecture', nom: 'Lecture et compréhension', url: '/francais/lecture' },
+  { id: 'francais-culture-litteraire', nom: 'Culture littéraire', url: '/francais/culture-litteraire' },
+  { id: 'francais-expression-ecrite', nom: 'Expression écrite', url: '/francais/expression-ecrite' },
+  { id: 'francais-expression-orale', nom: 'Expression orale', url: '/francais/expression-orale' },
+],
   
   'Mathématiques': [
     // Nombres et calculs
