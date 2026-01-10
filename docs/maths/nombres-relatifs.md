@@ -121,10 +121,10 @@ Les nombres relatifs sont partout :
 
 #### 2. Exercices de comparaison
 
-Comparer avec <, > ou = :
-- -5 ... +2 → -5 < +2
-- -10 ... -3 → -10 < -3
-- +8 ... +12 → +8 < +12
+Comparer avec `<`, `>` ou `=` :
+- -5 ... +2 → -5 `<` +2
+- -10 ... -3 → -10 `<` -3
+- +8 ... +12 → +8 `<` +12
 - -7 ... -7 → -7 = -7
 
 ### D. Addition de nombres relatifs
