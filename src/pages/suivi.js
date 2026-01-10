@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
-import styles from './suivi.module.css';
 
 // Liste complète des fiches avec leur ID, titre et matière
 const fiches = [
