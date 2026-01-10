@@ -32,77 +32,8 @@ const sidebars = {
       ],
     },
     
-    // ========================================
-    // 🔢 MATHÉMATIQUES (à venir)
-    // ========================================
-    {
-      type: 'category',
-      label: '🔢 Mathématiques',
-      collapsed: false,
-      items: [
-        // Fiches à venir
-      ],
-    },
-    
-    // ========================================
-    // 🇬🇧 ANGLAIS (à venir)
-    // ========================================
-    {
-      type: 'category',
-      label: '🇬🇧 Anglais',
-      collapsed: false,
-      items: [
-        // Fiches à venir
-      ],
-    },
-    
-    // ========================================
-    // 🌍 HISTOIRE-GÉOGRAPHIE-EMC (à venir)
-    // ========================================
-    {
-      type: 'category',
-      label: '🌍 Histoire-Géographie-EMC',
-      collapsed: false,
-      items: [
-        // Fiches à venir
-      ],
-    },
-    
-    // ========================================
-    // 🔬 SCIENCES ET TECHNOLOGIE (à venir)
-    // ========================================
-    {
-      type: 'category',
-      label: '🔬 Sciences et Technologie',
-      collapsed: false,
-      items: [
-        // Fiches à venir
-      ],
-    },
-    
-    // ========================================
-    // 🎨 ARTS (à venir)
-    // ========================================
-    {
-      type: 'category',
-      label: '🎨 Arts',
-      collapsed: false,
-      items: [
-        // Fiches à venir
-      ],
-    },
-    
-    // ========================================
-    // ⚽ EPS (à venir)
-    // ========================================
-    {
-      type: 'category',
-      label: '⚽ EPS',
-      collapsed: false,
-      items: [
-        // Fiches à venir
-      ],
-    },
+    // Les autres matières seront ajoutées au fur et à mesure
+    // (pas de catégories vides pour éviter les erreurs de build)
   ],
 };
 

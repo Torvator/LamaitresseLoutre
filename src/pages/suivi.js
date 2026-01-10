@@ -6,7 +6,7 @@ import { useAuth } from '../utils/useAuth';
 import ProtectedRoute from '../components/ProtectedRoute';
 
 // ========================================
-// OBJET FICHES - 5 FICHES FRANÇAIS + AUTRES MATIÈRES À VENIR
+// OBJET FICHES - UNIQUEMENT FRANÇAIS POUR L'INSTANT
 // ========================================
 const FICHES = {
   'Français': [
@@ -16,30 +16,7 @@ const FICHES = {
     { id: 'francais-expression-ecrite', nom: 'Expression écrite', url: '/francais/expression-ecrite' },
     { id: 'francais-expression-orale', nom: 'Expression orale', url: '/francais/expression-orale' },
   ],
-  
-  'Mathématiques': [
-    // Fiches à venir
-  ],
-  
-  'Anglais': [
-    // Fiches à venir
-  ],
-  
-  'Histoire-Géographie-EMC': [
-    // Fiches à venir
-  ],
-  
-  'Sciences et Technologie': [
-    // Fiches à venir
-  ],
-  
-  'Arts': [
-    // Fiches à venir
-  ],
-  
-  'EPS': [
-    // Fiches à venir
-  ],
+  // Les autres matières seront ajoutées au fur et à mesure
 };
 
 // ========================================
@@ -238,6 +215,18 @@ function SuiviContent() {
           onToggle={toggleFiche}
         />
       ))}
+      
+      <div style={{ 
+        marginTop: '3rem', 
+        padding: '1.5rem', 
+        backgroundColor: '#e3f2fd', 
+        borderRadius: '8px',
+        textAlign: 'center'
+      }}>
+        <p style={{ margin: 0, color: '#1976d2', fontWeight: '500' }}>
+          🚀 D'autres matières arrivent bientôt : Mathématiques, Anglais, Histoire-Géo, Sciences, Arts, EPS !
+        </p>
+      </div>
     </div>
   );
 }
