@@ -1,249 +1,374 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../utils/firebase';
-import { useAuth } from '../utils/useAuth';
-import ProtectedRoute from '../components/ProtectedRoute';
+import styles from './suivi.module.css';
 
-// ========================================
-// OBJET FICHES - FRANÇAIS + MATHÉMATIQUES
-// ========================================
-const FICHES = {
-  'Français': [
-    { id: 'francais-grammaire', nom: 'Grammaire et étude de la langue', url: '/francais/grammaire' },
-    { id: 'francais-lecture', nom: 'Lecture et compréhension', url: '/francais/lecture' },
-    { id: 'francais-culture-litteraire', nom: 'Culture littéraire', url: '/francais/culture-litteraire' },
-    { id: 'francais-expression-ecrite', nom: 'Expression écrite', url: '/francais/expression-ecrite' },
-    { id: 'francais-expression-orale', nom: 'Expression orale', url: '/francais/expression-orale' },
-  ],
-  'Mathématiques': [
-    // I. Nombres et Calculs (3 fiches disponibles, 3 à venir)
-    { id: 'maths-nombres-entiers-decimaux', nom: 'Nombres entiers et décimaux', url: '/maths/nombres-entiers-decimaux' },
-    { id: 'maths-fractions-nombres-rationnels', nom: 'Fractions et nombres rationnels', url: '/maths/fractions-nombres-rationnels' },
-    { id: 'maths-nombres-relatifs', nom: 'Nombres relatifs', url: '/maths/nombres-relatifs' },
-    // TODO: Ajouter les 9 fiches restantes
-  ],
-  // Les autres matières seront ajoutées au fur et à mesure
-};
+// Liste complète des fiches avec leur ID, titre et matière
+const fiches = [
+  // ========================================
+  // FRANÇAIS (5 fiches)
+  // ========================================
+  { id: 'francais-grammaire', titre: 'Grammaire', matiere: 'Français', url: '/docs/francais/grammaire' },
+  { id: 'francais-lecture', titre: 'Lecture', matiere: 'Français', url: '/docs/francais/lecture' },
+  { id: 'francais-culture', titre: 'Culture littéraire', matiere: 'Français', url: '/docs/francais/culture-litteraire' },
+  { id: 'francais-ecrit', titre: 'Expression écrite', matiere: 'Français', url: '/docs/francais/expression-ecrite' },
+  { id: 'francais-oral', titre: 'Expression orale', matiere: 'Français', url: '/docs/francais/expression-orale' },
+  
+  // ========================================
+  // MATHÉMATIQUES (12 fiches)
+  // ========================================
+  // I. Nombres et Calculs (6 fiches)
+  { id: 'maths-nombres-entiers', titre: 'Nombres entiers et décimaux', matiere: 'Mathématiques', url: '/docs/maths/nombres-entiers-decimaux' },
+  { id: 'maths-fractions', titre: 'Fractions et nombres rationnels', matiere: 'Mathématiques', url: '/docs/maths/fractions-nombres-rationnels' },
+  { id: 'maths-relatifs', titre: 'Nombres relatifs', matiere: 'Mathématiques', url: '/docs/maths/nombres-relatifs' },
+  { id: 'maths-puissances', titre: 'Puissances et racines carrées', matiere: 'Mathématiques', url: '/docs/maths/puissances-racines-carrees' },
+  { id: 'maths-calcul-litteral', titre: 'Calcul littéral', matiere: 'Mathématiques', url: '/docs/maths/calcul-litteral' },
+  { id: 'maths-durees', titre: 'Durées et calculs', matiere: 'Mathématiques', url: '/docs/maths/durees-calculs' },
+  
+  // II. Organisation et gestion de données (1 fiche)
+  { id: 'maths-organisation', titre: 'Organisation et gestion de données', matiere: 'Mathématiques', url: '/docs/maths/organisation-gestion-donnees' },
+  
+  // III. Grandeurs et mesures (1 fiche)
+  { id: 'maths-grandeurs', titre: 'Grandeurs et mesures', matiere: 'Mathématiques', url: '/docs/maths/grandeurs-mesures' },
+  
+  // IV. Géométrie (3 fiches)
+  { id: 'maths-geometrie-plane', titre: 'Géométrie plane', matiere: 'Mathématiques', url: '/docs/maths/geometrie-plane' },
+  { id: 'maths-geometrie-espace', titre: 'Géométrie dans l\'espace', matiere: 'Mathématiques', url: '/docs/maths/geometrie-espace' },
+  { id: 'maths-reperage', titre: 'Repérage', matiere: 'Mathématiques', url: '/docs/maths/reperage' },
+  
+  // V. Algorithmique et programmation (1 fiche)
+  { id: 'maths-algorithmique', titre: 'Algorithmique et programmation', matiere: 'Mathématiques', url: '/docs/maths/algorithmique-programmation' },
+];
 
-// ========================================
-// COMPOSANTS
-// ========================================
+function SuiviPage() {
+  // État pour stocker les fiches maîtrisées (stocké dans localStorage)
+  const [fichesMaitrisees, setFichesMaitrisees] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('fichesMaitrisees');
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
+  });
 
-function BarreProgression({ progression }) {
-  return (
-    <div style={{ marginBottom: '2rem' }}>
-      <div style={{ 
-        width: '100%', 
-        backgroundColor: '#e0e0e0', 
-        borderRadius: '10px', 
-        height: '30px',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        <div style={{ 
-          width: `${progression}%`, 
-          backgroundColor: '#4caf50', 
-          height: '100%',
-          transition: 'width 0.3s ease',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: '10px'
-        }}>
-          <span style={{ 
-            color: 'white', 
-            fontWeight: 'bold',
-            fontSize: '14px'
-          }}>
-            {Math.round(progression)}%
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ListeFiches({ matiere, fiches, fichesValidees, onToggle }) {
-  // Ne pas afficher les matières vides
-  if (!fiches || fiches.length === 0) {
-    return null;
-  }
-
-  return (
-    <div style={{ marginBottom: '3rem' }}>
-      <h2 style={{ 
-        borderBottom: '3px solid #2e8555', 
-        paddingBottom: '0.5rem',
-        marginBottom: '1.5rem'
-      }}>
-        {matiere}
-      </h2>
-      <div style={{ display: 'grid', gap: '1rem' }}>
-        {fiches.map((fiche) => {
-          const estValidee = fichesValidees[fiche.id] || false;
-          return (
-            <div 
-              key={fiche.id}
-              style={{
-                border: '1px solid #ddd',
-                borderRadius: '8px',
-                padding: '1rem',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                backgroundColor: estValidee ? '#e8f5e9' : '#fff',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              <div style={{ flex: 1 }}>
-                <a 
-                  href={fiche.url} 
-                  style={{ 
-                    textDecoration: 'none', 
-                    color: '#1976d2',
-                    fontWeight: '500',
-                    fontSize: '1.1rem'
-                  }}
-                >
-                  {fiche.nom}
-                </a>
-              </div>
-              <button
-                onClick={() => onToggle(fiche.id)}
-                style={{
-                  padding: '0.5rem 1.5rem',
-                  borderRadius: '5px',
-                  border: 'none',
-                  backgroundColor: estValidee ? '#4caf50' : '#9e9e9e',
-                  color: 'white',
-                  cursor: 'pointer',
-                  fontWeight: 'bold',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                {estValidee ? '✓ Maîtrisée' : 'Non commencée'}
-              </button>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-function SuiviContent() {
-  const { user } = useAuth();
-  const [fichesValidees, setFichesValidees] = useState({});
-  const [loading, setLoading] = useState(true);
-
-  // Charger les fiches validées depuis Firebase
+  // Sauvegarder dans localStorage à chaque changement
   useEffect(() => {
-    async function chargerProgression() {
-      if (!user) return;
-      
-      try {
-        const fichesRef = collection(db, `users/${user.uid}/fiches`);
-        const snapshot = await getDocs(fichesRef);
-        
-        const validees = {};
-        snapshot.forEach((doc) => {
-          validees[doc.id] = doc.data().validee || false;
-        });
-        
-        setFichesValidees(validees);
-      } catch (error) {
-        console.error('Erreur chargement progression:', error);
-      } finally {
-        setLoading(false);
-      }
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('fichesMaitrisees', JSON.stringify(fichesMaitrisees));
     }
+  }, [fichesMaitrisees]);
 
-    chargerProgression();
-  }, [user]);
-
-  // Calculer la progression globale
-  const totalFiches = Object.values(FICHES).flat().length;
-  const fichesValidees_count = Object.values(fichesValidees).filter(Boolean).length;
-  const progression = totalFiches > 0 ? (fichesValidees_count / totalFiches) * 100 : 0;
-
-  // Fonction pour toggle l'état d'une fiche
-  const toggleFiche = async (ficheId) => {
-    const nouvelEtat = !fichesValidees[ficheId];
-    setFichesValidees(prev => ({ ...prev, [ficheId]: nouvelEtat }));
-
-    // Sauvegarder dans Firebase
-    if (user) {
-      try {
-        const { setDoc, doc } = await import('firebase/firestore');
-        await setDoc(doc(db, `users/${user.uid}/fiches/${ficheId}`), {
-          validee: nouvelEtat,
-          dateModification: new Date()
-        });
-      } catch (error) {
-        console.error('Erreur sauvegarde:', error);
-      }
-    }
+  // Toggle une fiche (maîtrisée/non maîtrisée)
+  const toggleFiche = (ficheId) => {
+    setFichesMaitrisees((prev) =>
+      prev.includes(ficheId)
+        ? prev.filter((id) => id !== ficheId)
+        : [...prev, ficheId]
+    );
   };
 
-  if (loading) {
-    return (
-      <div style={{ textAlign: 'center', padding: '3rem' }}>
-        <p>Chargement de votre progression...</p>
-      </div>
-    );
-  }
+  // Calculer les statistiques
+  const nbTotal = fiches.length;
+  const nbMaitrisees = fichesMaitrisees.length;
+  const pourcentage = Math.round((nbMaitrisees / nbTotal) * 100);
+
+  // Statistiques par matière
+  const fichesFrancais = fiches.filter(f => f.matiere === 'Français');
+  const fichesMaths = fiches.filter(f => f.matiere === 'Mathématiques');
+  
+  const nbFrancaisMaitrisees = fichesFrancais.filter(f => fichesMaitrisees.includes(f.id)).length;
+  const nbMathsMaitrisees = fichesMaths.filter(f => fichesMaitrisees.includes(f.id)).length;
+  
+  const pourcentageFrancais = Math.round((nbFrancaisMaitrisees / fichesFrancais.length) * 100);
+  const pourcentageMaths = Math.round((nbMathsMaitrisees / fichesMaths.length) * 100);
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        📊 Suivi de révisions CRPE 2026
-      </h1>
-
-      <div style={{ 
-        backgroundColor: '#f5f5f5', 
-        padding: '1.5rem', 
-        borderRadius: '10px',
-        marginBottom: '3rem'
-      }}>
-        <h3 style={{ marginTop: 0 }}>Progression globale</h3>
-        <BarreProgression progression={progression} />
-        <p style={{ textAlign: 'center', margin: 0, color: '#666' }}>
-          {fichesValidees_count} / {totalFiches} fiches maîtrisées
+    <Layout
+      title="Suivi des révisions"
+      description="Suivez votre progression dans les révisions du CRPE"
+    >
+      <div className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
+        <h1>📊 Suivi des révisions</h1>
+        <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
+          Coche les fiches que tu as maîtrisées pour suivre ta progression !
         </p>
-      </div>
 
-      {Object.entries(FICHES).map(([matiere, fiches]) => (
-        <ListeFiches
-          key={matiere}
-          matiere={matiere}
-          fiches={fiches}
-          fichesValidees={fichesValidees}
-          onToggle={toggleFiche}
-        />
-      ))}
-      
-      <div style={{ 
-        marginTop: '3rem', 
-        padding: '1.5rem', 
-        backgroundColor: '#e3f2fd', 
-        borderRadius: '8px',
-        textAlign: 'center'
-      }}>
-        <p style={{ margin: 0, color: '#1976d2', fontWeight: '500' }}>
-          🚀 D'autres matières arrivent bientôt : Anglais, Histoire-Géo, Sciences, Arts, EPS !
-        </p>
-      </div>
-    </div>
-  );
-}
+        {/* Progression globale */}
+        <div style={{ 
+          backgroundColor: '#f0f0f0', 
+          borderRadius: '12px', 
+          padding: '1.5rem',
+          marginBottom: '2rem'
+        }}>
+          <h2 style={{ marginTop: 0 }}>🎯 Progression globale</h2>
+          <div style={{ 
+            backgroundColor: '#fff', 
+            borderRadius: '8px', 
+            height: '40px',
+            overflow: 'hidden',
+            marginBottom: '1rem'
+          }}>
+            <div style={{
+              backgroundColor: '#2e8555',
+              height: '100%',
+              width: `${pourcentage}%`,
+              transition: 'width 0.3s ease',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              fontWeight: 'bold'
+            }}>
+              {pourcentage}%
+            </div>
+          </div>
+          <p style={{ fontSize: '1.2rem', margin: 0 }}>
+            <strong>{nbMaitrisees}</strong> sur <strong>{nbTotal}</strong> fiches maîtrisées
+          </p>
+        </div>
 
-export default function Suivi() {
-  return (
-    <Layout title="Suivi des révisions" description="Suivez votre progression">
-      <ProtectedRoute>
-        <SuiviContent />
-      </ProtectedRoute>
+        {/* Progression par matière */}
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: '1fr 1fr', 
+          gap: '1rem',
+          marginBottom: '2rem'
+        }}>
+          {/* Français */}
+          <div style={{ 
+            backgroundColor: '#fff9f0', 
+            borderRadius: '12px', 
+            padding: '1.5rem',
+            border: '2px solid #f0e6d2'
+          }}>
+            <h3 style={{ marginTop: 0 }}>📝 Français</h3>
+            <div style={{ 
+              backgroundColor: '#fff', 
+              borderRadius: '8px', 
+              height: '30px',
+              overflow: 'hidden',
+              marginBottom: '0.5rem'
+            }}>
+              <div style={{
+                backgroundColor: '#e67e22',
+                height: '100%',
+                width: `${pourcentageFrancais}%`,
+                transition: 'width 0.3s ease',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontWeight: 'bold',
+                fontSize: '0.9rem'
+              }}>
+                {pourcentageFrancais}%
+              </div>
+            </div>
+            <p style={{ margin: 0 }}>
+              <strong>{nbFrancaisMaitrisees}</strong> / {fichesFrancais.length} fiches
+            </p>
+          </div>
+
+          {/* Mathématiques */}
+          <div style={{ 
+            backgroundColor: '#f0f9ff', 
+            borderRadius: '12px', 
+            padding: '1.5rem',
+            border: '2px solid #d2e6f0'
+          }}>
+            <h3 style={{ marginTop: 0 }}>🔢 Mathématiques</h3>
+            <div style={{ 
+              backgroundColor: '#fff', 
+              borderRadius: '8px', 
+              height: '30px',
+              overflow: 'hidden',
+              marginBottom: '0.5rem'
+            }}>
+              <div style={{
+                backgroundColor: '#3498db',
+                height: '100%',
+                width: `${pourcentageMaths}%`,
+                transition: 'width 0.3s ease',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontWeight: 'bold',
+                fontSize: '0.9rem'
+              }}>
+                {pourcentageMaths}%
+              </div>
+            </div>
+            <p style={{ margin: 0 }}>
+              <strong>{nbMathsMaitrisees}</strong> / {fichesMaths.length} fiches
+            </p>
+          </div>
+        </div>
+
+        {/* Liste des fiches par matière */}
+        <h2>📚 Fiches de révision</h2>
+
+        {/* FRANÇAIS */}
+        <div style={{ marginBottom: '3rem' }}>
+          <h3 style={{ 
+            backgroundColor: '#fff9f0', 
+            padding: '0.75rem 1rem',
+            borderRadius: '8px',
+            borderLeft: '4px solid #e67e22'
+          }}>
+            📝 Français ({nbFrancaisMaitrisees}/{fichesFrancais.length})
+          </h3>
+          <div style={{ display: 'grid', gap: '0.75rem', marginTop: '1rem' }}>
+            {fichesFrancais.map((fiche) => (
+              <div
+                key={fiche.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  padding: '1rem',
+                  backgroundColor: fichesMaitrisees.includes(fiche.id) ? '#d4edda' : '#f8f9fa',
+                  borderRadius: '8px',
+                  border: '1px solid #dee2e6',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer',
+                }}
+                onClick={() => toggleFiche(fiche.id)}
+              >
+                <input
+                  type="checkbox"
+                  checked={fichesMaitrisees.includes(fiche.id)}
+                  onChange={() => toggleFiche(fiche.id)}
+                  style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+                />
+                <div style={{ flex: 1 }}>
+                  <a 
+                    href={fiche.url}
+                    style={{ 
+                      fontSize: '1.1rem',
+                      fontWeight: fichesMaitrisees.includes(fiche.id) ? 'bold' : 'normal',
+                      textDecoration: 'none',
+                      color: '#1c1e21'
+                    }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {fiche.titre}
+                  </a>
+                </div>
+                {fichesMaitrisees.includes(fiche.id) && (
+                  <span style={{ color: '#28a745', fontSize: '1.5rem' }}>✓</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* MATHÉMATIQUES */}
+        <div style={{ marginBottom: '3rem' }}>
+          <h3 style={{ 
+            backgroundColor: '#f0f9ff', 
+            padding: '0.75rem 1rem',
+            borderRadius: '8px',
+            borderLeft: '4px solid #3498db'
+          }}>
+            🔢 Mathématiques ({nbMathsMaitrisees}/{fichesMaths.length})
+          </h3>
+          <div style={{ display: 'grid', gap: '0.75rem', marginTop: '1rem' }}>
+            {fichesMaths.map((fiche) => (
+              <div
+                key={fiche.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  padding: '1rem',
+                  backgroundColor: fichesMaitrisees.includes(fiche.id) ? '#d1ecf1' : '#f8f9fa',
+                  borderRadius: '8px',
+                  border: '1px solid #dee2e6',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer',
+                }}
+                onClick={() => toggleFiche(fiche.id)}
+              >
+                <input
+                  type="checkbox"
+                  checked={fichesMaitrisees.includes(fiche.id)}
+                  onChange={() => toggleFiche(fiche.id)}
+                  style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+                />
+                <div style={{ flex: 1 }}>
+                  <a 
+                    href={fiche.url}
+                    style={{ 
+                      fontSize: '1.1rem',
+                      fontWeight: fichesMaitrisees.includes(fiche.id) ? 'bold' : 'normal',
+                      textDecoration: 'none',
+                      color: '#1c1e21'
+                    }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {fiche.titre}
+                  </a>
+                </div>
+                {fichesMaitrisees.includes(fiche.id) && (
+                  <span style={{ color: '#17a2b8', fontSize: '1.5rem' }}>✓</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Message de motivation */}
+        <div style={{
+          textAlign: 'center',
+          marginTop: '3rem',
+          padding: '2rem',
+          backgroundColor: '#fff9f0',
+          borderRadius: '12px',
+          border: '2px solid #f0e6d2'
+        }}>
+          {pourcentage === 100 ? (
+            <>
+              <h2 style={{ color: '#2e8555', marginTop: 0 }}>
+                🎉 Félicitations Marie ! 🎉
+              </h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: 0 }}>
+                Tu as maîtrisé toutes les fiches !<br />
+                Continue à réviser régulièrement pour bien ancrer tes connaissances.
+              </p>
+            </>
+          ) : pourcentage >= 75 ? (
+            <>
+              <h2 style={{ color: '#e67e22', marginTop: 0 }}>
+                💪 Super progression !
+              </h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: 0 }}>
+                Plus que {nbTotal - nbMaitrisees} fiche{nbTotal - nbMaitrisees > 1 ? 's' : ''} à maîtriser !<br />
+                Tu es sur la bonne voie !
+              </p>
+            </>
+          ) : pourcentage >= 50 ? (
+            <>
+              <h2 style={{ color: '#3498db', marginTop: 0 }}>
+                🚀 Continue comme ça !
+              </h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: 0 }}>
+                Tu es à mi-chemin ! Garde le rythme !
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 style={{ color: '#95a5a6', marginTop: 0 }}>
+                🦦 Courage Marie !
+              </h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: 0 }}>
+                Chaque fiche maîtrisée est un pas de plus vers la réussite !<br />
+                Commence par les fiches qui te semblent les plus accessibles.
+              </p>
+            </>
+          )}
+        </div>
+      </div>
     </Layout>
   );
 }
+
+export default SuiviPage;
