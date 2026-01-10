@@ -17,23 +17,11 @@ const FICHES = {
     { id: 'francais-expression-orale', nom: 'Expression orale', url: '/francais/expression-orale' },
   ],
   'Mathématiques': [
-    // I. Nombres et Calculs
+    // I. Nombres et Calculs (3 fiches disponibles, 3 à venir)
     { id: 'maths-nombres-entiers-decimaux', nom: 'Nombres entiers et décimaux', url: '/maths/nombres-entiers-decimaux' },
     { id: 'maths-fractions-nombres-rationnels', nom: 'Fractions et nombres rationnels', url: '/maths/fractions-nombres-rationnels' },
     { id: 'maths-nombres-relatifs', nom: 'Nombres relatifs', url: '/maths/nombres-relatifs' },
-    { id: 'maths-puissances-racines-carrees', nom: 'Puissances et racines carrées', url: '/maths/puissances-racines-carrees' },
-    { id: 'maths-calcul-litteral', nom: 'Calcul littéral', url: '/maths/calcul-litteral' },
-    { id: 'maths-durees-calculs', nom: 'Durées et calculs', url: '/maths/durees-calculs' },
-    // II. Organisation et Gestion de Données
-    { id: 'maths-organisation-gestion-donnees', nom: 'Organisation et gestion de données', url: '/maths/organisation-gestion-donnees' },
-    // III. Grandeurs et Mesures
-    { id: 'maths-grandeurs-mesures', nom: 'Grandeurs et mesures', url: '/maths/grandeurs-mesures' },
-    // IV. Géométrie
-    { id: 'maths-geometrie-plane', nom: 'Géométrie plane', url: '/maths/geometrie-plane' },
-    { id: 'maths-geometrie-espace', nom: 'Géométrie dans l\'espace', url: '/maths/geometrie-espace' },
-    { id: 'maths-reperage', nom: 'Repérage', url: '/maths/reperage' },
-    // V. Algorithmique et Programmation
-    { id: 'maths-algorithmique-programmation', nom: 'Algorithmique et programmation', url: '/maths/algorithmique-programmation' },
+    // TODO: Ajouter les 9 fiches restantes
   ],
   // Les autres matières seront ajoutées au fur et à mesure
 };
