@@ -34,8 +34,8 @@ description: Fiche de révision CRPE - Nombres entiers et décimaux
 - 6 est le chiffre des unités → 6
 
 **Comparaison des nombres entiers** :
-- On compare le nombre de chiffres : 1 234 < 12 345
-- Si même nombre de chiffres, on compare de gauche à droite : 2 456 < 2 789
+- On compare le nombre de chiffres : 1 234 `<` 12 345
+- Si même nombre de chiffres, on compare de gauche à droite : 2 456 `<` 2 789
 
 #### 2. Divisibilité, multiples et diviseurs
 
@@ -191,11 +191,11 @@ Donc PGCD(18, 12) = 6
 4. Et ainsi de suite...
 
 **Exemples** :
-- 3,45 < 4,2 (car 3 < 4)
-- 2,7 > 2,68 (car 7 dixièmes > 6 dixièmes)
-- 5,234 < 5,24 (car 3 centièmes < 4 centièmes)
+- 3,45 `<` 4,2 (car 3 `<` 4)
+- 2,7 `>` 2,68 (car 7 dixièmes > 6 dixièmes)
+- 5,234 `<` 5,24 (car 3 centièmes < 4 centièmes)
 
-**Piège fréquent** : Les élèves pensent que 3,9 < 3,15 car "15 > 9"
+**Piège fréquent** : Les élèves pensent que 3,9 `<` 3,15 car "15 `>` 9"
 → Il faut toujours comparer position par position !
 
 #### 3. Opérations sur les nombres décimaux
@@ -487,7 +487,7 @@ Calculer :
 - Confusion entre multiple et diviseur
 
 **Sur les nombres décimaux** :
-- Penser que 3,9 < 3,15 car "15 > 9"
+- Penser que 3,9 `<` 3,15 car "15 `>` 9"
 - Oublier d'aligner les virgules dans les additions/soustractions
 - Placer la virgule au mauvais endroit dans les multiplications
 - Confusion entre 0,5 et 0,50 (équivalence)
@@ -582,7 +582,7 @@ Calculer :
 - "Pourquoi 1 n'est-il pas un nombre premier ?" → Car il n'a qu'un seul diviseur (lui-même)
 - "Comment expliquer à un CM1 que 0,5 = 0,50 ?" → Même valeur, comme 5 dixièmes = 50 centièmes
 - "À quel cycle introduit-on les nombres décimaux ?" → Cycle 3 (CM1), mais initiation possible fin CE2
-- "Comment aider un élève qui pense que 3,9 < 3,15 ?" → Comparer position par position avec tableau de numération
+- "Comment aider un élève qui pense que 3,9 `<` 3,15 ?" → Comparer position par position avec tableau de numération
 - "Quelle est la différence entre PGCD et PPCM ?" → PGCD = division / PPCM = multiplication (contextes différents)
 
 ### Questions types CRPE

@@ -23,7 +23,7 @@ description: Fiche de révision CRPE - Nombres relatifs
 **Définition** : Les nombres relatifs sont les nombres entiers **positifs** et **négatifs**, y compris zéro.
 
 **Ensemble ℤ** (Z comme "Zahlen" = nombres en allemand) :
-- ℤ = {..., -3, -2, -1, 0, +1, +2, +3, ...}
+- ℤ = `{..., -3, -2, -1, 0, +1, +2, +3, ...}`
 
 **Vocabulaire** :
 - **Nombre positif** : supérieur à 0 (exemple : +5 ou simplement 5)
@@ -50,7 +50,7 @@ négatifs                   zéro                    positifs
 
 **Exemples** :
 - -5 < -2 (car -5 est à gauche de -2)
-- -1 < 0 < +3
+- -1 `<` 0 < +3
 - +2 > -10
 
 **Piège** : -10 < -2 (attention ! les nombres négatifs fonctionnent "à l'envers")
@@ -111,7 +111,7 @@ Les nombres relatifs sont partout :
 - +2 > -100
 
 **Règle 2** : Entre deux nombres positifs, le plus grand est celui qui a la plus grande valeur absolue.
-- +7 > +3 (car 7 > 3)
+- +7 > +3 (car 7 `>` 3)
 
 **Règle 3** : Entre deux nombres négatifs, le plus grand est celui qui a la plus petite valeur absolue.
 - -3 > -7 (car |-3| < |-7|)
@@ -157,7 +157,7 @@ Comparer avec <, > ou = :
 
 **Exemple détaillé** : (-8) + (+5)
 - |-8| = 8 et |+5| = 5
-- 8 > 5 → on garde le signe de -8 (donc -)
+- 8 `>` 5 → on garde le signe de -8 (donc -)
 - 8 - 5 = 3
 - Résultat : **-3**
 
@@ -263,7 +263,7 @@ Ranger dans l'ordre croissant : -7, +3, 0, -2, +5, -10
 
 **Correction** :
 
-Sur la droite : -10 < -7 < -2 < 0 < +3 < +5
+Sur la droite : -10 < -7 < -2 `<` 0 < +3 < +5
 
 ### Exercice 2 : Addition
 
@@ -345,7 +345,7 @@ Calculer : (+5) - (-3) + (-7) - (+2)
 ### B. Difficultés fréquentes des élèves
 
 **Obstacles conceptuels** :
-- Penser que -10 > -2 car "10 > 2"
+- Penser que -10 > -2 car "10 `>` 2"
 - Ne pas comprendre qu'on peut soustraire un nombre négatif
 - Confondre le signe - (opération) et le signe - (nombre négatif)
 
@@ -603,7 +603,7 @@ On garde le signe du plus grand
 
 2. **Activité : Le thermomètre** (20 min)
    - "Quelle est la température la plus froide : -10°C ou -2°C ?"
-   - Débat : certains pensent -10 > -2 car "10 > 2"
+   - Débat : certains pensent -10 > -2 car "10 `>` 2"
    - Visualisation sur thermomètre : -10°C est plus froid
    - **-10 < -2**
 

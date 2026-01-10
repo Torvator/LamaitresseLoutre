@@ -119,16 +119,16 @@ Simplifier 30/45 :
 **Règle** : Si deux fractions ont le même dénominateur, la plus grande est celle qui a le plus grand numérateur.
 
 **Exemples** :
-- 3/7 < 5/7 (car 3 < 5)
-- 11/13 > 8/13 (car 11 > 8)
+- 3/7 `<` 5/7 (car 3 `<` 5)
+- 11/13 `>` 8/13 (car 11 `>` 8)
 
 #### 2. Même numérateur
 
 **Règle** : Si deux fractions ont le même numérateur, la plus grande est celle qui a le plus petit dénominateur.
 
 **Exemples** :
-- 3/5 > 3/7 (car 5 < 7)
-- 2/3 > 2/9 (car 3 < 9)
+- 3/5 `>` 3/7 (car 5 `<` 7)
+- 2/3 `>` 2/9 (car 3 `<` 9)
 
 **Explication** : Plus on divise en beaucoup de parts, plus chaque part est petite.
 
@@ -140,7 +140,7 @@ Simplifier 30/45 :
 - Dénominateur commun : 12 (multiple de 3 et 4)
 - 2/3 = 8/12
 - 3/4 = 9/12
-- Donc 2/3 < 3/4 (car 8/12 < 9/12)
+- Donc 2/3 `<` 3/4 (car 8/12 `<` 9/12)
 
 **Astuce** : Utiliser le PPCM comme dénominateur commun.
 - PPCM(3,4) = 12
@@ -275,7 +275,7 @@ Simplifier les fractions suivantes pour les rendre irréductibles :
 
 **Niveau** : 4ᵉ
 
-Comparer les fractions suivantes (utiliser <, > ou =) :
+Comparer les fractions suivantes (utiliser `<`, `>` ou `=`) :
 1. 3/5 et 2/3
 2. 7/8 et 5/6
 3. 4/9 et 5/12
@@ -285,17 +285,17 @@ Comparer les fractions suivantes (utiliser <, > ou =) :
 1. **3/5 et 2/3** :
    - Dénominateur commun : 15
    - 3/5 = 9/15 et 2/3 = 10/15
-   - **3/5 < 2/3**
+   - **3/5 `<` 2/3**
 
 2. **7/8 et 5/6** :
    - Dénominateur commun : 24
    - 7/8 = 21/24 et 5/6 = 20/24
-   - **7/8 > 5/6**
+   - **7/8 `>` 5/6**
 
 3. **4/9 et 5/12** :
    - Dénominateur commun : 36
    - 4/9 = 16/36 et 5/12 = 15/36
-   - **4/9 > 5/12**
+   - **4/9 `>` 5/12**
 
 ### Exercice 3 : Addition et soustraction
 
@@ -381,10 +381,10 @@ Marie a mangé 2/5 d'un gâteau. Son frère en a mangé 1/4. Quelle fraction du 
 ### B. Difficultés fréquentes des élèves
 
 **Obstacles conceptuels** :
-- Penser que 1/4 > 1/3 car "4 > 3"
+- Penser que 1/4 `>` 1/3 car "4 `>` 3"
 - Additionner numérateurs et dénominateurs : 1/2 + 1/3 = 2/5 ❌
 - Confusion entre 3/4 et 0,34
-- Ne pas comprendre que 5/4 > 1
+- Ne pas comprendre que 5/4 `>` 1
 
 **Erreurs fréquentes** :
 - Oublier de mettre au même dénominateur pour additionner
@@ -434,7 +434,7 @@ Marie a mangé 2/5 d'un gâteau. Son frère en a mangé 1/4. Quelle fraction du 
 - Maîtriser PARFAITEMENT les **opérations sur les fractions** (toutes !)
 - Savoir **simplifier rapidement** (PGCD, divisions successives)
 - Connaître la différence entre **rationnel et irrationnel**
-- Savoir expliquer pourquoi **1/4 < 1/3** (piège fréquent)
+- Savoir expliquer pourquoi **1/4 `<` 1/3** (piège fréquent)
 - Connaître la **progression** : manipulation → représentation → abstraction
 - Maîtriser le vocabulaire : numérateur, dénominateur, irréductible, inverse
 
@@ -451,7 +451,7 @@ Marie a mangé 2/5 d'un gâteau. Son frère en a mangé 1/4. Quelle fraction du 
 - Oublier de simplifier le résultat final
 - Proposer une leçon sans manipulation
 - Ne pas faire le lien avec le quotidien
-- Oublier que 1/4 < 1/3 (erreur de raisonnement)
+- Oublier que 1/4 `<` 1/3 (erreur de raisonnement)
 - Introduire trop de notions à la fois
 
 **Conseils pour l'oral** :
@@ -462,7 +462,7 @@ Marie a mangé 2/5 d'un gâteau. Son frère en a mangé 1/4. Quelle fraction du 
 - Varier les **représentations** : aires, longueurs, quantités
 
 **Questions pièges du jury** :
-- "Pourquoi 1/4 < 1/3 ?" → Plus on divise en parts, plus chaque part est petite
+- "Pourquoi 1/4 `<` 1/3 ?" → Plus on divise en parts, plus chaque part est petite
 - "Comment expliquer que 2/3 = 4/6 ?" → Multiplier numérateur ET dénominateur par 2
 - "À quel moment introduire les fractions ?" → Dès le CE1 avec manipulations (1/2, 1/4)
 - "Quelle est la différence entre fraction et nombre décimal ?" → Deux écritures du même nombre rationnel
@@ -481,20 +481,20 @@ Comparons 1/4 et 1/3 :
 - Même numérateur (1)
 - Dénominateurs différents : 4 et 3
 - Règle : à numérateur égal, la plus grande fraction est celle qui a le **plus petit dénominateur**
-- Donc **1/3 > 1/4**
+- Donc **1/3 `>` 1/4**
 
 **Pourquoi ?**
 
 Plus on divise un tout en **beaucoup** de parts, plus chaque part est **petite**.
 - 1/4 = un gâteau divisé en 4 parts → chaque part = 1/4 du gâteau
 - 1/3 = un gâteau divisé en 3 parts → chaque part = 1/3 du gâteau
-- **3 parts sont plus grosses que 4 parts** → 1/3 > 1/4
+- **3 parts sont plus grosses que 4 parts** → 1/3 `>` 1/4
 
 **Vérification avec dénominateur commun** :
 - Dénominateur commun : 12
 - 1/4 = 3/12
 - 1/3 = 4/12
-- Donc 1/3 > 1/4 ✓
+- Donc 1/3 `>` 1/4 ✓
 
 **Activité de manipulation pour CE2** (30 min) :
 
@@ -510,7 +510,7 @@ Plus on divise un tout en **beaucoup** de parts, plus chaque part est **petite**
 **Conclusion avec les élèves** :
 - "Quand on divise en 3 parts, chaque part est plus grosse"
 - "Quand on divise en 4 parts, chaque part est plus petite"
-- "Donc 1/3 > 1/4"
+- "Donc 1/3 `>` 1/4"
 
 **Prolongement** :
 - Comparer 1/2, 1/3, 1/4, 1/5 → ranger du plus grand au plus petit
@@ -538,7 +538,7 @@ L'élève a écrit : **1/2 + 1/3 = 2/5** au lieu de **5/6**.
 1. **Généralisation abusive** : application de la règle de multiplication (a/b × c/d = ac/bd)
 2. **Incompréhension du concept** : ne sait pas pourquoi il faut un dénominateur commun
 3. **Application mécanique** : additionne "ce qui va ensemble" sans réfléchir
-4. **Manque de vérification** : ne vérifie pas la cohérence (1/2 + 1/3 > 2/5 !)
+4. **Manque de vérification** : ne vérifie pas la cohérence (1/2 + 1/3 `>` 2/5 !)
 
 **Remédiation proposée** :
 
@@ -820,7 +820,7 @@ Entiers  Décimaux
 
 **1. Reformulation de la question** (pour vérifier la compréhension)
 
-"Tu veux savoir pourquoi 5/4 > 1, c'est bien ça ? C'est une très bonne question !"
+"Tu veux savoir pourquoi 5/4 `>` 1, c'est bien ça ? C'est une très bonne question !"
 
 **2. Explication concrète avec manipulation** (10 min)
 
@@ -855,10 +855,10 @@ Entiers  Décimaux
 "Quand le numérateur (le nombre du haut) est **plus grand** que le dénominateur (le nombre du bas), la fraction est **plus grande que 1**."
 
 **Exemples** :
-- 5/4 > 1 (car 5 > 4) ✓
-- 7/3 > 1 (car 7 > 3) ✓
-- 10/8 > 1 (car 10 > 8) ✓
-- 3/5 < 1 (car 3 < 5) ✓
+- 5/4 `>` 1 (car 5 `>` 4) ✓
+- 7/3 `>` 1 (car 7 `>` 3) ✓
+- 10/8 `>` 1 (car 10 `>` 8) ✓
+- 3/5 `<` 1 (car 3 `<` 5) ✓
 
 **5. Visualisation sur la droite graduée** (5 min)
 
@@ -881,9 +881,9 @@ Dessiner au tableau :
 
 **Exercice de vérification** :
 "À toi ! Dis-moi si ces fractions sont plus grandes ou plus petites que 1 :
-- 3/2 → Plus grand (3 > 2) ✓
-- 4/5 → Plus petit (4 < 5) ✓
-- 8/7 → Plus grand (8 > 7) ✓"
+- 3/2 → Plus grand (3 `>` 2) ✓
+- 4/5 → Plus petit (4 `<` 5) ✓
+- 8/7 → Plus grand (8 `>` 7) ✓"
 
 </details>
 
