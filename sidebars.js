@@ -65,7 +65,7 @@ const sidebars = {
     },
     
     // ========================================
-    // 📜 HISTOIRE (6 fiches sur 12)
+    // 📜 HISTOIRE (12 fiches - COMPLET !)
     // ========================================
     {
       type: 'category',
@@ -82,7 +82,17 @@ const sidebars = {
         'histoire/moyen-age-societe-feodale',
         'histoire/eglise-moyen-age',
         
-        // À venir : Renaissance, Grandes Découvertes, Révolution, XIXe, Guerres mondiales, Monde depuis 1945
+        // Temps modernes (2 fiches)
+        'histoire/renaissance',
+        'histoire/grandes-decouvertes',
+        
+        // Révolution et XIXe (2 fiches)
+        'histoire/revolution-empire',
+        'histoire/xixe-siecle',
+        
+        // XXe-XXIe siècles (2 fiches)
+        'histoire/guerres-mondiales',
+        'histoire/monde-depuis-1945',
       ],
     },
     

@@ -38,7 +38,7 @@ const fiches = [
   { id: 'maths-algorithmique', titre: 'Algorithmique et programmation', matiere: 'Mathématiques', url: '/docs/maths/algorithmique-programmation' },
   
   // ========================================
-  // HISTOIRE (6 fiches sur 12)
+  // HISTOIRE (12 fiches - COMPLET !)
   // ========================================
   // Antiquité (4 fiches)
   { id: 'histoire-prehistoire', titre: 'La Préhistoire', matiere: 'Histoire', url: '/docs/histoire/prehistoire' },
@@ -50,7 +50,19 @@ const fiches = [
   { id: 'histoire-moyen-age', titre: 'Le Moyen Âge - Société féodale', matiere: 'Histoire', url: '/docs/histoire/moyen-age-societe-feodale' },
   { id: 'histoire-eglise', titre: 'L\'Église au Moyen Âge', matiere: 'Histoire', url: '/docs/histoire/eglise-moyen-age' },
   
-  // À venir : Renaissance, Grandes Découvertes, Révolution, XIXe, Guerres mondiales, Monde depuis 1945
+  // Temps modernes (2 fiches)
+  { id: 'histoire-renaissance', titre: 'La Renaissance', matiere: 'Histoire', url: '/docs/histoire/renaissance' },
+  { id: 'histoire-decouvertes', titre: 'Les Grandes Découvertes', matiere: 'Histoire', url: '/docs/histoire/grandes-decouvertes' },
+  
+  // Révolution et XIXe (2 fiches)
+  { id: 'histoire-revolution', titre: 'La Révolution française et l\'Empire', matiere: 'Histoire', url: '/docs/histoire/revolution-empire' },
+  { id: 'histoire-xixe', titre: 'Le XIXe siècle', matiere: 'Histoire', url: '/docs/histoire/xixe-siecle' },
+  
+  // XXe-XXIe siècles (2 fiches)
+  { id: 'histoire-guerres', titre: 'Les deux guerres mondiales', matiere: 'Histoire', url: '/docs/histoire/guerres-mondiales' },
+  { id: 'histoire-1945', titre: 'Le monde depuis 1945', matiere: 'Histoire', url: '/docs/histoire/monde-depuis-1945' },
+  
+  // À venir : Géographie (10 fiches), Sciences (15 fiches)
 ];
 
 function SuiviPage() {
