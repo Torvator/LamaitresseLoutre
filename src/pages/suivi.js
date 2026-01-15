@@ -36,6 +36,21 @@ const fiches = [
   
   // V. Algorithmique et programmation (1 fiche)
   { id: 'maths-algorithmique', titre: 'Algorithmique et programmation', matiere: 'Mathématiques', url: '/docs/maths/algorithmique-programmation' },
+  
+  // ========================================
+  // HISTOIRE (6 fiches sur 12)
+  // ========================================
+  // Antiquité (4 fiches)
+  { id: 'histoire-prehistoire', titre: 'La Préhistoire', matiere: 'Histoire', url: '/docs/histoire/prehistoire' },
+  { id: 'histoire-civilisations', titre: 'Les premières civilisations', matiere: 'Histoire', url: '/docs/histoire/premieres-civilisations' },
+  { id: 'histoire-grece', titre: 'La Grèce antique', matiere: 'Histoire', url: '/docs/histoire/grece-antique' },
+  { id: 'histoire-rome', titre: 'Rome', matiere: 'Histoire', url: '/docs/histoire/rome' },
+  
+  // Moyen Âge (2 fiches)
+  { id: 'histoire-moyen-age', titre: 'Le Moyen Âge - Société féodale', matiere: 'Histoire', url: '/docs/histoire/moyen-age-societe-feodale' },
+  { id: 'histoire-eglise', titre: 'L\'Église au Moyen Âge', matiere: 'Histoire', url: '/docs/histoire/eglise-moyen-age' },
+  
+  // À venir : Renaissance, Grandes Découvertes, Révolution, XIXe, Guerres mondiales, Monde depuis 1945
 ];
 
 function SuiviPage() {
@@ -72,12 +87,15 @@ function SuiviPage() {
   // Statistiques par matière
   const fichesFrancais = fiches.filter(f => f.matiere === 'Français');
   const fichesMaths = fiches.filter(f => f.matiere === 'Mathématiques');
+  const fichesHistoire = fiches.filter(f => f.matiere === 'Histoire');
   
   const nbFrancaisMaitrisees = fichesFrancais.filter(f => fichesMaitrisees.includes(f.id)).length;
   const nbMathsMaitrisees = fichesMaths.filter(f => fichesMaitrisees.includes(f.id)).length;
+  const nbHistoireMaitrisees = fichesHistoire.filter(f => fichesMaitrisees.includes(f.id)).length;
   
   const pourcentageFrancais = Math.round((nbFrancaisMaitrisees / fichesFrancais.length) * 100);
   const pourcentageMaths = Math.round((nbMathsMaitrisees / fichesMaths.length) * 100);
+  const pourcentageHistoire = Math.round((nbHistoireMaitrisees / fichesHistoire.length) * 100);
 
   return (
     <Layout
@@ -127,7 +145,7 @@ function SuiviPage() {
         {/* Progression par matière */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: '1fr 1fr', 
+          gridTemplateColumns: '1fr 1fr 1fr', 
           gap: '1rem',
           marginBottom: '2rem'
         }}>
@@ -198,6 +216,41 @@ function SuiviPage() {
             </div>
             <p style={{ margin: 0 }}>
               <strong>{nbMathsMaitrisees}</strong> / {fichesMaths.length} fiches
+            </p>
+          </div>
+          
+          {/* Histoire */}
+          <div style={{ 
+            backgroundColor: '#fef5f0', 
+            borderRadius: '12px', 
+            padding: '1.5rem',
+            border: '2px solid #f0e0d2'
+          }}>
+            <h3 style={{ marginTop: 0 }}>📜 Histoire</h3>
+            <div style={{ 
+              backgroundColor: '#fff', 
+              borderRadius: '8px', 
+              height: '30px',
+              overflow: 'hidden',
+              marginBottom: '0.5rem'
+            }}>
+              <div style={{
+                backgroundColor: '#c0392b',
+                height: '100%',
+                width: `${pourcentageHistoire}%`,
+                transition: 'width 0.3s ease',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontWeight: 'bold',
+                fontSize: '0.9rem'
+              }}>
+                {pourcentageHistoire}%
+              </div>
+            </div>
+            <p style={{ margin: 0 }}>
+              <strong>{nbHistoireMaitrisees}</strong> / {fichesHistoire.length} fiches
             </p>
           </div>
         </div>
@@ -309,6 +362,61 @@ function SuiviPage() {
                 </div>
                 {fichesMaitrisees.includes(fiche.id) && (
                   <span style={{ color: '#17a2b8', fontSize: '1.5rem' }}>✓</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* HISTOIRE */}
+        <div style={{ marginBottom: '3rem' }}>
+          <h3 style={{ 
+            backgroundColor: '#fef5f0', 
+            padding: '0.75rem 1rem',
+            borderRadius: '8px',
+            borderLeft: '4px solid #c0392b'
+          }}>
+            📜 Histoire ({nbHistoireMaitrisees}/{fichesHistoire.length})
+          </h3>
+          <div style={{ display: 'grid', gap: '0.75rem', marginTop: '1rem' }}>
+            {fichesHistoire.map((fiche) => (
+              <div
+                key={fiche.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  padding: '1rem',
+                  backgroundColor: fichesMaitrisees.includes(fiche.id) ? '#f8d7da' : '#f8f9fa',
+                  borderRadius: '8px',
+                  border: '1px solid #dee2e6',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer',
+                }}
+                onClick={() => toggleFiche(fiche.id)}
+              >
+                <input
+                  type="checkbox"
+                  checked={fichesMaitrisees.includes(fiche.id)}
+                  onChange={() => toggleFiche(fiche.id)}
+                  style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+                />
+                <div style={{ flex: 1 }}>
+                  <a 
+                    href={fiche.url}
+                    style={{ 
+                      fontSize: '1.1rem',
+                      fontWeight: fichesMaitrisees.includes(fiche.id) ? 'bold' : 'normal',
+                      textDecoration: 'none',
+                      color: '#1c1e21'
+                    }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {fiche.titre}
+                  </a>
+                </div>
+                {fichesMaitrisees.includes(fiche.id) && (
+                  <span style={{ color: '#c0392b', fontSize: '1.5rem' }}>✓</span>
                 )}
               </div>
             ))}

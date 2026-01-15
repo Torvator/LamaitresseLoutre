@@ -64,7 +64,31 @@ const sidebars = {
       ],
     },
     
+    // ========================================
+    // 📜 HISTOIRE (6 fiches sur 12)
+    // ========================================
+    {
+      type: 'category',
+      label: '📜 Histoire',
+      collapsed: false,
+      items: [
+        // Antiquité (4 fiches)
+        'histoire/prehistoire',
+        'histoire/premieres-civilisations',
+        'histoire/grece-antique',
+        'histoire/rome',
+        
+        // Moyen Âge (2 fiches)
+        'histoire/moyen-age-societe-feodale',
+        'histoire/eglise-moyen-age',
+        
+        // À venir : Renaissance, Grandes Découvertes, Révolution, XIXe, Guerres mondiales, Monde depuis 1945
+      ],
+    },
+    
     // Les autres matières seront ajoutées au fur et à mesure
+    // Géographie (10 fiches à venir)
+    // Sciences (15 fiches à venir)
   ],
 };
 
