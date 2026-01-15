@@ -1,7 +1,7 @@
 ---
-sidebar_position: 12
-title: "Le monde depuis 1945"
-description: "Fiche de révision CRPE - Le monde depuis 1945"
+sidebar_position: 6
+title: Le monde depuis 1945
+description: Fiche de révision CRPE - Le monde depuis 1945
 ---
 
 # 🌍 Le monde depuis 1945
@@ -9,402 +9,422 @@ description: "Fiche de révision CRPE - Le monde depuis 1945"
 :::info Informations
 **Matière** : Histoire  
 **Niveau** : Cycles 3 et 4  
-**Durée de révision estimée** : 50 min
+**Durée de révision estimée** : 75 min
 :::
 
 ---
 
 ## 📚 I. Rappel du cours
 
-### A. La Guerre froide (1947-1991)
+### A. 1945-1991 : La Guerre froide
 
-#### 1. Deux blocs opposés
+#### 1. Qu'est-ce que la Guerre froide ?
 
-**Bloc occidental (capitaliste)** :
-- Chef : **États-Unis**
-- Économie capitaliste (entreprises privées, marché)
-- Démocratie libérale
-- Alliance : **OTAN** (1949, Organisation du Traité de l'Atlantique Nord)
-- Plan Marshall (1947) : aide économique à Europe
+**Définition** : Conflit **indirect** entre les États-Unis et l'URSS (1947-1991), sans affrontement militaire direct entre les deux superpuissances.
 
-**Bloc oriental (communiste)** :
-- Chef : **URSS**
-- Économie communiste (propriété collective, planification)
-- Dictature (parti unique)
-- Alliance : **Pacte de Varsovie** (1955)
+**Les deux blocs** :
+- **Bloc de l'Ouest** : États-Unis + Europe de l'Ouest (capitalisme, démocratie)
+- **Bloc de l'Est** : URSS + Europe de l'Est (communisme, dictature)
 
-**Rideau de fer** (Churchill, 1946) :
-- Europe divisée (Ouest vs Est)
-- **Mur de Berlin** (1961-1989) : symbole division
+**Caractéristiques** :
+- Course aux armements (arme nucléaire)
+- Espionnage (CIA vs KGB)
+- Propagande
+- Guerre par pays interposés
 
-#### 2. Affrontements indirects
+#### 2. Le Rideau de fer et la division de l'Europe
 
-**Pourquoi "froide" ?** : USA et URSS ne se font jamais la guerre directement (peur arme nucléaire = destruction mutuelle), mais s'affrontent par pays interposés
+**Le Rideau de fer** : Frontière idéologique et physique divisant l'Europe
 
-**Crises** :
-- **Blocus de Berlin** (1948-1949) : URSS bloque Berlin-Ouest, USA ravitaillent par pont aérien
-- **Crise de Cuba** (octobre 1962) : URSS installe missiles à Cuba (à 150 km USA), Kennedy menace, Khrouchtchev retire missiles, monde au bord guerre nucléaire
-- **Guerre de Corée** (1950-1953) : Nord communiste vs Sud capitaliste
-- **Guerre du Vietnam** (1965-1975) : USA soutiennent Sud, URSS/Chine soutiennent Nord (communiste), défaite USA 1975
+**Allemagne divisée** :
+- **RFA** (République fédérale d'Allemagne) : Ouest, capitaliste
+- **RDA** (République démocratique allemande) : Est, communiste
 
-**Course à l'espace** :
-- 1957 : Spoutnik (satellite soviétique)
-- 1961 : Youri Gagarine (1er homme dans l'espace, soviétique)
-- **21 juillet 1969** : **Neil Armstrong** (USA) marche sur la Lune ("Un petit pas pour l'homme, un bond de géant pour l'humanité")
+**Le Mur de Berlin (1961-1989)** :
+- Construit en 1961 pour empêcher les Allemands de l'Est de fuir à l'Ouest
+- Symbole de la Guerre froide
+- **9 novembre 1989** : Chute du Mur
 
-**Course aux armements** :
-- Bombe atomique (USA 1945, URSS 1949)
-- Bombe H (hydrogène, 1000× plus puissante)
-- Missiles intercontinentaux
-- "Équilibre de la terreur" (destruction mutuelle assurée)
+#### 3. Les crises de la Guerre froide
 
-#### 3. Fin de la Guerre froide
+**Crise de Cuba (octobre 1962)** :
+- URSS installe des missiles à Cuba (proche des États-Unis)
+- Risque de guerre nucléaire
+- Les Soviétiques reculent
 
-**Gorbatchev** (URSS, 1985-1991) :
-- Réformes : *Glasnost* (transparence), *Perestroïka* (restructuration)
-- Démocratisation
-- Retrait d'Afghanistan (1989)
+**Guerre du Vietnam (1955-1975)** :
+- Nord (communiste, soutenu par URSS et Chine) vs Sud (capitaliste, soutenu par États-Unis)
+- Victoire communiste (1975)
 
-**Chute du Mur de Berlin** :
-- **9 novembre 1989** : Berlinois détruisent le Mur (symbole)
-- Réunification Allemagne (3 octobre 1990)
+#### 4. La fin de la Guerre froide
 
-**Fin de l'URSS** :
-- Indépendances républiques (Pays baltes, Ukraine, etc.)
-- **25 décembre 1991** : Dissolution URSS
-- Gorbatchev démissionne
-- Russie (Eltsine)
+**1985-1991 : Gorbatchev en URSS**
+- Perestroïka (restructuration économique)
+- Glasnost (transparence politique)
+- Assouplissement du régime
 
-**Conséquence** : USA = seule superpuissance
+**9 novembre 1989 : Chute du Mur de Berlin**
+- Les Berlinois détruisent le Mur
+- Symbole de la fin de la Guerre froide
+
+**1990 : Réunification allemande**
+
+**1991 : Disparition de l'URSS**
+- Éclatement en 15 républiques indépendantes
+- Fin du communisme en Europe de l'Est
 
 ---
 
-### B. Décolonisation
+### B. La construction européenne
 
-#### 1. Causes
-
-**Affaiblissement métropoles** :
-- Europe ruinée par 2GM
-- Plus de moyens de maintenir colonies
-
-**Revendications** :
-- Peuples colonisés veulent indépendance
-- Influence 14 points Wilson (droit peuples à disposer d'eux-mêmes)
-- Élites locales formées (écoles coloniales)
-
-**Contexte Guerre froide** :
-- USA et URSS soutiennent décolonisation (contre empires européens)
-
-#### 2. Indépendances
-
-**Asie** :
-
-**Inde** (1947) :
-- **Gandhi** (1869-1948) : résistance non-violente (*ahimsa*)
-- Indépendance 15 août 1947
-- Partition : Inde (hindoue) / Pakistan (musulman)
-- Violences intercommunautaires (1 million morts)
-- Gandhi assassiné (1948)
-
-**Indochine** (1954) :
-- Guerre France vs Viêt-Minh (Ho Chi Minh, communiste)
-- Défaite française Diên Biên Phu (7 mai 1954)
-- Accords Genève : indépendance Vietnam, Laos, Cambodge
-- Vietnam divisé (Nord communiste, Sud capitaliste) → guerre Vietnam (USA)
-
-**Afrique** :
-
-**Afrique noire** :
-- Années 1960 = "année des indépendances africaines" (17 pays 1960)
-- Souvent pacifique (accords)
-
-**Algérie** (1954-1962) :
-- **Guerre d'Algérie** : FLN (Front Libération Nationale) vs France
-- 1 million Français d'Algérie (*pieds-noirs*)
-- Guerre sanglante (attentats, tortures, massacres)
-- **De Gaulle** revient pouvoir (1958), négocie
-- **Accords d'Évian** (18 mars 1962) : indépendance
-- Exode *pieds-noirs* et harkis (Algériens pro-France)
-
-#### 3. Tiers-monde
-
-**Conférence de Bandung** (1955, Indonésie) :
-- 29 pays d'Asie et Afrique
-- Refus alignement USA ou URSS
-- Non-alignement
-- Leaders : Nehru (Inde), Nasser (Égypte), Sukarno (Indonésie)
-
-**Difficultés** :
-- Frontières artificielles (tracées par colonisateurs)
-- Conflits ethniques
-- Pauvreté, sous-développement
-- Dictatures
-
----
-
-### C. Construction européenne
-
-#### 1. Origines
+#### 1. Pourquoi construire l'Europe ?
 
 **Objectifs** :
-- Paix durable (éviter nouvelles guerres)
+- **Maintenir la paix** : éviter une nouvelle guerre entre France et Allemagne
+- Reconstruire l'Europe après la guerre
+- Faire face aux deux superpuissances (États-Unis, URSS)
 - Prospérité économique
-- Union face USA et URSS
 
-**Pères fondateurs** :
-- **Robert Schuman** (France), **Jean Monnet** (France), Konrad Adenauer (Allemagne), Alcide De Gasperi (Italie)
+#### 2. Les étapes de la construction
 
-#### 2. Étapes
-
-**CECA (1951)** :
-- Communauté Européenne Charbon Acier
+**1951 : CECA** (Communauté européenne du charbon et de l'acier)
 - 6 pays : France, Allemagne (RFA), Italie, Belgique, Pays-Bas, Luxembourg
-- Mettre en commun charbon et acier (empêcher guerre France-Allemagne)
+- Coopération économique sur le charbon et l'acier
 
-**Traité de Rome (25 mars 1957)** :
-- **CEE** (Communauté Économique Européenne) = Marché commun
-- Libre circulation marchandises
-- 6 pays fondateurs
+**1957 : Traité de Rome** → Création de la **CEE** (Communauté économique européenne)
+- Marché commun
+- Libre circulation des marchandises
 
-**Élargissements** :
-- 1973 : Royaume-Uni, Irlande, Danemark (9)
-- 1981 : Grèce (10)
-- 1986 : Espagne, Portugal (12)
-- 1995 : Autriche, Suède, Finlande (15)
-- 2004 : 10 pays (dont Pologne, Hongrie) (25)
-- 2007 : Roumanie, Bulgarie (27)
-- 2013 : Croatie (28)
-- 2020 : Brexit (GB sort) → **27 pays**
-
-**Traité de Maastricht (7 février 1992)** :
-- **Union européenne** (UE)
+**1992 : Traité de Maastricht** → **Union européenne (UE)**
 - Citoyenneté européenne
-- **Euro** (monnaie unique, 2002, 20 pays actuellement)
+- Préparation de la monnaie unique
 
-**Institutions** :
-- **Commission européenne** (Bruxelles) : propose lois
-- **Parlement européen** (Strasbourg) : vote lois, élu au suffrage universel (depuis 1979)
-- **Conseil de l'UE** : ministres pays membres
-- **Conseil européen** : chefs d'État
+**1999-2002 : Euro**
+- Monnaie unique adoptée par plusieurs pays
+- Facilite les échanges
 
-**Symboles** :
-- Drapeau : 12 étoiles or sur fond bleu
-- Hymne : *Ode à la Joie* (Beethoven)
-- Devise : "Unie dans la diversité"
-- Fête : 9 mai (déclaration Schuman, 1950)
+**Aujourd'hui** : 27 pays membres (après le Brexit : sortie du Royaume-Uni en 2020)
+
+#### 3. Les symboles de l'UE
+
+- **Drapeau** : 12 étoiles dorées sur fond bleu
+- **Hymne** : Ode à la joie (Beethoven)
+- **Devise** : "Unie dans la diversité"
+- **Journée de l'Europe** : 9 mai
+- **Institutions** : Parlement européen (Strasbourg), Commission (Bruxelles)
+
+---
+
+### C. La décolonisation
+
+#### 1. Contexte
+
+**Empires coloniaux en 1945** :
+- France : Afrique, Indochine
+- Royaume-Uni : Inde, Afrique
+- Belgique, Portugal, Pays-Bas...
+
+**Pourquoi la décolonisation ?**
+- Affaiblissement des métropoles après 1945
+- Mouvements nationalistes dans les colonies
+- Influence des deux Grands (États-Unis, URSS) favorables à la décolonisation
+- Charte de l'ONU (droit des peuples à disposer d'eux-mêmes)
+
+#### 2. Les indépendances
+
+**Inde (1947)** :
+- Indépendance du Royaume-Uni
+- Gandhi : résistance non-violente
+- Partition : Inde (hindoue) / Pakistan (musulman)
+
+**Guerre d'Indochine (1946-1954)** :
+- France vs Viêt-Minh (nationalistes vietnamiens)
+- Défaite française à Diên Biên Phu (1954)
+- Indépendance du Vietnam, Laos, Cambodge
+
+**Guerre d'Algérie (1954-1962)** :
+- FLN (Front de libération nationale) vs France
+- Guerre longue et douloureuse
+- **1962 : Accords d'Évian** → Indépendance de l'Algérie
+- Retour d'1 million de pieds-noirs en France
+
+**Afrique subsaharienne (années 1960)** :
+- **1960** : "Année de l'Afrique" (17 pays deviennent indépendants)
+- Indépendances souvent pacifiques (sauf exceptions)
 
 #### 3. Bilan
 
-**Réussites** :
-- Paix (70 ans sans guerre en Europe occidentale)
-- Prospérité (marché unique, 450 millions habitants)
-- Euro (facilite échanges)
-- Libre circulation (espace Schengen, 1995)
-
-**Défis** :
-- Crises (économique 2008, migrants 2015, Covid 2020)
-- Euroscepticisme (Brexit 2020)
-- Difficultés décision (unanimité)
+- Fin des empires coloniaux
+- Naissance de nouveaux États
+- Relations complexes : néocolonialisme, Françafrique
+- Guerres civiles, instabilité dans certains pays
 
 ---
 
-### D. La France depuis 1945
+### D. La Ve République (depuis 1958)
 
-#### 1. IVe République (1946-1958)
+#### 1. La crise de 1958
 
-**Constitution** (1946) :
-- Parlementarisme (Assemblée nationale prépondérante)
-- Instabilité (gouvernements changent souvent)
+**Mai 1958** : Crise algérienne
+- Guerre d'Algérie, instabilité politique
+- L'armée menace de coup d'État
+- Appel au général de Gaulle
 
-**Reconstruction** :
-- Plan Marshall
-- Trente Glorieuses (1945-1975) : croissance économique forte
-- Nationalisations (EDF, SNCF, Renault)
-- Sécurité sociale (1945)
+**De Gaulle revient au pouvoir** :
+- Président du Conseil (juin 1958)
+- Fait adopter une nouvelle Constitution
 
-**Guerres coloniales** :
-- Indochine (défaite 1954)
-- Algérie (1954-1962)
+#### 2. La Constitution de 1958
 
-**Chute** :
-- Crise algérienne (1958)
-- De Gaulle appelé au pouvoir
+**Référendum (28 septembre 1958)** : Les Français approuvent la nouvelle Constitution
 
-#### 2. Ve République (1958-aujourd'hui)
+**Ve République** :
+- Régime semi-présidentiel
+- Président de la République élu au suffrage universel direct (depuis 1962)
+- Pouvoirs renforcés du président
+- Premier ministre, Assemblée nationale, Sénat
 
-**De Gaulle** (1958-1969) :
-- Constitution 1958 : président fort (élu au suffrage universel direct depuis 1962)
-- Indépendance Algérie (1962)
-- Politique de grandeur (force de frappe nucléaire, sortie OTAN)
-- Mai 68 : contestation étudiante et ouvrière
-- Démission 1969 (référendum perdu)
+**Janvier 1959** : De Gaulle devient le premier président de la Ve République
 
-**Présidents suivants** :
-- Pompidou (1969-1974)
-- Giscard d'Estaing (1974-1981) : majorité 18 ans, IVG (Simone Veil, 1975)
-- **Mitterrand** (1981-1995) : 1er président socialiste Ve, abolition peine de mort (1981), 2 septennats
-- Chirac (1995-2007) : quinquennat (2002)
-- Sarkozy (2007-2012)
-- Hollande (2012-2017)
-- Macron (2017-...)
+#### 3. Les présidents de la Ve République
 
-**Alternances** : Droite/Gauche (démocratie)
+1. **Charles de Gaulle** (1959-1969) : Indépendance Algérie, construction européenne, grandeur de la France
+2. **Georges Pompidou** (1969-1974)
+3. **Valéry Giscard d'Estaing** (1974-1981) : Majorité à 18 ans, IVG
+4. **François Mitterrand** (1981-1995) : Abolition peine de mort, cohabitation
+5. **Jacques Chirac** (1995-2007) : Quinquennat (5 ans au lieu de 7)
+6. **Nicolas Sarkozy** (2007-2012)
+7. **François Hollande** (2012-2017)
+8. **Emmanuel Macron** (2017-...)
 
 ---
 
-## 🎯 II. Exercices
+### E. Les grandes évolutions sociales
 
-### Exercice 1 : Guerre froide
+#### 1. Les Trente Glorieuses (1945-1975)
 
-**Niveau** : CM2
+**Définition** : Période de forte croissance économique et de plein emploi
 
-Complète : USA = ... (économie), URSS = ... (économie)
+**Caractéristiques** :
+- Reconstruction après la guerre
+- Modernisation (électroménager, automobile, télévision)
+- Amélioration du niveau de vie
+- Consommation de masse
+- Baby-boom
 
-**Correction** :
-- USA = Capitalisme (entreprises privées, marché)
-- URSS = Communisme (propriété collective, État)
+#### 2. Mai 1968
 
----
+**Mouvement étudiant et ouvrier** :
+- Contestation de l'autorité, de la société
+- Grèves massives (10 millions de grévistes)
+- De Gaulle dissout l'Assemblée, remporte les élections
+- Conséquences : libéralisation des mœurs
 
-### Exercice 2 : Mur de Berlin
+#### 3. Droits des femmes
 
-**Niveau** : CM2
+**1944** : Droit de vote des femmes (enfin !)
+**1965** : Droit de travailler sans autorisation du mari
+**1967** : Loi Neuwirth (contraception)
+**1975** : Loi Veil (IVG - interruption volontaire de grossesse)
+**1983** : Loi sur l'égalité professionnelle
+**2000** : Loi sur la parité en politique
 
-Construit 1961, détruit 9 novembre 1989. Durée ?
+**Figures** : Simone Veil, Simone de Beauvoir, Gisèle Halimi
 
-**Correction** : 1989 - 1961 = **28 ans**
+#### 4. Crises et chômage (depuis 1973)
 
-**Symbole** : Division Europe (Ouest vs Est), Guerre froide
-
----
-
-### Exercice 3 : Gandhi
-
-**Niveau** : 5ᵉ
-
-Gandhi libère Inde par non-violence. Assassiné 1948.
-
-**Questions** :
-1. Quelle méthode ?
-2. Pourquoi efficace ?
-
-**Correction** :
-
-**Méthode** : Non-violence (*ahimsa*) : boycott britannique, marche du sel, désobéissance civile
-
-**Efficacité** : Mobilise masses, GB ne peut tirer sur foules pacifiques (opinion mondiale), épuisement GB (2GM)
+**1973** : Premier choc pétrolier → Fin des Trente Glorieuses
+- Crise économique
+- Montée du chômage
+- Difficultés économiques persistantes
 
 ---
 
-### Exercice 4 : Construction européenne
+## 🎯 II. Mise en pratique
 
-**Niveau** : 6ᵉ
+:::tip Objectif
+Enseigner le monde depuis 1945 à des CM2
+:::
 
-1957 : 6 pays. 2013 : 28 pays. 2020 : 27 pays (Brexit).
+### Séquence proposée (3 séances)
 
-**Questions** :
-1. Quels 6 pays fondateurs ?
-2. Pourquoi construire UE ?
+**SÉANCE 1 : La Guerre froide et le Mur de Berlin**
 
-**Correction** :
+**Objectif** : Comprendre la division du monde en deux blocs
 
-**6 fondateurs** (1957) : France, Allemagne, Italie, Belgique, Pays-Bas, Luxembourg
+**Matériel** :
+- Carte monde (blocs Est/Ouest)
+- Photo Mur de Berlin
+- Vidéo chute du Mur (9 novembre 1989)
 
-**Pourquoi** :
-- Paix (éviter guerre France-Allemagne)
-- Prospérité (marché commun)
-- Union (face USA, URSS)
+**Activités** :
+1. Contextualisation : après 1945, deux superpuissances (États-Unis, URSS)
+2. Deux systèmes opposés : capitalisme vs communisme
+3. Le Mur de Berlin (1961) : symbole de la division
+4. Chute du Mur (1989) : fin de la Guerre froide
 
----
-
-### Exercice 5 : Présidents Ve République
-
-**Niveau** : 4ᵉ
-
-Qui : Indépendance Algérie ? Abolition peine de mort ? Premier président socialiste ?
-
-**Correction** :
-- Indépendance Algérie (1962) : **De Gaulle**
-- Abolition peine de mort (1981) : **Mitterrand** (loi Badinter)
-- Premier socialiste : **Mitterrand** (1981)
+**Trace écrite** :
+*"Après 1945, le monde est divisé en deux blocs : l'Ouest (États-Unis, capitalisme, démocratie) et l'Est (URSS, communisme, dictature). C'est la Guerre froide (1947-1991). Le Mur de Berlin (1961-1989) symbolise cette division. Sa chute le 9 novembre 1989 marque la fin de la Guerre froide."*
 
 ---
 
-## 👩‍🏫 III. Pédagogie
+**SÉANCE 2 : La construction européenne**
 
-**Progression** :
-- CM2 : Guerre froide (Mur Berlin), UE (drapeau, euro), Ve République
-- 3ᵉ : Décolonisation, Guerre froide détaillée
+**Objectif** : Comprendre pourquoi et comment l'Europe s'est construite
 
-**Difficultés** : Concepts (capitalisme, communisme), géopolitique
+**Matériel** :
+- Carte Europe (6 pays → 27 pays)
+- Drapeau européen
+- Pièces et billets en euros
+- Hymne européen (audio)
 
-**Activités** : Débat Guerre froide, carte UE (évolution), timeline présidents
+**Activités** :
+1. Pourquoi construire l'Europe ? → Paix, prospérité
+2. Étapes : 1957 (CEE, 6 pays), 1992 (UE), 2002 (euro)
+3. Symboles : drapeau, hymne, 9 mai
+4. Aujourd'hui : 27 pays
+
+**Trace écrite** :
+*"Après la guerre, les pays européens veulent construire la paix. En 1957, 6 pays créent la CEE (Communauté économique européenne). En 1992, c'est l'Union européenne. En 2002, l'euro devient la monnaie commune. Aujourd'hui, 27 pays font partie de l'UE. Symboles : drapeau (12 étoiles), Ode à la joie, 9 mai."*
 
 ---
 
-## 🎓 IV. Pour le concours
+**SÉANCE 3 : La Ve République et les droits des femmes**
 
-**Maîtriser** : Guerre froide (USA vs URSS, 1947-1991), décolonisation (Gandhi, Algérie), UE (étapes, symboles), Ve République
+**Objectif** : Découvrir la Ve République et les progrès des droits des femmes
 
-**Dates** : 1947 (début GF), 1989 (chute Mur), 1957 (CEE), 1962 (Algérie), 1992 (Maastricht)
+**Matériel** :
+- Portraits présidents (De Gaulle à Macron)
+- Frise chronologique Ve République
+- Photo Simone Veil
+- Affiches vote des femmes (1944)
+
+**Activités** :
+1. De Gaulle et la Ve République (1958)
+2. Présidents successifs
+3. Droits des femmes : vote (1944), IVG (1975)
+4. Simone Veil
+
+**Trace écrite** :
+*"En 1958, le général de Gaulle crée la Ve République (encore notre régime aujourd'hui). Le président est élu au suffrage universel. Depuis 1945, les droits des femmes progressent : droit de vote (1944), contraception (1967), IVG (1975, loi Veil). Simone Veil a été une grande figure de ces combats."*
 
 ---
 
-### Questions types CRPE
+## 👩‍🏫 III. Pédagogie et didactique
 
-**Question 1** : Expliquez la Guerre froide et sa fin.
+### A. Place dans les programmes
+
+**CM2** :
+- Guerre froide (notions simples)
+- Construction européenne
+- Ve République
+- Droits des femmes
+
+### B. Erreurs fréquentes
+
+| Erreur | Remédiation |
+|--------|-------------|
+| "Guerre froide = vraie guerre" | Expliquer : conflit INDIRECT, pas de combats USA-URSS |
+| Confondre CEE, UE, euro | Distinguer étapes : 1957 CEE, 1992 UE, 2002 euro |
+| "Femmes n'ont jamais eu de droits" | Nuancer : progrès progressifs, 1944 vote déjà acquis |
+
+### C. Conseils
+
+**À faire** ✅ :
+- Vidéo chute du Mur (émotion)
+- Manipuler euros (concrétiser)
+- Inviter témoins (si possible)
+- Lien avec présent (UE, République)
+
+**À éviter** ❌ :
+- Trop de dates et de détails
+- Juger (capitalisme vs communisme)
+- Oublier le lien avec aujourd'hui
+
+---
+
+## 💪 IV. S'entraîner pour le concours
+
+**Q1** : Qu'est-ce que la Guerre froide ?
 
 <details>
-<summary>Voir la réponse</summary>
-
-**Guerre froide (1947-1991)** : Affrontement indirect USA (capitalisme, démocratie, OTAN) vs URSS (communisme, dictature, Pacte Varsovie). Pas guerre directe (peur nucléaire) mais crises (Berlin, Cuba), guerres interposées (Corée, Vietnam), course armements et espace.
-
-**Fin** : Gorbatchev (réformes glasnost/perestroïka), chute Mur Berlin (9 nov 1989), dissolution URSS (25 déc 1991). USA = seule superpuissance.
-
+<summary>Réponse</summary>
+Conflit indirect (1947-1991) entre États-Unis (Ouest, capitalisme) et URSS (Est, communisme). Caractéristiques : course armements, espionnage, propagande, guerres interposées (Corée, Vietnam). Symbole : Mur de Berlin (1961-1989). Fin : chute Mur (1989), disparition URSS (1991).
 </details>
 
-**Question 2** : Proposez séance sur UE pour CM2.
+**Q2** : Pourquoi et comment l'Europe s'est-elle construite ?
 
 <details>
-<summary>Voir la réponse</summary>
-
-**SÉANCE (55 min) : L'Union européenne**
-
-**Phase 1 (15 min)** : Observer drapeau UE. 12 étoiles, bleu. Hymne (*Ode Joie*). Devise "Unie dans diversité". Combien pays ? 27.
-
-**Phase 2 (25 min)** : Carte vierge Europe. Colorier pays UE. 6 fondateurs (1957), puis élargissements. Euro (monnaie, 20 pays).
-
-**Phase 3 (15 min)** : Trace écrite. "UE = 27 pays unis pour paix et prospérité. Créée 1957 (6 pays). Libre circulation, euro. Symboles : drapeau 12 étoiles, hymne."
-
+<summary>Réponse</summary>
+Pourquoi : maintenir paix (éviter nouvelle guerre), prospérité, face aux deux Grands. Comment : 1957 CEE (6 pays), 1992 UE, 2002 euro. Aujourd'hui 27 pays. Symboles : drapeau (12 étoiles), Ode à la joie, 9 mai.
 </details>
 
-**Question 3** : Un élève demande "C'est quoi la Guerre froide ?". Réponse ?
+**Q3** : Citez 3 progrès des droits des femmes depuis 1945.
 
 <details>
-<summary>Voir la réponse</summary>
-
-**Pour CM2** : "Guerre froide (1947-1991) = conflit USA vs URSS mais sans se faire vraiment la guerre (d'où froide). Deux systèmes opposés : USA = capitalisme (liberté, entreprises privées), URSS = communisme (État contrôle tout). Peur bombe atomique (destruction mutuelle). Symbole : Mur de Berlin (1961-1989) sépare Berlin en 2 (Ouest = USA, Est = URSS). Fin 1991 : URSS disparaît."
-
-**Analyse CRPE** : Guerre froide = affrontement idéologique et géopolitique USA/URSS. Indirect (pas affrontement direct) : crises (Berlin, Cuba), guerres interposées (Corée, Vietnam), propagande, espionnage, course armements/espace. Monde bipolaire (2 blocs). Fin = réformes Gorbatchev, chute Mur Berlin (symbole), dissolution URSS (1991). Passage monde bipolaire → unipolaire (USA seule superpuissance) puis multipolaire (Chine, UE).
-
+<summary>Réponse</summary>
+1944 : droit de vote. 1967 : contraception (loi Neuwirth). 1975 : IVG (loi Veil, Simone Veil). Autres : égalité professionnelle (1983), parité politique (2000).
 </details>
 
 ---
 
-## 📖 V. Ressources
+## 📖 V. Pour aller plus loin
 
-**Vidéos** : Lumni (Guerre froide, UE), Arte
-**Sites** : Toute l'Europe (construction UE), INA (archives)
+### Ressources
+
+**Livres** :
+- "Le Mur de mon enfance" - Valérie Zenatti
+- "L'Europe" - collection Quelle Histoire
+
+**Vidéos** :
+- Lumni : Guerre froide, construction européenne
+- INA : Chute du Mur, discours présidents
+
+**Sites** :
+- Toute l'Europe : ressources pédagogiques
+- Vie publique : institutions Ve République
+
+---
+
+## ✅ Points clés
+
+:::note Récapitulatif
+1. **1947-1991** : Guerre froide (USA vs URSS)
+2. **Mur de Berlin** : 1961-1989
+3. **9 novembre 1989** : Chute du Mur
+4. **1957** : Traité de Rome, CEE
+5. **1992** : Union européenne
+6. **2002** : Euro
+7. **1958** : Ve République (De Gaulle)
+8. **1944** : Droit de vote femmes
+9. **1975** : IVG (loi Veil)
+10. **Décolonisation** : Algérie (1962)
+:::
+
+---
+
+## 🎓 Pour le concours
+
+**Dates essentielles** :
+- 9 novembre 1989 : Chute Mur Berlin
+- 1957 : Traité de Rome
+- 1958 : Ve République
+
+**Vigilance** :
+- Guerre froide : INDIRECT
+- Europe : étapes progressives
+- Droits femmes : 1944 vote acquis
 
 ---
 
 <div style={{textAlign: 'center', marginTop: '3rem', padding: '1.5rem', backgroundColor: '#fff9f0', borderRadius: '12px'}}>
   <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
-    🦦 <strong>Félicitations Marie ! TOUTES LES FICHES D'HISTOIRE TERMINÉES !</strong> 🎉
+    🦦 <strong>Bon courage Marie !</strong>
   </p>
   <p style={{color: '#666', fontSize: '0.9rem'}}>
-    12 fiches complètes de la Préhistoire à aujourd'hui !<br />
-    Guerre froide, décolonisation, UE : essentiel pour le CRPE.<br />
-    Tu as maintenant <strong>toute l'Histoire</strong> pour réviser ! 💪
+    Période récente, plus proche de nous !<br />
+    Maîtrise la Guerre froide, l'Europe et la Ve République.<br />
+    Dernière fiche : tu peux maintenant tout réviser !<br />
+    Marque-la comme <strong>maîtrisée</strong> une fois révisée !
   </p>
 </div>

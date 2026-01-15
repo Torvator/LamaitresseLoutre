@@ -82,15 +82,15 @@ const sidebars = {
         'histoire/moyen-age-societe-feodale',
         'histoire/eglise-moyen-age',
         
-        // Temps modernes (2 fiches)
+        // Temps modernes (2 fiches) ✅ NOUVELLES
         'histoire/renaissance',
         'histoire/grandes-decouvertes',
         
-        // Révolution et XIXe (2 fiches)
+        // Révolution et XIXe (2 fiches) ✅ NOUVELLES
         'histoire/revolution-empire',
         'histoire/xixe-siecle',
         
-        // XXe-XXIe siècles (2 fiches)
+        // XXe-XXIe siècles (2 fiches) ✅ NOUVELLES
         'histoire/guerres-mondiales',
         'histoire/monde-depuis-1945',
       ],

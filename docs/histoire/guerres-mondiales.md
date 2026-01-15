@@ -1,15 +1,15 @@
 ---
-sidebar_position: 11
-title: "Les deux guerres mondiales"
-description: "Fiche de révision CRPE - Les deux guerres mondiales (1914-1945)"
+sidebar_position: 5
+title: Les deux guerres mondiales (1914-1945)
+description: Fiche de révision CRPE - Les deux guerres mondiales
 ---
 
-# ⚔️ Les deux guerres mondiales
+# ⚔️ Les deux guerres mondiales (1914-1945)
 
 :::info Informations
 **Matière** : Histoire  
 **Niveau** : Cycles 3 et 4  
-**Durée de révision estimée** : 60 min
+**Durée de révision estimée** : 90 min
 :::
 
 ---
@@ -18,457 +18,296 @@ description: "Fiche de révision CRPE - Les deux guerres mondiales (1914-1945)"
 
 ### A. La Première Guerre mondiale (1914-1918)
 
-#### 1. Causes
+#### 1. Les causes et le déclenchement
 
-**Rivalités** :
-- Nationalisme (revanche France vs Allemagne après 1870)
-- Impérialisme (colonies)
-- Course aux armements
+**Contexte européen en 1914** :
+- Tensions entre grandes puissances
+- Système d'alliances : Triple Entente (France, Royaume-Uni, Russie) vs Triple Alliance (Allemagne, Autriche-Hongrie, Italie)
+- Nationalisme, course aux armements, rivalités coloniales
 
-**Systèmes d'alliances** :
-- **Triple-Entente** : France, Royaume-Uni, Russie
-- **Triple-Alliance** : Allemagne, Autriche-Hongrie, Italie
+**28 juin 1914** : Attentat de Sarajevo (assassinat de l'archiduc François-Ferdinand)
+**Juillet-août 1914** : Jeu des alliances → escalade
+**3 août 1914** : L'Allemagne déclare la guerre à la France
 
-**Déclenchement** :
-- **28 juin 1914** : Assassinat archiduc François-Ferdinand à Sarajevo (Bosnie)
-- Engrenage des alliances
-- **3 août 1914** : Allemagne déclare guerre à France
+#### 2. La guerre de mouvement et de position
 
-#### 2. Guerre de mouvement (août-novembre 1914)
+**1914 : Guerre de mouvement**
+- Offensive allemande à travers la Belgique
+- 6-12 septembre 1914 : Bataille de la Marne (victoire française)
 
-- Allemagne envahit Belgique puis France (plan Schlieffen)
-- **Bataille de la Marne** (6-13 septembre 1914) : arrêt Allemands à 40 km de Paris
-- **Taxis de la Marne** : 600 taxis parisiens transportent soldats
+**1915-1917 : Guerre de position (tranchées)**
+- Front stabilisé (700 km)
+- Conditions épouvantables : boue, rats, poux, obus
+- Batailles meurtrières :
+  - **Verdun (1916)** : 300 000 morts, "Ils ne passeront pas !"
+  - Somme (1916), Chemin des Dames (1917)
 
-#### 3. Guerre de position (1915-1917)
+#### 3. La guerre totale
 
-**Tranchées** :
-- Front de 700 km (mer du Nord à Suisse)
-- Soldats enterrés (boue, rats, poux, froid)
-- Vie quotidienne horrible
-- **Poilus** : surnom soldats français (barbe, saleté)
+**Mobilisation** :
+- Économie de guerre
+- Femmes dans les usines ("munitionnettes")
+- Colonies : tirailleurs sénégalais, travailleurs
+- Propagande, censure, union sacrée
 
-**Batailles meurtrières** :
-- **Verdun** (février-décembre 1916) : 300 000 morts (FR + ALL), "On les aura !" (Pétain)
-- **Somme** (1916) : 1 million de morts
-- Gains territoriaux minimes (quelques km pour dizaines de milliers de morts)
+**1917 : Année charnière**
+- Révolution russe → Russie sort de la guerre
+- Entrée en guerre des États-Unis (avril 1917)
+- Mutineries françaises
 
-**Nouvelles armes** :
-- Gaz toxiques (chlore, ypérite = "gaz moutarde")
-- Tanks (1916)
-- Aviation (combats aériens)
+**11 novembre 1918 : Armistice**
 
-**Mutineries** (1917) :
-- Soldats refusent attaques suicidaires
-- 40 000-100 000 mutins
-- Répression (600 fusillés)
+#### 4. Bilan
 
-#### 4. Guerre mondiale
-
-**Entrée en guerre** :
-- **Italie** (1915, côté Entente)
-- **États-Unis** (avril 1917, côté Entente) : guerre sous-marine allemande coule navires US
-
-**Front oriental** :
-- Russie vs Allemagne/Autriche
-- **Révolution russe** (1917) : Lénine retire Russie de la guerre (traité Brest-Litovsk, mars 1918)
-
-#### 5. Fin de la guerre
-
-- Offensive allemande (printemps 1918) : échec
-- Contre-offensive Alliés (été 1918)
-- **11 novembre 1918, 11h** : **Armistice** (cessez-le-feu) signé dans wagon à Rethondes
-
-#### 6. Bilan
-
-**Humain** :
-- **10 millions de morts** (militaires)
-- **21 millions de blessés** (dont mutilés, "gueules cassées", gazés)
-- Traumatisme collectif ("Der des Der" = dernière des dernières guerres)
-
-**Matériel** :
-- Nord et Est de la France dévastés
-- Villages rayés de la carte (zone rouge, Verdun)
-
-**Traité de Versailles (28 juin 1919)** :
-- Allemagne déclarée responsable
-- Perd colonies, Alsace-Lorraine (retour France)
-- Réparations financières énormes
-- Armée limitée (100 000 hommes)
-- Humiliation → ressentiment allemand
-
-**Géopolitique** :
-- Fin de 4 empires : Allemand, Autriche-Hongrie, Ottoman, Russie
-- Nouveaux États (Pologne, Tchécoslovaquie, Yougoslavie)
-- **Société des Nations** (SDN, 1920) : maintenir paix (échec)
+**Humain** : 10 millions de morts, 20 millions de blessés
+**Matériel** : Régions dévastées
+**Politique** : Traité de Versailles (1919), humiliation allemande, création de la SDN
 
 ---
 
-### B. L'entre-deux-guerres
+### B. L'entre-deux-guerres et la montée des totalitarismes
 
-#### 1. Années 1920
+#### 1. La crise de 1929
 
-**"Années folles"** en France :
-- Reconstruction
-- Croissance économique
-- Culture (cinéma, jazz, Art déco)
+**24 octobre 1929** : Krach de Wall Street → Grande Dépression
+- Chômage massif, misère
+- Perte de confiance dans la démocratie
 
-**Mais** :
-- Allemagne ruinée (réparations, inflation)
-- Italie instable
+#### 2. Les dictatures
 
-#### 2. Crise de 1929
+**Italie : Mussolini (1922)**
+**Allemagne : Hitler (1933)**
+- Idéologie nazie : racisme, antisémitisme, espace vital
+- Lois de Nuremberg (1935)
+- Nuit de Cristal (1938)
+- Réarmement, expansionnisme
 
-**Krach boursier** (24 octobre 1929, "jeudi noir") :
-- Effondrement Bourse de New York
-- Crise économique mondiale
-
-**Conséquences** :
-- Chômage de masse (6 millions Allemagne, 15 millions USA)
-- Faillites d'entreprises
-- Misère
-- Instabilité politique
-
-#### 3. Montée des totalitarismes
-
-**URSS (Staline)** :
-- Dictature communiste
-- Collectivisation forcée
-- Goulags (camps)
-- Famines (Ukraine, 1932-1933 : 6 millions morts)
-
-**Italie (Mussolini)** :
-- Fascisme (1922, Marche sur Rome)
-- Dictature
-- Nationalisme, militarisme
-- Culte du chef (*Duce*)
-
-**Allemagne (Hitler)** :
-- Parti nazi (NSDAP)
-- **1933** : Hitler chancelier
-- Dictature (Führer)
-- Idéologie nazie : racisme (Aryens race supérieure), antisémitisme (haine Juifs), espace vital (*Lebensraum*)
-- Réarmement (violation Versailles)
+**1er septembre 1939** : Invasion de la Pologne → Début de la Seconde Guerre mondiale
 
 ---
 
 ### C. La Seconde Guerre mondiale (1939-1945)
 
-#### 1. Origines
+#### 1. Les victoires de l'Axe (1939-1942)
 
-**Expansionnisme nazi** :
-- 1936 : Remilitarisation Rhénanie
-- 1938 : Annexion Autriche (*Anschluss*), Sudètes (Tchécoslovaquie)
-- **1er septembre 1939** : Invasion **Pologne**
-- **3 septembre 1939** : France et GB déclarent guerre Allemagne
+**1940 : Défaite de la France**
+- Blitzkrieg allemand
+- 22 juin 1940 : Armistice
+- **18 juin 1940 : Appel du général de Gaulle**
+- France divisée : zone occupée / zone libre (Vichy)
 
-#### 2. Victoires de l'Axe (1939-1942)
+**1941 : Mondialisation du conflit**
+- Invasion de l'URSS (juin)
+- Pearl Harbor (7 décembre) → États-Unis en guerre
 
-**Blitzkrieg** (guerre éclair) :
-- Tanks, aviation, rapidité
-- Pologne écrasée (septembre 1939)
-- Danemark, Norvège (avril 1940)
-- Belgique, Pays-Bas, France (mai-juin 1940)
+#### 2. La Shoah
 
-**Bataille de France** :
-- 10 mai 1940 : offensive allemande
-- Percée des Ardennes
-- **Exode** : 8 millions Français fuient vers le sud
-- **18 juin 1940** : Appel du général **de Gaulle** (Londres, BBC) : "La France a perdu une bataille, mais pas la guerre !"
-- **22 juin 1940** : **Armistice** (Pétain) signé à Rethondes (même wagon que 1918, humiliation)
+**Génocide des Juifs** :
+- Solution finale (1942)
+- Camps d'extermination (Auschwitz...)
+- 6 millions de Juifs assassinés
+- Rafle du Vél d'Hiv (16-17 juillet 1942)
 
-**France divisée** :
-- **Zone occupée** (Nord, Ouest) : Allemands
-- **Zone libre** (Sud) : Régime de Vichy (Pétain, "État français")
+#### 3. La victoire des Alliés (1942-1945)
 
-**Collaboration** :
-- Pétain collabore avec Hitler (rencontre Montoire, octobre 1940)
-- Milice (police politique française)
-- Rafles de Juifs (Vél d'Hiv, 16-17 juillet 1942 : 13 000 Juifs, dont 4 000 enfants)
+**Tournants** :
+- Stalingrad (1942-1943)
+- El-Alamein (1942)
 
-**Résistance** :
-- **Intérieure** : sabotages, renseignements, journaux clandestins (Combat, Libération), maquis (Jean Moulin unifie Résistance, 1943)
-- **Extérieure** : **France Libre** (de Gaulle, Londres), FFL (Forces Françaises Libres)
+**1944-1945 : Libération**
+- 6 juin 1944 : Débarquement en Normandie
+- 25 août 1944 : Libération de Paris
+- 8 mai 1945 : Capitulation allemande
+- Août 1945 : Bombes atomiques
+- 2 septembre 1945 : Capitulation japonaise
 
-**Bataille d'Angleterre** (été 1940) :
-- Allemagne bombarde Londres (Blitz)
-- RAF (aviation britannique) résiste
-- Hitler renonce à invasion
+#### 4. Bilan
 
-**Opération Barbarossa** (22 juin 1941) :
-- Allemagne attaque **URSS**
-- Front de 3 000 km
-- Siège de Leningrad (900 jours, 1 million morts)
-- **Stalingrad** (août 1942 - février 1943) : victoire soviétique décisive, tournant guerre
+**50-60 millions de morts**
+**Génocide, crimes contre l'humanité**
+**Création ONU (1945), DUDH (1948)**
 
-**Pearl Harbor** (7 décembre 1941) :
-- Japon attaque base US (Hawaï)
-- **États-Unis** entrent en guerre (côté Alliés)
+---
 
-#### 3. Tournant (1942-1943)
+## 🎯 II. Mise en pratique
 
-- Stalingrad (février 1943)
-- El-Alamein (Afrique du Nord, novembre 1942) : Britanniques battent Allemands
-- Débarquement Alliés en Afrique du Nord (novembre 1942)
+:::tip Objectif
+Enseigner les guerres mondiales à des CM2
+:::
 
-#### 4. Victoire des Alliés (1943-1945)
+### Séquence proposée (3 séances)
 
-**Débarquement en Italie** (juillet 1943) :
-- Mussolini renversé
-- Italie se rend (septembre 1943)
+**SÉANCE 1 : La guerre des tranchées (1914-1918)**
 
-**Débarquement en Normandie** :
-- **6 juin 1944** ("Jour J", **D-Day**) : Opération Overlord
-- 156 000 soldats alliés débarquent (5 plages : Utah, Omaha, Gold, Juno, Sword)
-- Eisenhower commande
-- **Bataille de Normandie** (juin-août) : sanglante, 100 000 morts
-- **25 août 1944** : Libération de **Paris** (général Leclerc, 2ᵉ DB)
-- De Gaulle descend Champs-Élysées
-
-**Front Est** :
-- Armée Rouge avance (Pologne, Hongrie, Balkans)
-
-**Fin en Europe** :
-- Hitler se suicide (30 avril 1945, bunker Berlin)
-- **8 mai 1945** : **Capitulation allemande** (fin guerre en Europe)
-
-**Pacifique** :
-- Guerre USA-Japon (îles)
-- **6 août 1945** : Bombe atomique sur **Hiroshima** (70 000 morts instantanés)
-- **9 août 1945** : Bombe sur **Nagasaki** (40 000 morts)
-- **2 septembre 1945** : Capitulation japonaise
-
-#### 5. Génocide juif (Shoah)
-
-**Persécutions** :
-- Lois de Nuremberg (1935, Allemagne) : Juifs privés de citoyenneté
-- Nuit de Cristal (9-10 novembre 1938) : pogroms (synagogues brûlées, magasins pillés)
-- Ghettos (Varsovie : 400 000 Juifs enfermés)
-
-**Solution finale** (1942) :
-- Conférence de Wannsee (janvier 1942) : décision extermination systématique
-- **Camps de concentration** : travail forcé, mort par épuisement
-- **Camps d'extermination** : chambres à gaz (Auschwitz-Birkenau, Treblinka, Sobibor)
-- Juifs déportés par trains (wagons à bestiaux)
-- Arrivée : sélection (valides → travail ; enfants, vieux, malades → chambre à gaz immédiate)
-- Corps brûlés dans fours crématoires
-
-**Bilan** :
-- **6 millions de Juifs** assassinés (dont 1,5 million d'enfants)
-- 2/3 des Juifs d'Europe
-- **Shoah** = génocide (extermination systématique d'un peuple)
-
-**Autres victimes** :
-- Tziganes (500 000)
-- Homosexuels, handicapés, opposants politiques, prisonniers soviétiques
-
-**Libération des camps** :
-- Janvier 1945 : Armée Rouge libère Auschwitz
-- Horreur découverte (corps empilés, survivants squelettiques)
-- **Crime contre l'humanité**
-
-#### 6. Bilan de la Seconde Guerre mondiale
-
-**Humain** :
-- **60 millions de morts** (dont 26 millions URSS, 6 millions Pologne, 400 000 France)
-- Génocide juif (6 millions)
-- Civils = 60% des morts (bombardements, exécutions, famines)
+**Objectif** : Comprendre la vie des poilus dans les tranchées
 
 **Matériel** :
-- Villes rasées (Berlin, Hambourg, Tokyo, Hiroshima, Nagasaki)
-- Europe dévastée
+- Photos de tranchées
+- Lettre de poilu
+- Monument aux morts
 
-**Moral** :
-- Traumatisme collectif (Shoah)
-- Procès de Nuremberg (1945-1946) : chefs nazis jugés (crimes contre l'humanité, génocide)
+**Activités** :
+1. Contextualisation (causes, alliances)
+2. Découverte des tranchées (photos, témoignages)
+3. Vie quotidienne : boue, peur, obus
+4. Grandes batailles (Verdun)
+5. 11 novembre 1918 : armistice
 
-**Géopolitique** :
-- USA et URSS = superpuissances
-- Europe affaiblie
-- Décolonisation amorcée
-- **ONU** créée (26 juin 1945, San Francisco) : maintenir paix, remplace SDN
-
----
-
-## 🎯 II. Exercices
-
-### Exercice 1 : Chronologie des guerres mondiales
-
-**Niveau** : CM1
-
-Place ces dates :
-- Début 1GM, Armistice 1GM, Début 2GM, Libération Paris, Fin 2GM
-
-**Correction** :
-1. 1914 : Début 1GM
-2. 11 novembre 1918 : Armistice
-3. 1939 : Début 2GM
-4. 25 août 1944 : Libération Paris
-5. 8 mai 1945 : Fin 2GM (Europe), 2 sept 1945 (Japon)
+**Trace écrite** :
+*"La Première Guerre mondiale (1914-1918) oppose deux camps. Les soldats vivent dans des tranchées. Les conditions sont terribles : boue, rats, obus, peur. Des batailles comme Verdun (1916) font des centaines de milliers de morts. Le 11 novembre 1918, l'armistice met fin à la guerre. Bilan : 10 millions de morts."*
 
 ---
 
-### Exercice 2 : Vie dans les tranchées
+**SÉANCE 2 : La Seconde Guerre mondiale (1939-1945)**
 
-**Niveau** : CM2
+**Objectif** : Comprendre Hitler, l'Occupation, la Shoah
 
-Lettre de poilu (1916) : "Boue, rats, poux, froid. Bombardements jour et nuit. Peur. Pas de douche depuis 2 mois. Nourriture froide. Camarades tués."
+**Matériel** :
+- Portrait Hitler
+- Carte Europe 1942
+- Photo étoile jaune
+- Témoignage Anne Frank
 
-**Questions** :
-1. Quelles conditions ?
-2. Pourquoi guerre longue ?
+**Activités** :
+1. Hitler et le nazisme (racisme, antisémitisme)
+2. Guerre : défaite France (1940), appel De Gaulle
+3. Génocide des Juifs (adapté à l'âge)
+4. Libération (1944-1945)
 
-**Correction** :
-
-**Conditions** : Horribles (boue, rats, poux, bombardements, peur, pas d'hygiène, froid)
-
-**Durée** : Guerre de position (tranchées, front immobile). Aucun camp ne peut percer. Batailles meurtrières pour quelques km.
-
----
-
-### Exercice 3 : Appel du 18 juin 1940
-
-**Niveau** : 5ᵉ
-
-De Gaulle (18 juin 1940) : "La France a perdu une bataille, mais pas la guerre !"
-
-**Questions** :
-1. Contexte ?
-2. Que propose de Gaulle ?
-
-**Correction** :
-
-**Contexte** : France vaincue (22 juin 1940, armistice). Pétain capitule, collabore.
-
-**Proposition** : Continuer combat depuis Londres. Résistance. Espoir.
-
-**Symbole** : Refus de la défaite, honneur de la France
+**Trace écrite** :
+*"En 1939, Hitler attaque la Pologne. En 1940, la France est vaincue mais De Gaulle appelle à continuer le combat (18 juin). Les nazis commettent le génocide des Juifs (Shoah) : 6 millions d'assassinés. En 1944-1945, les Alliés libèrent l'Europe. L'ONU est créée pour maintenir la paix."*
 
 ---
 
-### Exercice 4 : Débarquement du 6 juin 1944
+**SÉANCE 3 : La Résistance et le devoir de mémoire**
 
-**Niveau** : 6ᵉ
+**Objectif** : Découvrir la Résistance, comprendre le devoir de mémoire
 
-156 000 soldats alliés débarquent en Normandie. Objectif : libérer Europe.
+**Matériel** :
+- Portraits De Gaulle, Jean Moulin
+- Affiches Résistance
+- Photos commémorations
 
-**Questions** :
-1. Qui débarque ?
-2. Conséquences ?
+**Activités** :
+1. Régime de Vichy (collaboration)
+2. Résistance : De Gaulle, Jean Moulin, femmes
+3. Libération, épuration
+4. Devoir de mémoire : 11 novembre, 8 mai
 
-**Correction** :
-
-**Qui** : Alliés (USA, GB, Canada, France Libre)
-
-**Conséquences** :
-- Ouverture second front (Ouest)
-- Libération France (Paris 25 août 1944)
-- Progression vers Allemagne
-- Capitulation allemande (8 mai 1945)
+**Trace écrite** :
+*"Pendant l'Occupation, certains Français résistent : De Gaulle crée la France Libre, Jean Moulin unifie la Résistance. Le 25 août 1944, Paris est libéré. Il est important de se souvenir (11 novembre, 8 mai) pour que cela ne se reproduise jamais."*
 
 ---
 
-### Exercice 5 : La Shoah
+## 👩‍🏫 III. Pédagogie et didactique
 
-**Niveau** : 4ᵉ
+### A. Place dans les programmes
 
-6 millions de Juifs assassinés (1941-1945).
+**Cycle 3 (CM2)** :
+- 1914-1918 : Verdun, 11 novembre
+- 18 juin 1940 : Appel De Gaulle
+- 1944-1945 : Libération
 
-**Questions** :
-1. Qu'est-ce que la Shoah ?
-2. Comment ?
+### B. Erreurs fréquentes
 
-**Correction** :
+| Erreur | Remédiation |
+|--------|-------------|
+| Confondre les deux guerres | Bien distinguer dates, contextes |
+| "Hitler a gagné" | Insister : Hitler a PERDU, suicide 1945 |
+| "Les Juifs étaient coupables" | Expliquer : génocide = crime raciste |
+| Penser que tous ont résisté | Nuancer : Vichy, Résistance, majorité silencieuse |
 
-**Shoah** : Génocide des Juifs par les nazis (extermination systématique)
+### C. Conseils
 
-**Comment** :
-- Persécutions (lois raciales, ghettos)
-- Déportation (trains)
-- Camps d'extermination (chambres à gaz : Auschwitz, Treblinka)
+**À faire** ✅ :
+- Témoignages (lettres poilus, Anne Frank)
+- Visite monument aux morts
+- Commémorations 11 novembre, 8 mai
+- Aborder Shoah avec sensibilité
 
-**Crime contre l'humanité**
-
----
-
-## 👩‍🏫 III. Pédagogie
-
-**Progression** :
-- CM2 : 1GM (tranchées, 11 novembre), 2GM (de Gaulle, débarquement)
-- 3ᵉ : Programme complet (génocide)
-
-**Difficultés** : Violence (tranchées, Shoah)
-
-**Activités** : Lettres de poilus, témoignages déportés, visite mémorial
-
-**Sensibilité** : Shoah = sujet délicat (ne pas choquer mais ne pas édulcorer)
+**À éviter** ❌ :
+- Images trop violentes
+- Glorifier la guerre
+- Passer sous silence la Shoah
+- Simplifier : gentils vs méchants
 
 ---
 
-## 🎓 IV. Pour le concours
+## 💪 IV. S'entraîner pour le concours
 
-**Maîtriser** : 1GM (tranchées, Verdun, bilan), 2GM (Vichy, Résistance, débarquement, Shoah)
+### Questions types
 
-**Dates clés** : 1914, 11 nov 1918, 1939, 18 juin 1940, 6 juin 1944, 8 mai 1945
-
----
-
-### Questions types CRPE
-
-**Question 1** : Expliquez les causes et conséquences des deux guerres mondiales.
+**Q1** : Qu'est-ce que la guerre des tranchées ? Pourquoi si meurtrière ?
 
 <details>
-<summary>Voir la réponse</summary>
-
-**1GM Causes** : Rivalités (nationalisme, colonies), alliances (Triple-Entente vs Triple-Alliance), déclenchement (Sarajevo, 28 juin 1914).
-
-**1GM Conséquences** : 10M morts, destructions, Versailles (Allemagne humiliée → ressentiment), fin 4 empires, SDN.
-
-**2GM Causes** : Versailles ressenti humiliant, crise 1929 (chômage), montée totalitarismes (Hitler, Mussolini), expansionnisme nazi (Pologne, 1er sept 1939).
-
-**2GM Conséquences** : 60M morts, Shoah (6M Juifs), bombe atomique, USA/URSS superpuissances, ONU, décolonisation, guerre froide.
-
+<summary>Réponse</summary>
+Guerre de position (1915-1918). Fossés profonds, front stabilisé (700 km). Meurtrière car : guerre d'usure, nouvelles armes (mitrailleuses, gaz, artillerie), offensives suicidaires, conditions épouvantables, durée (4 ans). Bilan : 10 millions de morts.
 </details>
 
-**Question 2** : Proposez séance sur le 11 novembre pour CM2.
+**Q2** : Comment aborder la Shoah en CM2 ?
 
 <details>
-<summary>Voir la réponse</summary>
-
-**SÉANCE (55 min) : Le 11 novembre 1918**
-
-**Phase 1 (15 min)** : Contexte 1GM. 1914-1918. Tranchées (poilus). Batailles (Verdun).
-
-**Phase 2 (25 min)** : 11 novembre 1918, 11h : Armistice (cessez-le-feu). Joie (fin guerre). Monument aux morts (liste soldats village). Observation photo monument.
-
-**Phase 3 (15 min)** : Trace écrite + lien aujourd'hui. "11 novembre 1918 : fin 1GM. 10 millions morts. Chaque village a monument. Aujourd'hui = jour férié, hommage aux morts."
-
-**Activité** : Visite monument local, lecture noms.
-
+<summary>Réponse</summary>
+Principes : ne pas éluder, adapter à l'âge, contextualiser. Démarche : expliquer antisémitisme nazi, définir génocide (6 millions), témoignage Anne Frank, devoir de mémoire. Éviter : images choquantes, détails morbides. Insister : crime nazi, pas culpabilité victimes.
 </details>
 
-**Question 3** : Comment enseigner la Shoah en 3ᵉ ?
+**Q3** : Qui était De Gaulle ? Quel rôle en 1940 ?
 
 <details>
-<summary>Voir la réponse</summary>
-
-**Approche pédagogique** :
-
-**Contextualiser** : Idéologie nazie (racisme, antisémitisme), persécutions progressives (lois Nuremberg, Nuit Cristal, ghettos), solution finale (1942).
-
-**Expliquer mécanisme** : Déportations (trains), sélection (valides vs inaptes), chambres à gaz, fours crématoires. Échelle industrielle.
-
-**Chiffres** : 6 millions Juifs (dont 1,5M enfants), 2/3 Juifs Europe.
-
-**Témoignages** : Textes Anne Frank, Primo Levi, Simone Veil (sans images choquantes).
-
-**Nuance** : Résistances (soulèvement ghetto Varsovie), Justes (cachent Juifs), libération camps (horreur découverte).
-
-**Réflexion** : Crime contre l'humanité, devoir de mémoire, vigilance (racisme aujourd'hui).
-
-**Activité** : Lecture témoignage, débat "Pourquoi se souvenir ?"
-
+<summary>Réponse</summary>
+Général français. 18 juin 1940 : Appel depuis Londres ("La France a perdu une bataille, pas la guerre"). Crée France Libre. Unifie Résistance (via Jean Moulin). Libération Paris (25 août 1944). Symbole refus défaite, restaure République.
 </details>
+
+---
+
+## 📖 V. Pour aller plus loin
+
+### Ressources
+
+**Livres élèves** :
+- "Otto" - Tomi Ungerer
+- "Journal d'Anne Frank" (adapté)
+- "La Première/Seconde Guerre mondiale" - Casterman BD
+
+**Vidéos** :
+- Lumni : séries sur les guerres
+- C'est pas sorcier
+
+**Sites** :
+- Mémorial de la Shoah
+- Mémorial de Caen
+- Chemins de Mémoire
+
+---
+
+## ✅ Points clés
+
+:::note Récapitulatif
+1. **1914-1918** : Première Guerre mondiale, tranchées, Verdun, 10 millions de morts
+2. **11 novembre 1918** : Armistice
+3. **1929** : Crise économique
+4. **1933** : Hitler au pouvoir
+5. **1939-1945** : Seconde Guerre mondiale
+6. **18 juin 1940** : Appel De Gaulle
+7. **Shoah** : 6 millions de Juifs assassinés
+8. **6 juin 1944** : Débarquement Normandie
+9. **8 mai 1945** : Fin guerre en Europe
+10. **Devoir de mémoire** : 11 novembre, 8 mai
+:::
+
+---
+
+## 🎓 Pour le concours
+
+**Dates indispensables** :
+- 1914-1918 / 11 novembre 1918
+- 18 juin 1940
+- 8 mai 1945
+
+**Vigilance** :
+- Shoah : aborder avec sensibilité
+- Résistance : nuancer (pas tous)
+- Devoir de mémoire : essentiel
 
 ---
 
@@ -476,9 +315,11 @@ De Gaulle (18 juin 1940) : "La France a perdu une bataille, mais pas la guerre !
   <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
     🦦 <strong>Bon courage Marie !</strong>
   </p>
-  <p style={{color: '#666', fontSize: '0.9rem'}}>
-    Guerres mondiales = traumatisme du XXe siècle.<br />
-    Tranchées, Shoah, débarquement : dates et faits essentiels.<br />
-    Marque comme <strong>maîtrisée</strong> !
+  <p style={{color: '
+
+#666', fontSize: '0.9rem'}}>
+    Périodes douloureuses mais essentielles à connaître.<br />
+    Maîtrise les dates clés et le devoir de mémoire.<br />
+    Marque cette fiche comme <strong>maîtrisée</strong> une fois révisée !
   </p>
 </div>
