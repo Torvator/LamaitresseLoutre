@@ -315,9 +315,7 @@ Général français. 18 juin 1940 : Appel depuis Londres ("La France a perdu une
   <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
     🦦 <strong>Bon courage Marie !</strong>
   </p>
-  <p style={{color: '
-
-#666', fontSize: '0.9rem'}}>
+  <p style={{color: '#666', fontSize: '0.9rem'}}>
     Périodes douloureuses mais essentielles à connaître.<br />
     Maîtrise les dates clés et le devoir de mémoire.<br />
     Marque cette fiche comme <strong>maîtrisée</strong> une fois révisée !
