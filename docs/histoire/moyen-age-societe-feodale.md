@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
-title: Le Moyen Âge - Société féodale
-description: Fiche de révision CRPE - Le Moyen Âge : périodisation et société féodale
+title: "Le Moyen Âge - Société féodale"
+description: "Fiche de révision CRPE - Le Moyen Âge : périodisation et société féodale"
 ---
 
 # 🏰 Le Moyen Âge - Société féodale

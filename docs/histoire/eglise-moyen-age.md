@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
-title: L'Église au Moyen Âge
-description: Fiche de révision CRPE - L'Église au Moyen Âge
+title: "L'Église au Moyen Âge"
+description: "Fiche de révision CRPE - L'Église au Moyen Âge"
 ---
 
 # ⛪ L'Église au Moyen Âge
