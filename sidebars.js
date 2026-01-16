@@ -82,23 +82,111 @@ const sidebars = {
         'histoire/moyen-age-societe-feodale',
         'histoire/eglise-moyen-age',
         
-        // Temps modernes (2 fiches) ✅ NOUVELLES
+        // Temps modernes (2 fiches)
         'histoire/renaissance',
         'histoire/grandes-decouvertes',
         
-        // Révolution et XIXe (2 fiches) ✅ NOUVELLES
+        // Révolution et XIXe (2 fiches)
         'histoire/revolution-empire',
         'histoire/xixe-siecle',
         
-        // XXe-XXIe siècles (2 fiches) ✅ NOUVELLES
+        // XXe-XXIe siècles (2 fiches)
         'histoire/guerres-mondiales',
         'histoire/monde-depuis-1945',
       ],
     },
     
-    // Les autres matières seront ajoutées au fur et à mesure
-    // Géographie (10 fiches à venir)
-    // Sciences (15 fiches à venir)
+    // ========================================
+    // 🌍 GÉOGRAPHIE (8 fiches - COMPLET !)
+    // ========================================
+    {
+      type: 'category',
+      label: '🌍 Géographie',
+      collapsed: false,
+      items: [
+        // Cycle 3 (4 fiches)
+        'geographie/lieux-habite',
+        'geographie/loger-travailler',
+        'geographie/consommer',
+        'geographie/demographie-developpement',
+        
+        // Cycle 4 (4 fiches)
+        'geographie/ressources',
+        'geographie/risques-climat',
+        'geographie/urbanisation-mobilites',
+        'geographie/france-ue-mondialisation',
+      ],
+    },
+    
+    // ========================================
+    // 🌈 EMC - Enseignement Moral et Civique (6 fiches - COMPLET !)
+    // ========================================
+    {
+      type: 'category',
+      label: '🌈 EMC',
+      collapsed: false,
+      items: [
+        'emc/sensibilite',
+        'emc/droit-regle',
+        'emc/jugement',
+        'emc/engagement',
+        'emc/laicite',
+        'emc/egalite-discriminations',
+      ],
+    },
+    
+    // ========================================
+    // 🔬 SCIENCES & TECHNOLOGIE (2/16 fiches - EN COURS)
+    // ========================================
+    {
+      type: 'category',
+      label: '🔬 Sciences',
+      collapsed: false,
+      items: [
+        // Physique-Chimie (2/6 fiches)
+        'sciences/matiere',
+        'sciences/atomes-molecules-ions',
+        // 'sciences/reactions-chimiques',
+        // 'sciences/energie',
+        // 'sciences/electricite',
+        // 'sciences/forces-mouvements',
+        
+        // SVT - Sciences de la Vie (0/5 fiches à venir)
+        // 'sciences/vivant',
+        // 'sciences/corps-humain-nutrition',
+        // 'sciences/corps-humain-reproduction',
+        // 'sciences/genetique-evolution',
+        // 'sciences/ecologie',
+        
+        // SVT - Sciences de la Terre (0/2 fiches à venir)
+        // 'sciences/geologie',
+        // 'sciences/astronomie',
+        
+        // Technologie (0/3 fiches à venir)
+        // 'sciences/objets-techniques',
+        // 'sciences/informatique-programmation',
+        // 'sciences/developpement-durable',
+      ],
+    },
+    
+    // ========================================
+    // 🎨 HISTOIRE DE L'ART (8 fiches - COMPLET !)
+    // ========================================
+    {
+      type: 'category',
+      label: '🎨 Histoire de l\'Art',
+      collapsed: false,
+      items: [
+        'arts/prehistoire-antiquite',
+        'arts/moyen-age',
+        'arts/renaissance',
+        'arts/classique',
+        'arts/xixe-siecle',
+        'arts/xxe-siecle',
+        'arts/art-contemporain',
+        'arts/architecture',
+      ],
+    },
   ],
 };
 
