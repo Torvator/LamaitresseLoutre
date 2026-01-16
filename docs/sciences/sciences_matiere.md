@@ -1020,14 +1020,14 @@ GLACE (solide) --------→ EAU (liquide)
 | **Distance particules** | Très proches | Proches | Très éloignées |
 | **Mobilité particules** | Vibration sur place | Glissement | Déplacement libre, rapide |
 | **Liaisons** | Fortes | Moyennes | Faibles/nulles |
-| **Exemple (eau)** | Glace (<0°C) | Eau liquide (0-100°C) | Vapeur d'eau (>100°C) |
+| **Exemple (eau)** | Glace (&lt;0°C) | Eau liquide (0-100°C) | Vapeur d'eau (&gt;100°C) |
 
 ---
 
 **V. Application à l'eau : les trois états**
 
 **Glace (solide)** :
-- T < 0°C (pression atmosphérique)
+- T &lt; 0°C (pression atmosphérique)
 - Glaçon, iceberg, neige, givre
 - Molécules H₂O en réseau cristallin hexagonal
 - Particularité : glace **moins dense** que l'eau liquide → flotte (augmentation volume lors de solidification)
@@ -1038,7 +1038,7 @@ GLACE (solide) --------→ EAU (liquide)
 - Molécules H₂O mobiles, proches
 
 **Vapeur d'eau (gaz)** :
-- T > 100°C (ou évaporation à température ambiante)
+- T &gt; 100°C (ou évaporation à température ambiante)
 - Invisible (≠ buée = gouttelettes)
 - Dans l'air (humidité), nuages (après condensation en gouttelettes), bouilloire
 - Molécules H₂O très éloignées, rapides
