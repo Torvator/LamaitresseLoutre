@@ -105,16 +105,16 @@ const sidebars = {
       collapsed: false,
       items: [
         // Cycle 3 (4 fiches)
-        'geographie/lieux-habite',
-        'geographie/loger-travailler',
-        'geographie/consommer',
-        'geographie/demographie-developpement',
+        'geographie/geo_lieux_habite',
+        'geographie/geo_loger_travailler',
+        'geographie/geo_consommer',
+        'geographie/geo_demographie_developpement',
         
         // Cycle 4 (4 fiches)
-        'geographie/ressources',
-        'geographie/risques-climat',
-        'geographie/urbanisation-mobilites',
-        'geographie/france-ue-mondialisation',
+        'geographie/geo_ressources',
+        'geographie/geo_risques_climat',
+        'geographie/geo_urbanisation_mobilites',
+        'geographie/geo_france_ue_mondialisation',
       ],
     },
     
@@ -126,12 +126,12 @@ const sidebars = {
       label: '🌈 EMC',
       collapsed: false,
       items: [
-        'emc/sensibilite',
-        'emc/droit-regle',
-        'emc/jugement',
-        'emc/engagement',
-        'emc/laicite',
-        'emc/egalite-discriminations',
+        'emc/emc_sensibilite',
+        'emc/emc_droit_regle',
+        'emc/emc_jugement',
+        'emc/emc_engagement',
+        'emc/emc_laicite',
+        'emc/emc_egalite_discriminations',
       ],
     },
     
@@ -144,47 +144,28 @@ const sidebars = {
       collapsed: false,
       items: [
         // Physique-Chimie (2/6 fiches)
-        'sciences/matiere',
-        'sciences/atomes-molecules-ions',
-        // 'sciences/reactions-chimiques',
-        // 'sciences/energie',
-        // 'sciences/electricite',
-        // 'sciences/forces-mouvements',
+        'sciences/sciences_matiere',
+        'sciences/sciences_atomes_molecules_ions',
+        // 'sciences/sciences_reactions_chimiques',
+        // 'sciences/sciences_energie',
+        // 'sciences/sciences_electricite',
+        // 'sciences/sciences_forces_mouvements',
         
         // SVT - Sciences de la Vie (0/5 fiches à venir)
-        // 'sciences/vivant',
-        // 'sciences/corps-humain-nutrition',
-        // 'sciences/corps-humain-reproduction',
-        // 'sciences/genetique-evolution',
-        // 'sciences/ecologie',
+        // 'sciences/sciences_vivant',
+        // 'sciences/sciences_corps_humain_nutrition',
+        // 'sciences/sciences_corps_humain_reproduction',
+        // 'sciences/sciences_genetique_evolution',
+        // 'sciences/sciences_ecologie',
         
         // SVT - Sciences de la Terre (0/2 fiches à venir)
-        // 'sciences/geologie',
-        // 'sciences/astronomie',
+        // 'sciences/sciences_geologie',
+        // 'sciences/sciences_astronomie',
         
         // Technologie (0/3 fiches à venir)
-        // 'sciences/objets-techniques',
-        // 'sciences/informatique-programmation',
-        // 'sciences/developpement-durable',
-      ],
-    },
-    
-    // ========================================
-    // 🎨 HISTOIRE DE L'ART (8 fiches - COMPLET !)
-    // ========================================
-    {
-      type: 'category',
-      label: '🎨 Histoire de l\'Art',
-      collapsed: false,
-      items: [
-        'arts/prehistoire-antiquite',
-        'arts/moyen-age',
-        'arts/renaissance',
-        'arts/classique',
-        'arts/xixe-siecle',
-        'arts/xxe-siecle',
-        'arts/art-contemporain',
-        'arts/architecture',
+        // 'sciences/sciences_objets_techniques',
+        // 'sciences/sciences_informatique_programmation',
+        // 'sciences/sciences_developpement_durable',
       ],
     },
   ],
