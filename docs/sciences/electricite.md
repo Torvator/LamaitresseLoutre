@@ -370,7 +370,7 @@ U = R × I = 50 × 2 = **100 V**
 **Formule de la puissance dissipée** :
 
 $$
-P = R × I² = U × I = \frac{U²}{R}
+P = R × I² = U × I = U²/R
 $$
 
 **Applications utiles de l'effet Joule** :
@@ -474,7 +474,7 @@ Coût : 9 × 0,20 = **1,80 €**
 | 10 mA | Contraction musculaire (ne peut plus lâcher) |
 | 30 mA | Paralysie respiratoire |
 | 75 mA | Fibrillation cardiaque (mortel) |
-| &gt; 1 A | Brûlures graves |
+| Plus de 1 A | Brûlures graves |
 
 **La tension de sécurité** : **50 V** en milieu sec, **25 V** en milieu humide.
 
@@ -1417,13 +1417,9 @@ Cette séance illustre une démarche d'investigation complète : défi de dépar
 
 ---
 
-<div style={{textAlign: 'center', marginTop: '3rem', padding: '1.5rem', backgroundColor: '#e3f2fd', borderRadius: '12px'}}>
-  <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
-    🦦 <strong>Bon courage Marie !</strong>
-  </p>
-  <p style={{color: '#1565c0', fontSize: '0.9rem'}}>
-    L'électricité c'est comme l'eau : ça circule en boucle ! 🔌<br />
-    Retiens série (tout dépendant) vs dérivation (indépendance).<br />
-    Marque cette fiche comme <strong>maîtrisée</strong> une fois révisée !
-  </p>
-</div>
+
+:::tip 🦦 Bon courage Marie !
+Lʼélectricité cʼest comme lʼeau : ça circule en boucle ! 🔌  
+Retiens série (tout dépendant) vs dérivation (indépendance).  
+Marque cette fiche comme **maîtrisée** une fois révisée !
+:::

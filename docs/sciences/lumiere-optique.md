@@ -206,7 +206,7 @@ La Lune ne produit pas de lumière : elle **réfléchit** la lumière du Soleil.
 **Loi 2** : L'angle de réflexion est **égal** à l'angle d'incidence.
 
 $$
-\text{Angle d'incidence} = \text{Angle de réflexion}
+Angle d'incidence = Angle de réflexion
 $$
 
 **Schéma** :
@@ -439,8 +439,8 @@ Chaque couleur correspond à une **longueur d'onde** (λ) différente :
 **Lumière visible** : De 380 nm (violet) à 780 nm (rouge).
 
 **Au-delà du visible** :
-- **Infrarouge (IR)** : λ > 780 nm (chaleur, télécommandes)
-- **Ultraviolet (UV)** : λ < 380 nm (bronzage, stérilisation)
+- **Infrarouge (IR)** : λ supérieur à 780 nm (chaleur, télécommandes)
+- **Ultraviolet (UV)** : λ inférieur à 380 nm (bronzage, stérilisation)
 
 #### 3. Synthèse additive des couleurs
 
@@ -923,7 +923,7 @@ Montrer un cadran solaire ou en fabriquer un simple.
 
 **À éviter** ❌ :
 - Regarder le Soleil directement (même pendant une éclipse) → **DANGER**
-- Utiliser des lasers de classe > 1 (danger pour les yeux)
+- Utiliser des lasers de classe supérieure à 1 (danger pour les yeux)
 - Confondre source primaire et source secondaire dans son discours
 - Négliger les conceptions initiales des élèves
 - Faire des schémas sans avoir manipulé au préalable
@@ -1226,13 +1226,9 @@ L'expérience des cartons percés est simple, efficace et reproductible. Elle pe
 
 ---
 
-<div style={{textAlign: 'center', marginTop: '3rem', padding: '1.5rem', backgroundColor: '#fff8e1', borderRadius: '12px'}}>
-  <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
-    🦦 <strong>Bon courage Marie !</strong>
-  </p>
-  <p style={{color: '#f57f17', fontSize: '0.9rem'}}>
-    La lumière file tout droit à 300 000 km/s : même Flash est jaloux ! 💡<br />
-    Retiens : propagation rectiligne et conditions de la vision.<br />
-    Marque cette fiche comme <strong>maîtrisée</strong> une fois révisée !
-  </p>
-</div>
+
+:::tip 🦦 Bon courage Marie !
+La lumière file tout droit à 300 000 km/s : même Flash est jaloux ! 💡  
+Retiens : propagation rectiligne et conditions de la vision.  
+Marque cette fiche comme **maîtrisée** une fois révisée !
+:::

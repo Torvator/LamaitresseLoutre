@@ -72,7 +72,7 @@ Rectiligne :        Circulaire :         Curviligne :
 **Formule de la vitesse moyenne** :
 
 $$
-v = \frac{d}{t}
+v = d / t
 $$
 
 Où :
@@ -281,7 +281,7 @@ m = P / g = 50 / 10 = **5 kg**
 **Formule** :
 
 $$
-F = G \times \frac{m_1 \times m_2}{d^2}
+F = G × (m₁ × m₂) / d²
 $$
 
 Où :
@@ -1234,13 +1234,9 @@ La notion de référentiel se construit par confrontation de points de vue sur d
 
 ---
 
-<div style={{textAlign: 'center', marginTop: '3rem', padding: '1.5rem', backgroundColor: '#e8f5e9', borderRadius: '12px'}}>
-  <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
-    🦦 <strong>Bon courage Marie !</strong>
-  </p>
-  <p style={{color: '#2e7d32', fontSize: '0.9rem'}}>
-    Sur la Lune, tu pèserais 6 fois moins mais ta masse serait la même ! 🚀<br />
-    Retiens v = d/t et P = m × g, et n'oublie pas : le mouvement est relatif !<br />
-    Marque cette fiche comme <strong>maîtrisée</strong> une fois révisée !
-  </p>
-</div>
+
+:::tip 🦦 Bon courage Marie !
+Sur la Lune, tu pèserais 6 fois moins mais ta masse serait la même ! 🚀  
+Retiens v = d/t et P = m × g, et nʼoublie pas : le mouvement est relatif !  
+Marque cette fiche comme **maîtrisée** une fois révisée !
+:::

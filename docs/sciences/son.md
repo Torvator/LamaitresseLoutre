@@ -117,8 +117,8 @@ L'éclair (lumière) et le tonnerre (son) sont produits au même moment. Mais on
 **Domaine audible par l'humain** : **20 Hz à 20 000 Hz** (20 kHz)
 
 **Au-delà du domaine audible** :
-- **Infrasons** : f &lt; 20 Hz (éléphants, séismes, vent)
-- **Ultrasons** : f &gt; 20 000 Hz (chauves-souris, dauphins, échographie)
+- **Infrasons** : f inférieur à 20 Hz (éléphants, séismes, vent)
+- **Ultrasons** : f supérieur à 20 000 Hz (chauves-souris, dauphins, échographie)
 
 **Exemples de fréquences** :
 
@@ -197,7 +197,7 @@ Amplitude
 **Relation fréquence-période** :
 
 $$
-f = \frac{1}{T} \quad \text{et} \quad T = \frac{1}{f}
+f = 1 / T  et  T = 1 / f
 $$
 
 **Exemple** : La 440 Hz → T = 1/440 ≈ 0,00227 s ≈ 2,3 ms
@@ -874,13 +874,13 @@ L'expérience de la cloche à vide le démontre : un réveil qui sonne sous une 
 ### Formule
 
 $$
-t = \frac{d}{v}
+t = d / v
 $$
 
 ### Calcul
 
 $$
-t = \frac{1000}{340} = 2,94 \text{ s} \approx \textbf{3 secondes}
+t = 1000 / 340 = 2,94 s ≈ 3 secondes
 $$
 
 ### Vérification
@@ -1062,13 +1062,9 @@ Le son, étant une onde mécanique, nécessite un milieu matériel pour se propa
 
 ---
 
-<div style={{textAlign: 'center', marginTop: '3rem', padding: '1.5rem', backgroundColor: '#f3e5f5', borderRadius: '12px'}}>
-  <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
-    🦦 <strong>Bon courage Marie !</strong>
-  </p>
-  <p style={{color: '#7b1fa2', fontSize: '0.9rem'}}>
-    Le son voyage à 340 m/s : compte les secondes après l'éclair pour savoir si l'orage approche ! 🔊<br />
-    Retiens : son = vibration, pas de son dans le vide, et protège tes oreilles !<br />
-    Marque cette fiche comme <strong>maîtrisée</strong> une fois révisée !
-  </p>
-</div>
+
+:::tip 🦦 Bon courage Marie !
+Le son voyage à 340 m/s : compte les secondes après lʼéclair pour savoir si lʼorage approche ! 🔊  
+Retiens : son = vibration, pas de son dans le vide, et protège tes oreilles !  
+Marque cette fiche comme **maîtrisée** une fois révisée !
+:::

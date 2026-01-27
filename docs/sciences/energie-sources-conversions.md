@@ -325,7 +325,7 @@ L'énergie existe sous plusieurs formes :
 **Formule** :
 
 $$
-\text{Rendement (η)} = \frac{\text{Énergie utile (sortie)}}{\text{Énergie totale (entrée)}} × 100
+Rendement (η) = (Énergie utile / Énergie totale) × 100
 $$
 
 **Exprimé en pourcentage (%)** : Un rendement de 100% serait parfait (impossible en pratique).
@@ -955,7 +955,7 @@ Cette chaleur n'est pas "perdue" au sens physique, mais elle n'est pas **utile**
 Le rendement (η) mesure l'efficacité d'une conversion d'énergie :
 
 $$
-η = \frac{\text{Énergie utile}}{\text{Énergie totale consommée}} × 100
+η = (Énergie utile / Énergie totale) × 100
 $$
 
 Le rendement s'exprime en pourcentage et est toujours **inférieur à 100%**.
@@ -987,7 +987,7 @@ Pour 100 unités d'énergie chimique (essence) :
 ### 3. Calcul du rendement
 
 $$
-η = \frac{25}{100} × 100 = 25\%
+η = (25 / 100) × 100 = 25%
 $$
 
 Le rendement d'un moteur essence est d'environ **25-30%**.
@@ -1270,13 +1270,9 @@ La construction de la chaîne énergétique au cycle 3 s'appuie sur l'observatio
 
 ---
 
-<div style={{textAlign: 'center', marginTop: '3rem', padding: '1.5rem', backgroundColor: '#fff3e0', borderRadius: '12px'}}>
-  <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
-    🦦 <strong>Bon courage Marie !</strong>
-  </p>
-  <p style={{color: '#e65100', fontSize: '0.9rem'}}>
-    L'énergie est partout : dans ton café chaud, dans le vent, dans ton corps ! ⚡<br />
-    Retiens la chaîne énergétique et le rendement (toujours &lt; 100%).<br />
-    Marque cette fiche comme <strong>maîtrisée</strong> une fois révisée !
-  </p>
-</div>
+
+:::tip 🦦 Bon courage Marie !
+Lʼénergie est partout : dans ton café chaud, dans le vent, dans ton corps ! ⚡  
+Retiens la chaîne énergétique et le rendement (toujours inférieur à 100%).  
+Marque cette fiche comme **maîtrisée** une fois révisée !
+:::
