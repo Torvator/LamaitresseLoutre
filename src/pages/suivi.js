@@ -47,30 +47,50 @@ const fiches = [
   // ========================================
   // GÉOGRAPHIE (8 fiches - COMPLET !)
   // ========================================
-  { id: 'geo-lieux', titre: 'Découvrir les lieux où j\'habite', matiere: 'Géographie', url: '/docs/geographie/lieux-habite' },
-  { id: 'geo-loger', titre: 'Se loger, travailler, se cultiver', matiere: 'Géographie', url: '/docs/geographie/loger-travailler' },
-  { id: 'geo-consommer', titre: 'Consommer en France', matiere: 'Géographie', url: '/docs/geographie/consommer' },
-  { id: 'geo-demographie', titre: 'Démographie et développement', matiere: 'Géographie', url: '/docs/geographie/demographie-developpement' },
-  { id: 'geo-ressources', titre: 'Ressources et énergies', matiere: 'Géographie', url: '/docs/geographie/ressources' },
-  { id: 'geo-risques', titre: 'Risques et changement climatique', matiere: 'Géographie', url: '/docs/geographie/risques-climat' },
-  { id: 'geo-urbanisation', titre: 'Urbanisation et mobilités', matiere: 'Géographie', url: '/docs/geographie/urbanisation-mobilites' },
-  { id: 'geo-mondialisation', titre: 'France, UE et mondialisation', matiere: 'Géographie', url: '/docs/geographie/france-ue-mondialisation' },
+  { id: 'geo-lieux', titre: 'Découvrir les lieux où j\'habite', matiere: 'Géographie', url: '/docs/geographie/geo_lieux_habite' },
+  { id: 'geo-loger', titre: 'Se loger, travailler, se cultiver', matiere: 'Géographie', url: '/docs/geographie/geo_loger_travailler' },
+  { id: 'geo-consommer', titre: 'Consommer en France', matiere: 'Géographie', url: '/docs/geographie/geo_consommer' },
+  { id: 'geo-demographie', titre: 'Démographie et développement', matiere: 'Géographie', url: '/docs/geographie/geo_demographie_developpement' },
+  { id: 'geo-ressources', titre: 'Ressources et énergies', matiere: 'Géographie', url: '/docs/geographie/geo_ressources' },
+  { id: 'geo-risques', titre: 'Risques et changement climatique', matiere: 'Géographie', url: '/docs/geographie/geo_risques_climat' },
+  { id: 'geo-urbanisation', titre: 'Urbanisation et mobilités', matiere: 'Géographie', url: '/docs/geographie/geo_urbanisation_mobilites' },
+  { id: 'geo-mondialisation', titre: 'France, UE et mondialisation', matiere: 'Géographie', url: '/docs/geographie/geo_france_ue_mondialisation' },
   
   // ========================================
   // EMC - Enseignement Moral et Civique (6 fiches - COMPLET !)
   // ========================================
-  { id: 'emc-sensibilite', titre: 'La sensibilité : soi et les autres', matiere: 'EMC', url: '/docs/emc/sensibilite' },
-  { id: 'emc-droit', titre: 'Le droit et la règle', matiere: 'EMC', url: '/docs/emc/droit-regle' },
-  { id: 'emc-jugement', titre: 'Le jugement : penser par soi-même', matiere: 'EMC', url: '/docs/emc/jugement' },
-  { id: 'emc-engagement', titre: 'L\'engagement : agir individuellement et collectivement', matiere: 'EMC', url: '/docs/emc/engagement' },
-  { id: 'emc-laicite', titre: 'Laïcité et liberté de conscience', matiere: 'EMC', url: '/docs/emc/laicite' },
-  { id: 'emc-egalite', titre: 'Égalité et lutte contre les discriminations', matiere: 'EMC', url: '/docs/emc/egalite-discriminations' },
+  { id: 'emc-sensibilite', titre: 'La sensibilité : soi et les autres', matiere: 'EMC', url: '/docs/emc/emc_sensibilite' },
+  { id: 'emc-droit', titre: 'Le droit et la règle', matiere: 'EMC', url: '/docs/emc/emc_droit_regle' },
+  { id: 'emc-jugement', titre: 'Le jugement : penser par soi-même', matiere: 'EMC', url: '/docs/emc/emc_jugement' },
+  { id: 'emc-engagement', titre: 'L\'engagement : agir individuellement et collectivement', matiere: 'EMC', url: '/docs/emc/emc_engagement' },
+  { id: 'emc-laicite', titre: 'Laïcité et liberté de conscience', matiere: 'EMC', url: '/docs/emc/emc_laicite' },
+  { id: 'emc-egalite', titre: 'Égalité et lutte contre les discriminations', matiere: 'EMC', url: '/docs/emc/emc_egalite_discriminations' },
   
   // ========================================
-  // SCIENCES & TECHNOLOGIE (2/16 fiches - EN COURS)
+  // SCIENCES & TECHNOLOGIE (8/15 fiches - Physique-Chimie COMPLET !)
   // ========================================
-  { id: 'sciences-matiere', titre: 'La matière : États et transformations', matiere: 'Sciences', url: '/docs/sciences/matiere' },
-  { id: 'sciences-atomes', titre: 'Atomes, molécules et ions', matiere: 'Sciences', url: '/docs/sciences/atomes-molecules-ions' },
+  // Physique-Chimie (8 fiches - COMPLET !)
+  { id: 'sciences-matiere', titre: 'La matière : états et changements', matiere: 'Sciences', url: '/docs/sciences/matiere-etats-changements' },
+  { id: 'sciences-melanges', titre: 'Mélanges et solutions', matiere: 'Sciences', url: '/docs/sciences/melanges-solutions' },
+  { id: 'sciences-atomes', titre: 'Atomes, molécules et réactions chimiques', matiere: 'Sciences', url: '/docs/sciences/atomes-molecules-reactions' },
+  { id: 'sciences-energie', titre: 'L\'énergie : sources et conversions', matiere: 'Sciences', url: '/docs/sciences/energie-sources-conversions' },
+  { id: 'sciences-electricite', titre: 'L\'électricité', matiere: 'Sciences', url: '/docs/sciences/electricite' },
+  { id: 'sciences-mouvement', titre: 'Mouvement et forces', matiere: 'Sciences', url: '/docs/sciences/mouvement-forces' },
+  { id: 'sciences-lumiere', titre: 'Lumière et optique', matiere: 'Sciences', url: '/docs/sciences/lumiere-optique' },
+  { id: 'sciences-son', titre: 'Le son', matiere: 'Sciences', url: '/docs/sciences/son' },
+  
+  // Sciences de la Vie - SVT (À VENIR)
+  // { id: 'sciences-vivant', titre: 'Le vivant : classification et biodiversité', matiere: 'Sciences', url: '/docs/sciences/vivant-classification-biodiversite' },
+  // { id: 'sciences-nutrition', titre: 'Fonctions de nutrition', matiere: 'Sciences', url: '/docs/sciences/fonctions-nutrition' },
+  // { id: 'sciences-reproduction', titre: 'Reproduction et développement', matiere: 'Sciences', url: '/docs/sciences/reproduction-developpement' },
+  // { id: 'sciences-corps', titre: 'Corps humain et santé', matiere: 'Sciences', url: '/docs/sciences/corps-humain-sante' },
+  
+  // Sciences de la Terre (À VENIR)
+  // { id: 'sciences-ecosystemes', titre: 'Écosystèmes et environnement', matiere: 'Sciences', url: '/docs/sciences/ecosystemes-environnement' },
+  // { id: 'sciences-terre', titre: 'La Terre et le système solaire', matiere: 'Sciences', url: '/docs/sciences/terre-systeme-solaire' },
+  
+  // Technologie (À VENIR)
+  // { id: 'sciences-technologie', titre: 'Objets techniques et programmation', matiere: 'Sciences', url: '/docs/sciences/objets-techniques-programmation' },
 ];
 
 // Suite du fichier identique...
@@ -115,63 +135,68 @@ function SuiviPage() {
   const nbEMCMaitrisees = fichesEMC.filter(f => fichesMaitrisees.includes(f.id)).length;
   const nbSciencesMaitrisees = fichesSciences.filter(f => fichesMaitrisees.includes(f.id)).length;
   
-  const pourcentageFrancais = Math.round((nbFrancaisMaitrisees / fichesFrancais.length) * 100);
-  const pourcentageMaths = Math.round((nbMathsMaitrisees / fichesMaths.length) * 100);
-  const pourcentageHistoire = Math.round((nbHistoireMaitrisees / fichesHistoire.length) * 100);
-  const pourcentageGeo = Math.round((nbGeoMaitrisees / fichesGeo.length) * 100);
-  const pourcentageEMC = Math.round((nbEMCMaitrisees / fichesEMC.length) * 100);
-  const pourcentageSciences = Math.round((nbSciencesMaitrisees / fichesSciences.length) * 100);
+  const pourcentageFrancais = Math.round((nbFrancaisMaitrisees / fichesFrancais.length) * 100) || 0;
+  const pourcentageMaths = Math.round((nbMathsMaitrisees / fichesMaths.length) * 100) || 0;
+  const pourcentageHistoire = Math.round((nbHistoireMaitrisees / fichesHistoire.length) * 100) || 0;
+  const pourcentageGeo = Math.round((nbGeoMaitrisees / fichesGeo.length) * 100) || 0;
+  const pourcentageEMC = Math.round((nbEMCMaitrisees / fichesEMC.length) * 100) || 0;
+  const pourcentageSciences = Math.round((nbSciencesMaitrisees / fichesSciences.length) * 100) || 0;
 
+  // Composant pour une liste de matière
   const MatiereListe = ({ fiches, matiere, emoji, couleurBg, couleurBorder, couleurCheck }) => (
-    <div style={{ marginBottom: '3rem' }}>
-      <h3 style={{ 
-        backgroundColor: couleurBg, 
-        padding: '0.75rem 1rem',
-        borderRadius: '8px',
-        borderLeft: `4px solid ${couleurBorder}`
-      }}>
-        {emoji} {matiere} ({fiches.filter(f => fichesMaitrisees.includes(f.id)).length}/{fiches.length})
+    <div style={{
+      backgroundColor: couleurBg,
+      borderRadius: '12px',
+      padding: '1.5rem',
+      marginBottom: '1.5rem',
+      border: `2px solid ${couleurBorder}`
+    }}>
+      <h3 style={{ marginTop: 0, borderBottom: `2px solid ${couleurBorder}`, paddingBottom: '0.5rem' }}>
+        {emoji} {matiere}
       </h3>
-      <div style={{ display: 'grid', gap: '0.75rem', marginTop: '1rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '0.75rem' }}>
         {fiches.map((fiche) => (
           <div
             key={fiche.id}
+            onClick={() => toggleFiche(fiche.id)}
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '1rem',
-              padding: '1rem',
-              backgroundColor: fichesMaitrisees.includes(fiche.id) ? `${couleurBg}dd` : '#f8f9fa',
+              padding: '0.75rem 1rem',
+              backgroundColor: fichesMaitrisees.includes(fiche.id) ? '#e8f5e9' : 'white',
               borderRadius: '8px',
-              border: '1px solid #dee2e6',
-              transition: 'all 0.2s ease',
               cursor: 'pointer',
+              border: fichesMaitrisees.includes(fiche.id) ? '2px solid #4caf50' : '1px solid #ddd',
+              transition: 'all 0.2s ease'
             }}
-            onClick={() => toggleFiche(fiche.id)}
           >
-            <input
-              type="checkbox"
-              checked={fichesMaitrisees.includes(fiche.id)}
-              onChange={() => toggleFiche(fiche.id)}
-              style={{ width: '20px', height: '20px', cursor: 'pointer' }}
-            />
-            <div style={{ flex: 1 }}>
-              <a 
-                href={fiche.url}
-                style={{ 
-                  fontSize: '1.1rem',
-                  fontWeight: fichesMaitrisees.includes(fiche.id) ? 'bold' : 'normal',
-                  textDecoration: 'none',
-                  color: '#1c1e21'
-                }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                {fiche.titre}
-              </a>
+            <div style={{
+              width: '24px',
+              height: '24px',
+              borderRadius: '4px',
+              border: fichesMaitrisees.includes(fiche.id) ? 'none' : `2px solid ${couleurCheck}`,
+              backgroundColor: fichesMaitrisees.includes(fiche.id) ? '#4caf50' : 'white',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginRight: '0.75rem',
+              flexShrink: 0
+            }}>
+              {fichesMaitrisees.includes(fiche.id) && (
+                <span style={{ color: 'white', fontWeight: 'bold' }}>✓</span>
+              )}
             </div>
-            {fichesMaitrisees.includes(fiche.id) && (
-              <span style={{ color: couleurCheck, fontSize: '1.5rem' }}>✓</span>
-            )}
+            <a
+              href={fiche.url}
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                textDecoration: fichesMaitrisees.includes(fiche.id) ? 'line-through' : 'none',
+                color: fichesMaitrisees.includes(fiche.id) ? '#666' : '#333',
+                fontWeight: '500'
+              }}
+            >
+              {fiche.titre}
+            </a>
           </div>
         ))}
       </div>
@@ -179,45 +204,43 @@ function SuiviPage() {
   );
 
   return (
-    <Layout
-      title="Suivi des révisions"
-      description="Suivez votre progression dans les révisions du CRPE"
-    >
-      <div className="container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
-        <h1>📊 Suivi des révisions</h1>
-        <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
+    <Layout title="Suivi des révisions" description="Suivez votre progression dans les révisions CRPE">
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
+        <h1 style={{ textAlign: 'center', marginBottom: '0.5rem' }}>📊 Suivi des révisions</h1>
+        <p style={{ textAlign: 'center', color: '#666', marginBottom: '2rem' }}>
           Coche les fiches que tu as maîtrisées pour suivre ta progression !
         </p>
 
-        <div style={{ 
-          backgroundColor: '#f0f0f0', 
-          borderRadius: '12px', 
+        <div style={{
+          backgroundColor: '#f8f9fa',
+          borderRadius: '12px',
           padding: '1.5rem',
-          marginBottom: '2rem'
+          marginBottom: '2rem',
+          textAlign: 'center'
         }}>
-          <h2 style={{ marginTop: 0 }}>🎯 Progression globale</h2>
-          <div style={{ 
-            backgroundColor: '#fff', 
-            borderRadius: '8px', 
+          <div style={{
+            backgroundColor: '#e9ecef',
+            borderRadius: '10px',
             height: '40px',
             overflow: 'hidden',
             marginBottom: '1rem'
           }}>
             <div style={{
-              backgroundColor: '#2e8555',
+              backgroundColor: pourcentage >= 75 ? '#28a745' : pourcentage >= 50 ? '#ffc107' : '#17a2b8',
               height: '100%',
               width: `${pourcentage}%`,
-              transition: 'width 0.3s ease',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: 'white',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              fontSize: '1.1rem',
+              transition: 'width 0.5s ease'
             }}>
               {pourcentage}%
             </div>
           </div>
-          <p style={{ fontSize: '1.2rem', margin: 0 }}>
+          <p style={{ margin: 0, fontSize: '1.1rem' }}>
             <strong>{nbMaitrisees}</strong> sur <strong>{nbTotal}</strong> fiches maîtrisées
           </p>
         </div>

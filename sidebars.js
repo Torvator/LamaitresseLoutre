@@ -136,36 +136,71 @@ const sidebars = {
     },
     
     // ========================================
-    // 🔬 SCIENCES & TECHNOLOGIE (2/16 fiches - EN COURS)
+    // 🔬 SCIENCES & TECHNOLOGIE (8/15 fiches - EN COURS)
     // ========================================
     {
       type: 'category',
       label: '🔬 Sciences',
       collapsed: false,
       items: [
-        // Physique-Chimie (2/6 fiches)
-        'sciences/sciences_matiere',
-        'sciences/sciences_atomes_molecules_ions',
-        // 'sciences/sciences_reactions_chimiques',
-        // 'sciences/sciences_energie',
-        // 'sciences/sciences_electricite',
-        // 'sciences/sciences_forces_mouvements',
+        // ----------------------------------------
+        // I. Physique-Chimie (8/8 fiches - COMPLET !)
+        // ----------------------------------------
+        {
+          type: 'category',
+          label: '⚗️ Physique-Chimie',
+          collapsed: false,
+          items: [
+            'sciences/matiere-etats-changements',
+            'sciences/melanges-solutions',
+            'sciences/atomes-molecules-reactions',
+            'sciences/energie-sources-conversions',
+            'sciences/electricite',
+            'sciences/mouvement-forces',
+            'sciences/lumiere-optique',
+            'sciences/son',
+          ],
+        },
         
-        // SVT - Sciences de la Vie (0/5 fiches à venir)
-        // 'sciences/sciences_vivant',
-        // 'sciences/sciences_corps_humain_nutrition',
-        // 'sciences/sciences_corps_humain_reproduction',
-        // 'sciences/sciences_genetique_evolution',
-        // 'sciences/sciences_ecologie',
+        // ----------------------------------------
+        // II. Sciences de la Vie - SVT (0/4 fiches - À VENIR)
+        // ----------------------------------------
+        // {
+        //   type: 'category',
+        //   label: '🌱 Sciences de la Vie',
+        //   collapsed: true,
+        //   items: [
+        //     'sciences/vivant-classification-biodiversite',
+        //     'sciences/fonctions-nutrition',
+        //     'sciences/reproduction-developpement',
+        //     'sciences/corps-humain-sante',
+        //   ],
+        // },
         
-        // SVT - Sciences de la Terre (0/2 fiches à venir)
-        // 'sciences/sciences_geologie',
-        // 'sciences/sciences_astronomie',
+        // ----------------------------------------
+        // III. Sciences de la Terre (0/2 fiches - À VENIR)
+        // ----------------------------------------
+        // {
+        //   type: 'category',
+        //   label: '🌍 Sciences de la Terre',
+        //   collapsed: true,
+        //   items: [
+        //     'sciences/ecosystemes-environnement',
+        //     'sciences/terre-systeme-solaire',
+        //   ],
+        // },
         
-        // Technologie (0/3 fiches à venir)
-        // 'sciences/sciences_objets_techniques',
-        // 'sciences/sciences_informatique_programmation',
-        // 'sciences/sciences_developpement_durable',
+        // ----------------------------------------
+        // IV. Technologie (0/1 fiche - À VENIR)
+        // ----------------------------------------
+        // {
+        //   type: 'category',
+        //   label: '🔧 Technologie',
+        //   collapsed: true,
+        //   items: [
+        //     'sciences/objets-techniques-programmation',
+        //   ],
+        // },
       ],
     },
   ],
