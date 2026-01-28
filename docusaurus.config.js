@@ -53,27 +53,10 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'crpeSidebar',
             position: 'left',
             label: '📚 Mes Fiches',
           },
-          // Les liens ci-dessous nécessitent des pages dans src/pages/
-          // Décommente-les quand tu auras créé les pages correspondantes
-          // {
-          //   to: '/suivi',
-          //   label: '📊 Suivi',
-          //   position: 'left',
-          // },
-          // {
-          //   to: '/commentaires',
-          //   label: '💬 Commentaires',
-          //   position: 'left',
-          // },
-          // {
-          //   to: '/profil',
-          //   label: '👤 Profil',
-          //   position: 'right',
-          // },
         ],
         hideOnScroll: false,
       },
