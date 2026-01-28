@@ -978,7 +978,7 @@ L'effet de serre naturel est donc **indispensable à la vie** telle que nous la 
 | **Dioxyde de carbone** | CO₂ | Respiration, volcans | ~25% |
 | **Méthane** | CH₄ | Zones humides, animaux | ~10% |
 | **Ozone** | O₃ | Réactions chimiques | ~5% |
-| **Protoxyde d'azote** | N₂O | Sols, océans | <5% |
+| **Protoxyde d'azote** | N₂O | Sols, océans | moins de 5% |
 
 ---
 
