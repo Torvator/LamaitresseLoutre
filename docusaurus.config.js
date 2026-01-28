@@ -28,19 +28,19 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js', // Chemin relatif simple
+          sidebarPath: './sidebars.js',
           routeBasePath: 'fiches',
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css', // Chemin relatif simple
+          customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
 
-  // --- INTÉGRATION RECHERCHE LOCALE (Corrigée) ---
-themes: [
+  // --- INTÉGRATION RECHERCHE LOCALE (Simplifiée) ---
+  themes: [
     [
       "@easyops-cn/docusaurus-search-local",
       {
@@ -49,11 +49,11 @@ themes: [
         indexDocs: true,
         indexBlog: false,
         indexPages: false,
-        docsRouteBasePath: "/fiches",
+        docsRouteBasePath: ["fiches"],
       },
     ],
   ],
-  // ----------------------------------------------
+  // ------------------------------------------------
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
