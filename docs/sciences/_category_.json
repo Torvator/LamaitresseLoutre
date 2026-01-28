@@ -1,8 +1,8 @@
 {
-  "label": "🔬 Sciences",
-  "position": 6,
+  "label": "🔬 Sciences et Technologie",
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Fiches de révision Sciences et Technologie pour le CRPE 2026 - Physique-Chimie, SVT, Technologie"
+    "description": "Toutes les fiches de révision en Sciences et Technologie pour le CRPE 2026."
   }
 }
