@@ -1,22 +1,26 @@
-// @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '🦦 La Maîtresse Loutre',
-  tagline: 'Préparation CRPE 2026 - Tu vas réussir Marie ! 💪',
+  tagline: 'Préparation CRPE',
   favicon: 'img/favicon.ico',
 
-  // Configuration GitHub Pages
+  // Set the production url of your site here
   url: 'https://torvator.github.io',
+  // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/LamaitresseLoutre/',
-  
-  organizationName: 'torvator',
-  projectName: 'LamaitresseLoutre',
 
-  onBrokenLinks: 'warn',
+  // GitHub pages deployment config.
+  organizationName: 'torvator', // Usually your GitHub org/user name.
+  projectName: 'LamaitresseLoutre', // Usually your repo name.
+
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr'],
@@ -29,9 +33,12 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          // C'est ici que tu as défini que tes docs sont sur /fiches
           routeBasePath: 'fiches',
+          editUrl:
+            'https://github.com/torvator/LamaitresseLoutre/tree/main/',
         },
-        blog: false,
+        blog: false, // Blog désactivé comme dans ta config
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -39,33 +46,37 @@ const config = {
     ],
   ],
 
-  // --- INTÉGRATION RECHERCHE LOCALE (Simplifiée) ---
-  themes: [
+  // --- CORRECTION DU PLUGIN DE RECHERCHE ---
+  plugins: [
     [
-      "@easyops-cn/docusaurus-search-local",
+      require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         hashed: true,
         language: ["fr"],
         indexDocs: true,
         indexBlog: false,
-        indexPages: false,
-        docsRouteBasePath: ["fiches"],
+        // C'EST CETTE LIGNE QUI MANQUAIT :
+        // On dit au plugin d'aller chercher le contenu dans "/fiches" et pas "/docs"
+        docsRouteBasePath: "/fiches",
+        
+        // Optionnel : Surligne le mot cherché quand on arrive sur la page
+        highlightSearchTermsOnTargetPage: true,
       },
     ],
   ],
-  // ------------------------------------------------
+  // -----------------------------------------
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
-      },
-      
+      // Replace with your project's social card
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '🦦 La Maîtresse Loutre',
+        logo: {
+          alt: 'La Maîtresse Loutre Logo',
+          src: 'img/logo.svg',
+        },
         items: [
           {
             type: 'docSidebar',
@@ -73,31 +84,24 @@ const config = {
             position: 'left',
             label: '📚 Mes Fiches',
           },
+          {to: '/suivi', label: '📊 Suivi', position: 'left'},
+          {to: '/commentaires', label: '💬 Commentaires', position: 'left'},
+          {to: '/profil', label: '👤 Profil', position: 'right'},
+          // Le lien GitHub
           {
-            to: '/suivi',
-            label: '📊 Suivi',
-            position: 'left',
-          },
-          {
-            to: '/commentaires',
-            label: '💬 Commentaires',
-            position: 'left',
-          },
-          {
-            to: '/profil',
-            label: '👤 Profil',
+            href: 'https://github.com/torvator/LamaitresseLoutre',
+            label: 'GitHub',
             position: 'right',
           },
         ],
-        hideOnScroll: false,
       },
-      
       footer: {
         style: 'dark',
-        links: [],
+        links: [
+          // J'ai gardé ton footer simple s'il n'y a pas de liens spécifiques
+        ],
         copyright: `🦦 Préparation CRPE 2026 - Bon courage Marie ! 💪✨`,
       },
-      
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
