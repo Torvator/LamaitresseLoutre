@@ -57,21 +57,23 @@ const config = {
             position: 'left',
             label: '📚 Mes Fiches',
           },
-          {
-            to: '/suivi',
-            label: '📊 Suivi',
-            position: 'left',
-          },
-          {
-            to: '/commentaires',
-            label: '💬 Commentaires',
-            position: 'left',
-          },
-          {
-            to: '/profil',
-            label: '👤 Profil',
-            position: 'right',
-          },
+          // Les liens ci-dessous nécessitent des pages dans src/pages/
+          // Décommente-les quand tu auras créé les pages correspondantes
+          // {
+          //   to: '/suivi',
+          //   label: '📊 Suivi',
+          //   position: 'left',
+          // },
+          // {
+          //   to: '/commentaires',
+          //   label: '💬 Commentaires',
+          //   position: 'left',
+          // },
+          // {
+          //   to: '/profil',
+          //   label: '👤 Profil',
+          //   position: 'right',
+          // },
         ],
         hideOnScroll: false,
       },
