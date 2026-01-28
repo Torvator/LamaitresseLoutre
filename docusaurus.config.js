@@ -53,9 +53,24 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'crpeSidebar',
+            sidebarId: 'tutorialSidebar',
             position: 'left',
             label: '📚 Mes Fiches',
+          },
+          {
+            to: '/suivi',
+            label: '📊 Suivi',
+            position: 'left',
+          },
+          {
+            to: '/commentaires',
+            label: '💬 Commentaires',
+            position: 'left',
+          },
+          {
+            to: '/profil',
+            label: '👤 Profil',
+            position: 'right',
           },
         ],
         hideOnScroll: false,
