@@ -28,16 +28,32 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: './sidebars.js', // Chemin relatif simple
           routeBasePath: 'fiches',
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.css', // Chemin relatif simple
         },
       }),
     ],
   ],
+
+  // --- INTÉGRATION RECHERCHE LOCALE (Corrigée) ---
+themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["fr"],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: "/fiches",
+      },
+    ],
+  ],
+  // ----------------------------------------------
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

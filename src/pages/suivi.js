@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import Layout from '@theme/Layout'; // Ajout du Layout manquant pour la cohérence
+import ProtectedRoute from '../components/ProtectedRoute'; // Protection de la page
+import { useAuth } from '../utils/useAuth';
+import { db } from '../utils/firebase';
+import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
 
-// Données des fiches par matière - TOUTES LES MATIÈRES
+// --- Données des fiches (Inchangé) ---
 const fichesData = {
   sciences: {
     label: '🔬 Sciences et Technologie',
@@ -117,15 +122,23 @@ const fichesData = {
   },
 };
 
-// Composant pour une fiche individuelle
-function FicheItem({ fiche, status, onStatusChange }) {
+// Composant FicheItem (Légèrement adapté)
+function FicheItem({ fiche, status, onStatusChange, disabled }) {
   const statusColors = {
-    'non-commence': { bg: '#ffebee', border: '#f44336', emoji: '🔴' },
-    'en-cours': { bg: '#fff3e0', border: '#ff9800', emoji: '🟡' },
-    'maitrise': { bg: '#e8f5e9', border: '#4caf50', emoji: '🟢' },
+    'NON_COMMENCE': { bg: '#ffebee', border: '#f44336', emoji: '🔴' }, // Match avec StatutFiche.js
+    'EN_COURS': { bg: '#fff3e0', border: '#ff9800', emoji: '🟡' },
+    'MAITRISE': { bg: '#e8f5e9', border: '#4caf50', emoji: '🟢' },
   };
 
-  const currentStatus = statusColors[status] || statusColors['non-commence'];
+  // Mapping pour compatibilité avec l'ancien code si besoin
+  const mapStatus = (s) => {
+    if (s === 'non-commence') return 'NON_COMMENCE';
+    if (s === 'en-cours') return 'EN_COURS';
+    if (s === 'maitrise') return 'MAITRISE';
+    return s || 'NON_COMMENCE';
+  };
+
+  const currentStatus = statusColors[mapStatus(status)] || statusColors['NON_COMMENCE'];
 
   return (
     <div
@@ -145,54 +158,46 @@ function FicheItem({ fiche, status, onStatusChange }) {
         <span style={{ fontWeight: '500' }}>{fiche.title}</span>
       </div>
       <select
-        value={status}
+        value={mapStatus(status)}
         onChange={(e) => onStatusChange(fiche.id, e.target.value)}
+        disabled={disabled}
         style={{
           padding: '6px 12px',
           borderRadius: '4px',
           border: '1px solid #ddd',
-          cursor: 'pointer',
+          cursor: disabled ? 'wait' : 'pointer',
+          opacity: disabled ? 0.7 : 1,
         }}
       >
-        <option value="non-commence">📚 Non commencé</option>
-        <option value="en-cours">📖 En cours</option>
-        <option value="maitrise">✅ Maîtrisé</option>
+        <option value="NON_COMMENCE">📚 Non commencé</option>
+        <option value="EN_COURS">📖 En cours</option>
+        <option value="MAITRISE">✅ Maîtrisé</option>
       </select>
     </div>
   );
 }
 
-// Composant pour une catégorie de matière
-function MatiereSection({ matiereKey, matiere, statuts, onStatusChange }) {
+// Composant MatiereSection
+function MatiereSection({ matiereKey, matiere, statuts, onStatusChange, loading }) {
   const totalFiches = matiere.fiches.length;
+  
+  // Normalisation des statuts pour le calcul
+  const getNormStatus = (id) => statuts[id] || 'NON_COMMENCE';
+  
   const fichesTerminees = matiere.fiches.filter(
-    (f) => statuts[f.id] === 'maitrise'
+    (f) => getNormStatus(f.id) === 'MAITRISE'
   ).length;
   const fichesEnCours = matiere.fiches.filter(
-    (f) => statuts[f.id] === 'en-cours'
+    (f) => getNormStatus(f.id) === 'EN_COURS'
   ).length;
+  
   const progression = Math.round((fichesTerminees / totalFiches) * 100);
 
   return (
     <div style={{ marginBottom: '32px' }}>
       <h2 style={{ marginBottom: '8px' }}>{matiere.label}</h2>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '16px',
-          marginBottom: '16px',
-        }}
-      >
-        <div
-          style={{
-            flex: 1,
-            height: '8px',
-            backgroundColor: '#e0e0e0',
-            borderRadius: '4px',
-            overflow: 'hidden',
-          }}
-        >
+      <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+        <div style={{ flex: 1, height: '8px', backgroundColor: '#e0e0e0', borderRadius: '4px', overflow: 'hidden' }}>
           <div
             style={{
               width: `${progression}%`,
@@ -202,171 +207,89 @@ function MatiereSection({ matiereKey, matiere, statuts, onStatusChange }) {
             }}
           />
         </div>
-        <span style={{ fontWeight: 'bold', minWidth: '60px' }}>
-          {progression}%
-        </span>
+        <span style={{ fontWeight: 'bold', minWidth: '60px' }}>{progression}%</span>
       </div>
       <div style={{ fontSize: '0.9em', color: '#666', marginBottom: '16px' }}>
-        🟢 {fichesTerminees} maîtrisées | 🟡 {fichesEnCours} en cours | 🔴{' '}
-        {totalFiches - fichesTerminees - fichesEnCours} non commencées
+        🟢 {fichesTerminees} maîtrisées | 🟡 {fichesEnCours} en cours | 🔴 {totalFiches - fichesTerminees - fichesEnCours} non commencées
       </div>
       {matiere.fiches.map((fiche) => (
         <FicheItem
           key={fiche.id}
           fiche={fiche}
-          status={statuts[fiche.id] || 'non-commence'}
+          status={statuts[fiche.id]}
           onStatusChange={onStatusChange}
+          disabled={loading}
         />
       ))}
     </div>
   );
 }
 
-// Composant principal de suivi
-export default function SuiviProgression() {
+function SuiviProgressionContent() {
   const [statuts, setStatuts] = useState({});
+  const [dataLoading, setDataLoading] = useState(true);
+  const { user, loading: authLoading } = useAuth();
 
-  // Charger les statuts depuis localStorage au montage
+  // Charger les données depuis Firebase
   useEffect(() => {
-    const saved = localStorage.getItem('crpe-progression');
-    if (saved) {
-      setStatuts(JSON.parse(saved));
-    }
-  }, []);
+    if (!user) return;
 
-  // Sauvegarder les statuts dans localStorage à chaque modification
-  const handleStatusChange = (ficheId, newStatus) => {
-    const newStatuts = { ...statuts, [ficheId]: newStatus };
-    setStatuts(newStatuts);
-    localStorage.setItem('crpe-progression', JSON.stringify(newStatuts));
+    const fetchProgression = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'users', user.uid, 'fiches'));
+        const firebaseData = {};
+        querySnapshot.forEach((doc) => {
+          // On mappe l'ID du document (ficheId) vers son statut
+          firebaseData[doc.id] = doc.data().statut;
+        });
+        setStatuts(firebaseData);
+      } catch (error) {
+        console.error("Erreur de chargement:", error);
+      } finally {
+        setDataLoading(false);
+      }
+    };
+
+    fetchProgression();
+  }, [user]);
+
+  const handleStatusChange = async (ficheId, newStatus) => {
+    // 1. Mise à jour Optimiste (pour que l'interface soit rapide)
+    setStatuts(prev => ({ ...prev, [ficheId]: newStatus }));
+
+    // 2. Sauvegarde Firebase
+    try {
+      await setDoc(doc(db, 'users', user.uid, 'fiches', ficheId), {
+        statut: newStatus,
+        lastUpdate: new Date().toISOString()
+      }, { merge: true });
+    } catch (error) {
+      console.error("Erreur de sauvegarde:", error);
+      alert("Erreur de connexion. La sauvegarde a échoué.");
+      // Optionnel : Revert le state ici si échec
+    }
   };
 
-  // Calculer les statistiques globales
+  if (authLoading || dataLoading) {
+    return <div style={{textAlign: 'center', padding: '50px'}}>Chargement de votre progression...</div>;
+  }
+
+  // Calculs globaux
   const allFiches = Object.values(fichesData).flatMap((m) => m.fiches);
   const totalFiches = allFiches.length;
-  const fichesTerminees = allFiches.filter(
-    (f) => statuts[f.id] === 'maitrise'
-  ).length;
-  const fichesEnCours = allFiches.filter(
-    (f) => statuts[f.id] === 'en-cours'
-  ).length;
+  const fichesTerminees = allFiches.filter((f) => statuts[f.id] === 'MAITRISE').length;
   const progressionGlobale = Math.round((fichesTerminees / totalFiches) * 100);
-
-  // Réinitialiser la progression
-  const resetProgression = () => {
-    if (window.confirm('Voulez-vous vraiment réinitialiser toute la progression ?')) {
-      setStatuts({});
-      localStorage.removeItem('crpe-progression');
-    }
-  };
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      {/* En-tête avec statistiques globales */}
-      <div
-        style={{
-          backgroundColor: '#f5f5f5',
-          padding: '24px',
-          borderRadius: '8px',
-          marginBottom: '32px',
-        }}
-      >
-        <h1 style={{ marginTop: 0, marginBottom: '16px' }}>
-          📊 Suivi de progression CRPE 2026
-        </h1>
-        
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: '16px',
-            marginBottom: '20px',
-          }}
-        >
-          <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2em', fontWeight: 'bold', color: '#2196f3' }}>
-              {totalFiches}
-            </div>
-            <div style={{ color: '#666' }}>Fiches totales</div>
-          </div>
-          <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2em', fontWeight: 'bold', color: '#4caf50' }}>
-              {fichesTerminees}
-            </div>
-            <div style={{ color: '#666' }}>Maîtrisées</div>
-          </div>
-          <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2em', fontWeight: 'bold', color: '#ff9800' }}>
-              {fichesEnCours}
-            </div>
-            <div style={{ color: '#666' }}>En cours</div>
-          </div>
-          <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2em', fontWeight: 'bold', color: '#f44336' }}>
-              {totalFiches - fichesTerminees - fichesEnCours}
-            </div>
-            <div style={{ color: '#666' }}>À faire</div>
-          </div>
-        </div>
-
-        {/* Barre de progression globale */}
-        <div style={{ marginBottom: '16px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-            <span style={{ fontWeight: 'bold' }}>Progression globale</span>
-            <span style={{ fontWeight: 'bold' }}>{progressionGlobale}%</span>
-          </div>
-          <div
-            style={{
-              height: '20px',
-              backgroundColor: '#e0e0e0',
-              borderRadius: '10px',
-              overflow: 'hidden',
-            }}
-          >
-            <div
-              style={{
-                width: `${progressionGlobale}%`,
-                height: '100%',
-                backgroundColor: progressionGlobale === 100 ? '#4caf50' : '#2196f3',
-                transition: 'width 0.3s ease',
-                background: progressionGlobale === 100 
-                  ? '#4caf50' 
-                  : 'linear-gradient(90deg, #4caf50 0%, #2196f3 100%)',
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Message d'encouragement */}
-        <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#e3f2fd', borderRadius: '8px' }}>
-          {progressionGlobale === 0 && "🚀 C'est parti ! Commence par la matière de ton choix."}
-          {progressionGlobale > 0 && progressionGlobale < 25 && "💪 Bon début ! Continue comme ça !"}
-          {progressionGlobale >= 25 && progressionGlobale < 50 && "📚 Tu avances bien ! Un quart du chemin parcouru !"}
-          {progressionGlobale >= 50 && progressionGlobale < 75 && "🌟 Bravo ! Tu es à mi-chemin !"}
-          {progressionGlobale >= 75 && progressionGlobale < 100 && "🔥 Excellent ! La ligne d'arrivée approche !"}
-          {progressionGlobale === 100 && "🎉 FÉLICITATIONS ! Tu as terminé toutes les fiches !"}
-        </div>
-
-        {/* Bouton reset */}
-        <div style={{ textAlign: 'center', marginTop: '16px' }}>
-          <button
-            onClick={resetProgression}
-            style={{
-              padding: '8px 16px',
-              backgroundColor: '#f44336',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              fontSize: '0.9em',
-            }}
-          >
-            🔄 Réinitialiser la progression
-          </button>
+      <div style={{ backgroundColor: '#f5f5f5', padding: '24px', borderRadius: '8px', marginBottom: '32px' }}>
+        <h1 style={{ marginTop: 0 }}>📊 Suivi de progression</h1>
+        <p>Progression globale : <strong>{progressionGlobale}%</strong></p>
+        <div style={{ height: '20px', backgroundColor: '#e0e0e0', borderRadius: '10px', overflow: 'hidden' }}>
+            <div style={{ width: `${progressionGlobale}%`, height: '100%', backgroundColor: '#4caf50' }} />
         </div>
       </div>
 
-      {/* Sections par matière */}
       {Object.entries(fichesData).map(([key, matiere]) => (
         <MatiereSection
           key={key}
@@ -374,23 +297,19 @@ export default function SuiviProgression() {
           matiere={matiere}
           statuts={statuts}
           onStatusChange={handleStatusChange}
+          loading={dataLoading}
         />
       ))}
-
-      {/* Footer */}
-      <div
-        style={{
-          marginTop: '32px',
-          padding: '16px',
-          backgroundColor: '#f0f7ff',
-          borderRadius: '8px',
-          textAlign: 'center',
-        }}
-      >
-        <p style={{ margin: 0 }}>
-          🦦 <strong>Bon courage Marie !</strong> Ta progression est sauvegardée automatiquement.
-        </p>
-      </div>
     </div>
+  );
+}
+
+export default function Suivi() {
+  return (
+    <ProtectedRoute title="Suivi" description="Votre tableau de bord">
+      <Layout>
+        <SuiviProgressionContent />
+      </Layout>
+    </ProtectedRoute>
   );
 }
