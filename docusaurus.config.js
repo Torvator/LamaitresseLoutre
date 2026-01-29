@@ -41,6 +41,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Désactiver le bouton jour/nuit
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '🦦 La Maîtresse Loutre',

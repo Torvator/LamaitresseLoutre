@@ -1,14 +1,105 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '@theme/Layout'; // Ajout du Layout manquant pour la cohérence
-import ProtectedRoute from '../components/ProtectedRoute'; // Protection de la page
+import Layout from '@theme/Layout';
+import ProtectedRoute from '../components/ProtectedRoute';
 import { useAuth } from '../utils/useAuth';
 import { db } from '../utils/firebase';
 import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
 
-// --- Données des fiches (Inchangé) ---
+// --- Données des fiches (ordre aligné sur sidebars.js) ---
 const fichesData = {
+  // ========================================
+  // 📝 FRANÇAIS (5 fiches)
+  // ========================================
+  francais: {
+    label: '📝 Français',
+    fiches: [
+      { id: 'grammaire', title: 'Grammaire' },
+      { id: 'lecture', title: 'Lecture' },
+      { id: 'culture-litteraire', title: 'Culture littéraire' },
+      { id: 'expression-ecrite', title: 'Expression écrite' },
+      { id: 'expression-orale', title: 'Expression orale' },
+    ],
+  },
+
+  // ========================================
+  // 🔢 MATHÉMATIQUES (12 fiches)
+  // ========================================
+  maths: {
+    label: '🔢 Mathématiques',
+    fiches: [
+      { id: 'nombres-entiers-decimaux', title: 'Nombres entiers et décimaux' },
+      { id: 'fractions-nombres-rationnels', title: 'Fractions et nombres rationnels' },
+      { id: 'nombres-relatifs', title: 'Nombres relatifs' },
+      { id: 'puissances-racines-carrees', title: 'Puissances et racines carrées' },
+      { id: 'calcul-litteral', title: 'Calcul littéral' },
+      { id: 'durees-calculs', title: 'Durées et calculs' },
+      { id: 'organisation-gestion-donnees', title: 'Organisation et gestion de données' },
+      { id: 'grandeurs-mesures', title: 'Grandeurs et mesures' },
+      { id: 'geometrie-plane', title: 'Géométrie plane' },
+      { id: 'geometrie-espace', title: 'Géométrie dans l\'espace' },
+      { id: 'reperage', title: 'Repérage' },
+      { id: 'algorithmique-programmation', title: 'Algorithmique et programmation' },
+    ],
+  },
+
+  // ========================================
+  // 📜 HISTOIRE (12 fiches)
+  // ========================================
+  histoire: {
+    label: '📜 Histoire',
+    fiches: [
+      { id: 'prehistoire', title: 'Préhistoire' },
+      { id: 'premieres-civilisations', title: 'Premières civilisations' },
+      { id: 'grece-antique', title: 'Grèce antique' },
+      { id: 'rome', title: 'Rome' },
+      { id: 'moyen-age-societe-feodale', title: 'Moyen Âge - Société féodale' },
+      { id: 'eglise-moyen-age', title: 'L\'Église au Moyen Âge' },
+      { id: 'renaissance', title: 'La Renaissance' },
+      { id: 'grandes-decouvertes', title: 'Les grandes découvertes' },
+      { id: 'revolution-empire', title: 'Révolution et Empire' },
+      { id: 'xixe-siecle', title: 'Le XIXe siècle' },
+      { id: 'guerres-mondiales', title: 'Les guerres mondiales' },
+      { id: 'monde-depuis-1945', title: 'Le monde depuis 1945' },
+    ],
+  },
+
+  // ========================================
+  // 🌍 GÉOGRAPHIE (8 fiches)
+  // ========================================
+  geographie: {
+    label: '🌍 Géographie',
+    fiches: [
+      { id: 'geo_lieux_habite', title: 'Les lieux où j\'habite' },
+      { id: 'geo_loger_travailler', title: 'Se loger, travailler' },
+      { id: 'geo_consommer', title: 'Consommer' },
+      { id: 'geo_demographie_developpement', title: 'Démographie et développement' },
+      { id: 'geo_ressources', title: 'Les ressources' },
+      { id: 'geo_risques_climat', title: 'Risques et climat' },
+      { id: 'geo_urbanisation_mobilites', title: 'Urbanisation et mobilités' },
+      { id: 'geo_france_ue_mondialisation', title: 'France, UE et mondialisation' },
+    ],
+  },
+
+  // ========================================
+  // 🌈 EMC (6 fiches)
+  // ========================================
+  emc: {
+    label: '🌈 EMC',
+    fiches: [
+      { id: 'emc_sensibilite', title: 'La sensibilité' },
+      { id: 'emc_droit_regle', title: 'Le droit et la règle' },
+      { id: 'emc_jugement', title: 'Le jugement' },
+      { id: 'emc_engagement', title: 'L\'engagement' },
+      { id: 'emc_laicite', title: 'La laïcité' },
+      { id: 'emc_egalite_discriminations', title: 'Égalité et discriminations' },
+    ],
+  },
+
+  // ========================================
+  // 🔬 SCIENCES & TECHNOLOGIE (15 fiches)
+  // ========================================
   sciences: {
-    label: '🔬 Sciences et Technologie',
+    label: '🔬 Sciences',
     fiches: [
       { id: 'matiere-etats-changements', title: 'Matière : états et changements' },
       { id: 'melanges-solutions', title: 'Mélanges et solutions' },
@@ -27,8 +118,12 @@ const fichesData = {
       { id: 'objets-techniques-programmation', title: 'Objets techniques et programmation' },
     ],
   },
+
+  // ========================================
+  // 🎨 ÉDUCATION ARTISTIQUE (5 fiches)
+  // ========================================
   arts: {
-    label: '🎨 Éducation Artistique',
+    label: '🎨 Arts',
     fiches: [
       { id: 'arts-plastiques-fondamentaux', title: 'Arts plastiques - Fondamentaux' },
       { id: 'arts-plastiques-oeuvres-2026', title: 'Arts plastiques - Œuvres 2026' },
@@ -37,6 +132,10 @@ const fichesData = {
       { id: 'histoire-des-arts-2026', title: 'Histoire des arts - Œuvres 2026' },
     ],
   },
+
+  // ========================================
+  // ⚽ EPS (2 fiches)
+  // ========================================
   eps: {
     label: '⚽ EPS',
     fiches: [
@@ -44,6 +143,10 @@ const fichesData = {
       { id: 'eps-apsa-champs-apprentissage', title: 'EPS - Les APSA par champ d\'apprentissage' },
     ],
   },
+
+  // ========================================
+  // 🇬🇧 ANGLAIS (3 fiches)
+  // ========================================
   anglais: {
     label: '🇬🇧 Anglais',
     fiches: [
@@ -52,85 +155,16 @@ const fichesData = {
       { id: 'anglais-vocabulaire-culture', title: 'Anglais - Vocabulaire et culture' },
     ],
   },
-  francais: {
-    label: '🇫🇷 Français',
-    fiches: [
-      { id: 'grammaire', title: 'Grammaire' },
-      { id: 'lecture', title: 'Lecture' },
-      { id: 'expression-ecrite', title: 'Expression écrite' },
-      { id: 'expression-orale', title: 'Expression orale' },
-      { id: 'culture-litteraire', title: 'Culture littéraire' },
-    ],
-  },
-  maths: {
-    label: '🔢 Mathématiques',
-    fiches: [
-      { id: 'nombres-entiers-decimaux', title: 'Nombres entiers et décimaux' },
-      { id: 'fractions-nombres-rationnels', title: 'Fractions et nombres rationnels' },
-      { id: 'nombres-relatifs', title: 'Nombres relatifs' },
-      { id: 'puissances-racines-carrees', title: 'Puissances et racines carrées' },
-      { id: 'calcul-litteral', title: 'Calcul littéral' },
-      { id: 'geometrie-plane', title: 'Géométrie plane' },
-      { id: 'geometrie-espace', title: 'Géométrie dans l\'espace' },
-      { id: 'grandeurs-mesures', title: 'Grandeurs et mesures' },
-      { id: 'durees-calculs', title: 'Durées et calculs' },
-      { id: 'reperage', title: 'Repérage' },
-      { id: 'organisation-gestion-donnees', title: 'Organisation et gestion de données' },
-      { id: 'algorithmique-programmation', title: 'Algorithmique et programmation' },
-    ],
-  },
-  histoire: {
-    label: '📜 Histoire',
-    fiches: [
-      { id: 'prehistoire', title: 'Préhistoire' },
-      { id: 'premieres-civilisations', title: 'Premières civilisations' },
-      { id: 'grece-antique', title: 'Grèce antique' },
-      { id: 'rome', title: 'Rome' },
-      { id: 'moyen-age-societe-feodale', title: 'Moyen Âge - Société féodale' },
-      { id: 'eglise-moyen-age', title: 'L\'Église au Moyen Âge' },
-      { id: 'grandes-decouvertes', title: 'Les grandes découvertes' },
-      { id: 'renaissance', title: 'La Renaissance' },
-      { id: 'revolution-empire', title: 'Révolution et Empire' },
-      { id: 'xixe-siecle', title: 'Le XIXe siècle' },
-      { id: 'guerres-mondiales', title: 'Les guerres mondiales' },
-      { id: 'monde-depuis-1945', title: 'Le monde depuis 1945' },
-    ],
-  },
-  geographie: {
-    label: '🌍 Géographie',
-    fiches: [
-      { id: 'geo_lieux_habite', title: 'Les lieux où j\'habite' },
-      { id: 'geo_loger_travailler', title: 'Se loger, travailler' },
-      { id: 'geo_consommer', title: 'Consommer' },
-      { id: 'geo_urbanisation_mobilites', title: 'Urbanisation et mobilités' },
-      { id: 'geo_ressources', title: 'Les ressources' },
-      { id: 'geo_risques_climat', title: 'Risques et climat' },
-      { id: 'geo_demographie_developpement', title: 'Démographie et développement' },
-      { id: 'geo_france_ue_mondialisation', title: 'France, UE et mondialisation' },
-    ],
-  },
-  emc: {
-    label: '🏛️ EMC',
-    fiches: [
-      { id: 'emc_sensibilite', title: 'La sensibilité' },
-      { id: 'emc_droit_regle', title: 'Le droit et la règle' },
-      { id: 'emc_jugement', title: 'Le jugement' },
-      { id: 'emc_engagement', title: 'L\'engagement' },
-      { id: 'emc_laicite', title: 'La laïcité' },
-      { id: 'emc_egalite_discriminations', title: 'Égalité et discriminations' },
-    ],
-  },
 };
 
-// Composant FicheItem (Légèrement adapté)
+// Composant FicheItem
 function FicheItem({ fiche, status, onStatusChange, disabled }) {
   const statusColors = {
-    'NON_COMMENCE': { bg: '#ffebee', border: '#f44336', emoji: '🔴' }, // Match avec StatutFiche.js
+    'NON_COMMENCE': { bg: '#ffebee', border: '#f44336', emoji: '🔴' },
     'EN_COURS': { bg: '#fff3e0', border: '#ff9800', emoji: '🟡' },
     'MAITRISE': { bg: '#e8f5e9', border: '#4caf50', emoji: '🟢' },
   };
 
-  // Mapping pour compatibilité avec l'ancien code si besoin
   const mapStatus = (s) => {
     if (s === 'non-commence') return 'NON_COMMENCE';
     if (s === 'en-cours') return 'EN_COURS';
@@ -181,7 +215,6 @@ function FicheItem({ fiche, status, onStatusChange, disabled }) {
 function MatiereSection({ matiereKey, matiere, statuts, onStatusChange, loading }) {
   const totalFiches = matiere.fiches.length;
   
-  // Normalisation des statuts pour le calcul
   const getNormStatus = (id) => statuts[id] || 'NON_COMMENCE';
   
   const fichesTerminees = matiere.fiches.filter(
@@ -230,7 +263,6 @@ function SuiviProgressionContent() {
   const [dataLoading, setDataLoading] = useState(true);
   const { user, loading: authLoading } = useAuth();
 
-  // Charger les données depuis Firebase
   useEffect(() => {
     if (!user) return;
 
@@ -239,7 +271,6 @@ function SuiviProgressionContent() {
         const querySnapshot = await getDocs(collection(db, 'users', user.uid, 'fiches'));
         const firebaseData = {};
         querySnapshot.forEach((doc) => {
-          // On mappe l'ID du document (ficheId) vers son statut
           firebaseData[doc.id] = doc.data().statut;
         });
         setStatuts(firebaseData);
@@ -254,10 +285,8 @@ function SuiviProgressionContent() {
   }, [user]);
 
   const handleStatusChange = async (ficheId, newStatus) => {
-    // 1. Mise à jour Optimiste (pour que l'interface soit rapide)
     setStatuts(prev => ({ ...prev, [ficheId]: newStatus }));
 
-    // 2. Sauvegarde Firebase
     try {
       await setDoc(doc(db, 'users', user.uid, 'fiches', ficheId), {
         statut: newStatus,
@@ -266,7 +295,6 @@ function SuiviProgressionContent() {
     } catch (error) {
       console.error("Erreur de sauvegarde:", error);
       alert("Erreur de connexion. La sauvegarde a échoué.");
-      // Optionnel : Revert le state ici si échec
     }
   };
 
@@ -274,7 +302,6 @@ function SuiviProgressionContent() {
     return <div style={{textAlign: 'center', padding: '50px'}}>Chargement de votre progression...</div>;
   }
 
-  // Calculs globaux
   const allFiches = Object.values(fichesData).flatMap((m) => m.fiches);
   const totalFiches = allFiches.length;
   const fichesTerminees = allFiches.filter((f) => statuts[f.id] === 'MAITRISE').length;
