@@ -94,7 +94,7 @@ export default function Login() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
               <a
-                href="/LamaitresseLoutre/"
+                href={ROUTES.HOME}
                 style={{
                   padding: '0.75rem 2rem',
                   backgroundColor: '#ff9a9e',

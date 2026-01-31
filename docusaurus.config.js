@@ -6,7 +6,7 @@ const config = {
   tagline: 'Préparation CRPE',
   favicon: 'img/favicon.ico',
 
-  // Votre URL de production
+  // URL de production
   url: 'https://torvator.github.io',
   baseUrl: '/LamaitresseLoutre/',
 
@@ -41,13 +41,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Désactiver le bouton jour/nuit
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
-      image: 'img/docusaurus-social-card.jpg',
+      // TODO: Remplacer par une image personnalisée (static/img/social-card.jpg)
+      image: 'img/social-card.jpg',
       navbar: {
         title: '🦦 La Maîtresse Loutre',
         logo: {
@@ -73,7 +73,6 @@ const config = {
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
       },
     }),
 };

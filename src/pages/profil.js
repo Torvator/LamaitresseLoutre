@@ -129,7 +129,7 @@ export default function Profil() {
 
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
             <a
-              href="/LamaitresseLoutre/"
+              href={ROUTES.HOME}
               style={{
                 color: '#ff9a9e',
                 textDecoration: 'none',
