@@ -1,4 +1,4 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+// @ts-check
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -6,7 +6,6 @@ const config = {
   tagline: 'Préparation CRPE',
   favicon: 'img/favicon.ico',
 
-  // URL de production
   url: 'https://torvator.github.io',
   baseUrl: '/LamaitresseLoutre/',
 
@@ -28,7 +27,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: 'fiches',
         },
         blog: false,
         theme: {
@@ -38,22 +36,29 @@ const config = {
     ],
   ],
 
+  // ========== PLUGIN QUIZ ==========
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'quiz',
+        path: 'quiz',
+        routeBasePath: 'quiz',
+        sidebarPath: './sidebarsQuiz.js',
+      },
+    ],
+  ],
+  // ==================================
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
-        respectPrefersColorScheme: false,
       },
-      // TODO: Remplacer par une image personnalisée (static/img/social-card.jpg)
-      image: 'img/social-card.jpg',
       navbar: {
         title: '🦦 La Maîtresse Loutre',
-        logo: {
-          alt: 'La Maîtresse Loutre Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           {
             type: 'docSidebar',
@@ -61,18 +66,31 @@ const config = {
             position: 'left',
             label: '📚 Mes Fiches',
           },
-          {to: '/suivi', label: '📊 Suivi', position: 'left'},
-          {to: '/commentaires', label: '💬 Commentaires', position: 'left'},
-          {to: '/profil', label: '👤 Profil', position: 'right'},
+          {
+            to: '/quiz/intro',
+            position: 'left',
+            label: '📝 Quiz',
+          },
+          {
+            to: '/suivi',
+            label: '📊 Suivi',
+            position: 'left',
+          },
+          {
+            to: '/commentaires',
+            label: '💬 Commentaires',
+            position: 'left',
+          },
+          {
+            to: '/profil',
+            label: '👤 Profil',
+            position: 'right',
+          },
         ],
       },
       footer: {
-        style: 'dark',
-        links: [],
-        copyright: `🦦 Préparation CRPE 2026 - Bon courage Marie ! 💪✨`,
-      },
-      prism: {
-        theme: prismThemes.github,
+        style: 'light',
+        copyright: `🦦 La Maîtresse Loutre - CRPE 2026 - Fait avec ❤️`,
       },
     }),
 };
