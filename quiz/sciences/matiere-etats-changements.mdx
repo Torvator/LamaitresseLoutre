@@ -32,7 +32,8 @@ export const questionsMatiere = [
       "Elle reste constante car la quantité de matière ne change pas",
       "Elle varie selon le sens du changement d'état"
     ],
-    correctIndex: 2
+    correctIndex: 2,
+    explication: "La masse est une propriété conservée lors des changements d'état. Seul le volume change, pas la quantité de matière."
   },
   {
     id: 2,
@@ -43,7 +44,8 @@ export const questionsMatiere = [
       "L'eau liquide est plus froide que la glace",
       "La tension superficielle de l'eau soutient la glace"
     ],
-    correctIndex: 1
+    correctIndex: 1,
+    explication: "L'eau est une exception : sa forme solide (glace) est moins dense que sa forme liquide. C'est pourquoi les icebergs flottent."
   },
   {
     id: 3,
@@ -54,7 +56,8 @@ export const questionsMatiere = [
       "Calculer la masse volumique de différents matériaux",
       "Expliquer la structure moléculaire de l'eau"
     ],
-    correctIndex: 1
+    correctIndex: 1,
+    explication: "En cycle 2, on reste à l'observation et l'identification. Les aspects quantitatifs et moléculaires viennent plus tard."
   },
   {
     id: 4,
@@ -65,7 +68,8 @@ export const questionsMatiere = [
       "Elle fluctue autour de 100°C",
       "Elle diminue légèrement à cause de l'évaporation"
     ],
-    correctIndex: 1
+    correctIndex: 1,
+    explication: "C'est le palier de température : toute l'énergie fournie sert au changement d'état, pas à l'augmentation de température."
   },
   {
     id: 5,
@@ -76,7 +80,8 @@ export const questionsMatiere = [
       "Solide à gazeux",
       "Liquide à solide"
     ],
-    correctIndex: 2
+    correctIndex: 2,
+    explication: "Sublimation = solide → gaz (ex: la neige qui disparaît sans fondre par temps sec). L'inverse (gaz → solide) est la condensation solide."
   },
   {
     id: 6,
@@ -87,7 +92,8 @@ export const questionsMatiere = [
       "Croire que l'évaporation ne se produit qu'à 100°C",
       "Toutes ces réponses sont des erreurs fréquentes"
     ],
-    correctIndex: 3
+    correctIndex: 3,
+    explication: "Ces trois conceptions erronées sont très répandues. L'évaporation se produit à toute température et l'eau ne disparaît pas, elle change d'état."
   },
   {
     id: 7,
@@ -98,7 +104,8 @@ export const questionsMatiere = [
       "Évaluation sommative",
       "Correction des erreurs des élèves"
     ],
-    correctIndex: 1
+    correctIndex: 1,
+    explication: "La démarche suit cet ordre : situation déclenchante → représentations → hypothèses → protocole → expérience → résultats → conclusion → trace écrite."
   },
   {
     id: 8,
@@ -109,7 +116,8 @@ export const questionsMatiere = [
       "20°C",
       "100°C"
     ],
-    correctIndex: 1
+    correctIndex: 1,
+    explication: "L'eau atteint sa densité maximale à 4°C, pas à 0°C. C'est une anomalie de l'eau qui explique pourquoi les lacs gèlent par le dessus."
   },
   {
     id: 9,
@@ -120,7 +128,8 @@ export const questionsMatiere = [
       "Calculer les énergies de changement d'état",
       "Comprendre les diagrammes de phase"
     ],
-    correctIndex: 1
+    correctIndex: 1,
+    explication: "Le cycle 3 introduit la mesure et l'expérimentation. Les calculs d'énergie et diagrammes de phase sont au collège/lycée."
   },
   {
     id: 10,
@@ -131,19 +140,13 @@ export const questionsMatiere = [
       "Liquéfaction (ou condensation liquide)",
       "Fusion"
     ],
-    correctIndex: 2
+    correctIndex: 2,
+    explication: "Gaz → Liquide = Liquéfaction. Attention : Vaporisation = Liquide → Gaz (l'inverse), Fusion = Solide → Liquide."
   }
 ];
 
 <QuizFiche 
   ficheId="matiere-etats-changements" 
+  matiere="sciences"
   questions={questionsMatiere} 
 />
-
----
-
-<div style={{textAlign: 'center', marginTop: '2rem', padding: '1.5rem', backgroundColor: '#fff9f0', borderRadius: '12px'}}>
-  <p style={{fontSize: '1.1rem', marginBottom: '0'}}>
-    🦦 <strong>Tu peux le faire Marie !</strong> Relis bien la fiche si besoin.
-  </p>
-</div>
