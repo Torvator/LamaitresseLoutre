@@ -35,6 +35,20 @@ Quand tu obtiens **10/10**, la fiche correspondante est automatiquement marquée
 - [Expression écrite](./francais/expression-ecrite)
 - [Expression orale](./francais/expression-orale)
 
+### 🔢 Mathématiques
+- [Nombres entiers et décimaux](./maths/nombres-entiers-decimaux)
+- [Fractions et nombres rationnels](./maths/fractions-nombres-rationnels)
+- [Nombres relatifs](./maths/nombres-relatifs)
+- [Puissances et racines carrées](./maths/puissances-racines-carrees)
+- [Calcul littéral](./maths/calcul-litteral)
+- [Durées et calculs](./maths/durees-calculs)
+- [Organisation et gestion de données](./maths/organisation-gestion-donnees)
+- [Grandeurs et mesures](./maths/grandeurs-mesures)
+- [Géométrie plane](./maths/geometrie-plane)
+- [Géométrie dans l'espace](./maths/geometrie-espace)
+- [Repérage](./maths/reperage)
+- [Algorithmique et programmation](./maths/algorithmique-programmation)
+
 ---
 
 ## 💡 Conseils
