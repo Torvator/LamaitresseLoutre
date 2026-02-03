@@ -1,0 +1,152 @@
+---
+sidebar_position: 7
+title: "Quiz : Organisation et gestion de données"
+description: Quiz de validation CRPE - Mathématiques - Proportionnalité, statistiques, probabilités
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Organisation et gestion de données
+
+<LienFiche 
+  fichePath="/fiches/maths/organisation-gestion-donnees" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Qu'est-ce qu'un coefficient de proportionnalité ?",
+    options: [
+      "La somme de deux grandeurs",
+      "Le nombre par lequel on multiplie toujours pour passer d'une grandeur à l'autre",
+      "La différence entre deux valeurs",
+      "Le nombre de lignes d'un tableau"
+    ],
+    correctIndex: 1,
+    explication: "Dans une situation de proportionnalité, on passe d'une grandeur à l'autre en MULTIPLIANT TOUJOURS par le même nombre : le coefficient de proportionnalité. Exemple : si 2 kg coûtent 6€, le coefficient est 3€/kg."
+  },
+  {
+    id: 2,
+    question: "3 kg de pommes coûtent 9€. Combien coûtent 7 kg ?",
+    options: [
+      "18€",
+      "21€",
+      "24€",
+      "63€"
+    ],
+    correctIndex: 1,
+    explication: "Coefficient = 9÷3 = 3€/kg. Pour 7 kg : 7 × 3 = 21€. On peut aussi utiliser la règle de trois : (9×7)÷3 = 21€."
+  },
+  {
+    id: 3,
+    question: "Calculer 30% de 80 :",
+    options: [
+      "24",
+      "30",
+      "50",
+      "110"
+    ],
+    correctIndex: 0,
+    explication: "30% = 30/100 = 0,30. Donc 30% de 80 = 0,30 × 80 = 24."
+  },
+  {
+    id: 4,
+    question: "Une carte a une échelle de 1/50 000. Que représente 1 cm sur la carte ?",
+    options: [
+      "50 m",
+      "500 m",
+      "5 km",
+      "50 km"
+    ],
+    correctIndex: 1,
+    explication: "Échelle 1/50 000 signifie que 1 cm sur la carte = 50 000 cm en réalité = 500 m (car 50 000 cm ÷ 100 = 500 m)."
+  },
+  {
+    id: 5,
+    question: "Comment calculer une moyenne ?",
+    options: [
+      "On additionne la plus grande et la plus petite valeur puis on divise par 2",
+      "On additionne toutes les valeurs puis on divise par le nombre de valeurs",
+      "On prend la valeur du milieu",
+      "On compte le nombre de valeurs"
+    ],
+    correctIndex: 1,
+    explication: "Moyenne = Somme des valeurs / Nombre de valeurs. Exemple : moyenne de 12, 15, 8 = (12+15+8)÷3 = 35÷3 ≈ 11,7."
+  },
+  {
+    id: 6,
+    question: "Qu'est-ce que la médiane d'une série statistique ?",
+    options: [
+      "La valeur qui apparaît le plus souvent",
+      "La somme de toutes les valeurs",
+      "La valeur qui partage la série ordonnée en deux parties égales",
+      "La différence entre le max et le min"
+    ],
+    correctIndex: 2,
+    explication: "La MÉDIANE est la valeur qui sépare la série ordonnée en deux moitiés égales. 50% des valeurs sont en dessous, 50% au-dessus. Ce n'est pas la même chose que la moyenne !"
+  },
+  {
+    id: 7,
+    question: "Un article à 50€ est soldé avec 20% de réduction. Par quel nombre multiplier pour trouver le nouveau prix ?",
+    options: [
+      "0,20",
+      "0,80",
+      "1,20",
+      "20"
+    ],
+    correctIndex: 1,
+    explication: "Réduction de 20% = on garde 80% du prix. Donc on multiplie par 0,80. Nouveau prix : 50 × 0,80 = 40€. Pour une AUGMENTATION de 20%, on multiplierait par 1,20."
+  },
+  {
+    id: 8,
+    question: "La formule de la vitesse moyenne est :",
+    options: [
+      "v = d + t",
+      "v = d × t",
+      "v = d / t",
+      "v = t / d"
+    ],
+    correctIndex: 2,
+    explication: "Vitesse = Distance / Temps (v = d/t). Exemple : 150 km en 2h → v = 150/2 = 75 km/h. Attention aux unités : km et h → km/h."
+  },
+  {
+    id: 9,
+    question: "À quel cycle la proportionnalité est-elle principalement travaillée ?",
+    options: [
+      "Cycle 1",
+      "Cycle 2 (situations simples) et Cycle 3 (formalisation)",
+      "Uniquement au Cycle 4",
+      "Uniquement au lycée"
+    ],
+    correctIndex: 1,
+    explication: "Cycle 2 : situations de proportionnalité simples (doubles, moitiés, recettes). Cycle 3 : formalisation, tableaux, coefficient, pourcentages simples. Cycle 4 : approfondissement (équations, fonctions linéaires)."
+  },
+  {
+    id: 10,
+    question: "Un élève confond la moyenne et la médiane. Comment l'aider à différencier ?",
+    options: [
+      "Lui dire que c'est la même chose",
+      "Utiliser un exemple où moyenne ≠ médiane, comme des salaires avec une valeur extrême",
+      "Ne travailler que la moyenne",
+      "Éviter les statistiques"
+    ],
+    correctIndex: 1,
+    explication: "Exemple parlant : salaires de 1000€, 1100€, 1200€, 1300€, 10000€. Moyenne = 2920€ (tirée vers le haut par 10000€), mais Médiane = 1200€ (plus représentative). La médiane résiste aux valeurs extrêmes !"
+  }
+];
+
+<QuizFiche 
+  ficheId="organisation-gestion-donnees" 
+  matiere="maths"
+  questions={questions} 
+/>

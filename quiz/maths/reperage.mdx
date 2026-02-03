@@ -1,0 +1,152 @@
+---
+sidebar_position: 11
+title: "Quiz : Repérage"
+description: Quiz de validation CRPE - Mathématiques - Repérage dans le plan et l'espace
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Repérage
+
+<LienFiche 
+  fichePath="/fiches/maths/reperage" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Dans un repère du plan, comment s'appelle la première coordonnée d'un point ?",
+    options: [
+      "L'ordonnée",
+      "L'abscisse",
+      "La cote",
+      "L'altitude"
+    ],
+    correctIndex: 1,
+    explication: "Dans un repère (x ; y), la première coordonnée x est l'ABSCISSE (axe horizontal), la seconde y est l'ORDONNÉE (axe vertical). Mnémotechnique : A vient avant O dans l'alphabet, abscisse avant ordonnée."
+  },
+  {
+    id: 2,
+    question: "Dans quel quadrant se trouve le point A(-3 ; 2) ?",
+    options: [
+      "1er quadrant (haut-droite)",
+      "2ème quadrant (haut-gauche)",
+      "3ème quadrant (bas-gauche)",
+      "4ème quadrant (bas-droite)"
+    ],
+    correctIndex: 1,
+    explication: "A(-3 ; 2) a une abscisse NÉGATIVE (x < 0) et une ordonnée POSITIVE (y > 0). C'est le 2ème quadrant (en haut à gauche). 1er : x>0, y>0 / 2ème : x<0, y>0 / 3ème : x<0, y<0 / 4ème : x>0, y<0."
+  },
+  {
+    id: 3,
+    question: "Quelles sont les coordonnées de l'origine d'un repère ?",
+    options: [
+      "(1 ; 1)",
+      "(0 ; 0)",
+      "(1 ; 0)",
+      "(0 ; 1)"
+    ],
+    correctIndex: 1,
+    explication: "L'ORIGINE O du repère est le point d'intersection des deux axes. Ses coordonnées sont (0 ; 0)."
+  },
+  {
+    id: 4,
+    question: "Sur une droite graduée, comment s'appelle le nombre associé à un point ?",
+    options: [
+      "L'ordonnée",
+      "La coordonnée",
+      "L'abscisse",
+      "Le rang"
+    ],
+    correctIndex: 2,
+    explication: "Sur une DROITE graduée (1 dimension), le nombre associé à un point s'appelle son ABSCISSE. Dans un plan (2D), on a abscisse ET ordonnée."
+  },
+  {
+    id: 5,
+    question: "Dans un repère de l'espace 3D, combien de coordonnées a un point ?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    correctIndex: 2,
+    explication: "Dans l'espace 3D, un point a 3 coordonnées : (x ; y ; z) où x = abscisse, y = ordonnée, z = cote (ou altitude). Exemple : M(2 ; 3 ; 5)."
+  },
+  {
+    id: 6,
+    question: "À quel cycle introduit-on le repérage sur quadrillage (cases) ?",
+    options: [
+      "Cycle 1 (maternelle)",
+      "Cycle 2 (CP-CE2)",
+      "Cycle 3 (CM1-6e)",
+      "Cycle 4 (5e-3e)"
+    ],
+    correctIndex: 1,
+    explication: "Le repérage sur quadrillage (type bataille navale, B3, etc.) est introduit dès le Cycle 2. Les coordonnées cartésiennes (x ; y) avec nombres relatifs arrivent au Cycle 4."
+  },
+  {
+    id: 7,
+    question: "Si un point est sur l'axe des abscisses, que vaut son ordonnée ?",
+    options: [
+      "1",
+      "0",
+      "-1",
+      "Elle peut valoir n'importe quoi"
+    ],
+    correctIndex: 1,
+    explication: "Un point sur l'AXE DES ABSCISSES (axe horizontal) a une ordonnée NULLE (y = 0). Ses coordonnées sont de la forme (x ; 0). De même, un point sur l'axe des ordonnées a une abscisse nulle : (0 ; y)."
+  },
+  {
+    id: 8,
+    question: "Quel jeu classique utilise le repérage sur quadrillage ?",
+    options: [
+      "Les dominos",
+      "La bataille navale",
+      "Le jeu de l'oie",
+      "Les dames"
+    ],
+    correctIndex: 1,
+    explication: "La BATAILLE NAVALE utilise un repérage (lettre ; chiffre) comme A1, B3, etc. C'est un excellent support pédagogique pour introduire le repérage au Cycle 2. Les échecs utilisent aussi ce système (e4, d5...)."
+  },
+  {
+    id: 9,
+    question: "Quelles sont les coordonnées géographiques utilisées sur Terre ?",
+    options: [
+      "Abscisse et ordonnée",
+      "Latitude et longitude",
+      "X et Y",
+      "Nord et Sud"
+    ],
+    correctIndex: 1,
+    explication: "Sur Terre, on utilise la LATITUDE (Nord/Sud, de -90° à +90°) et la LONGITUDE (Est/Ouest, de -180° à +180°). C'est une application concrète du repérage dans l'espace."
+  },
+  {
+    id: 10,
+    question: "Un élève confond abscisse et ordonnée. Quelle remédiation proposer ?",
+    options: [
+      "Lui faire apprendre les définitions par cœur",
+      "Utiliser un moyen mnémotechnique : « A vient avant O, abscisse avant ordonnée » et manipuler avec des jeux (bataille navale)",
+      "Éviter le vocabulaire et utiliser uniquement x et y",
+      "Attendre qu'il comprenne seul"
+    ],
+    correctIndex: 1,
+    explication: "Remédiation efficace : utiliser des MOYENS MNÉMOTECHNIQUES (A avant O dans l'alphabet = abscisse avant ordonnée = horizontal avant vertical) et des MANIPULATIONS concrètes (bataille navale, plan de classe)."
+  }
+];
+
+<QuizFiche 
+  ficheId="reperage" 
+  matiere="maths"
+  questions={questions} 
+/>

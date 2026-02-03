@@ -1,0 +1,152 @@
+---
+sidebar_position: 4
+title: "Quiz : Puissances et racines carrées"
+description: Quiz de validation CRPE - Mathématiques - Puissances et racines carrées
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Puissances et racines carrées
+
+<LienFiche 
+  fichePath="/fiches/maths/puissances-racines-carrees" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Que vaut 2⁰ ?",
+    options: [
+      "0",
+      "1",
+      "2",
+      "Indéfini"
+    ],
+    correctIndex: 1,
+    explication: "Tout nombre (sauf 0) élevé à la puissance 0 égale 1. C'est une convention mathématique : a⁰ = 1. Seul 0⁰ est indéfini."
+  },
+  {
+    id: 2,
+    question: "Quelle est la propriété pour multiplier deux puissances de même base : aᵐ × aⁿ = ?",
+    options: [
+      "aᵐˣⁿ",
+      "aᵐ⁺ⁿ",
+      "aᵐ⁻ⁿ",
+      "(a×a)ᵐ⁺ⁿ"
+    ],
+    correctIndex: 1,
+    explication: "Quand on MULTIPLIE des puissances de MÊME BASE, on ADDITIONNE les exposants : aᵐ × aⁿ = aᵐ⁺ⁿ. Exemple : 2³ × 2⁵ = 2⁸."
+  },
+  {
+    id: 3,
+    question: "Que signifie 5⁻² ?",
+    options: [
+      "-25",
+      "-10",
+      "1/25",
+      "1/10"
+    ],
+    correctIndex: 2,
+    explication: "Un exposant NÉGATIF signifie qu'on prend l'INVERSE : a⁻ⁿ = 1/aⁿ. Donc 5⁻² = 1/5² = 1/25."
+  },
+  {
+    id: 4,
+    question: "Quelle est √49 ?",
+    options: [
+      "24,5",
+      "7",
+      "±7",
+      "49/2"
+    ],
+    correctIndex: 1,
+    explication: "La racine carrée d'un nombre est le nombre POSITIF dont le carré vaut ce nombre. √49 = 7 car 7² = 49. Par convention, √ désigne toujours la racine positive."
+  },
+  {
+    id: 5,
+    question: "Est-ce que √(a + b) = √a + √b ?",
+    options: [
+      "Oui, toujours",
+      "Non, jamais",
+      "Seulement si a = b",
+      "Seulement si a et b sont des carrés parfaits"
+    ],
+    correctIndex: 1,
+    explication: "NON ! La racine carrée ne se distribue PAS sur l'addition. √(a+b) ≠ √a + √b. Contre-exemple : √(9+16) = √25 = 5, mais √9 + √16 = 3 + 4 = 7. La racine se distribue uniquement sur × et ÷."
+  },
+  {
+    id: 6,
+    question: "Quelle est l'écriture scientifique de 345 000 ?",
+    options: [
+      "345 × 10³",
+      "3,45 × 10⁵",
+      "34,5 × 10⁴",
+      "3,45 × 10⁶"
+    ],
+    correctIndex: 1,
+    explication: "En notation scientifique : a × 10ⁿ avec 1 ≤ a < 10. On déplace la virgule de 5 rangs vers la gauche : 345 000 = 3,45 × 10⁵."
+  },
+  {
+    id: 7,
+    question: "√2 est un nombre...",
+    options: [
+      "Entier",
+      "Rationnel",
+      "Irrationnel",
+      "Négatif"
+    ],
+    correctIndex: 2,
+    explication: "√2 ≈ 1,41421356... est IRRATIONNEL : il ne peut pas s'écrire sous forme de fraction et ses décimales sont infinies et non périodiques. C'est l'exemple classique de nombre irrationnel."
+  },
+  {
+    id: 8,
+    question: "Comment introduire la notion de racine carrée au Cycle 4 ?",
+    options: [
+      "Par la définition formelle et les propriétés algébriques",
+      "Par le problème géométrique : trouver le côté d'un carré connaissant son aire",
+      "Par la calculatrice uniquement",
+      "Par les puissances négatives"
+    ],
+    correctIndex: 1,
+    explication: "L'approche géométrique est idéale : « Un carré a une aire de 25 cm². Quel est son côté ? » → côté² = 25 → côté = √25 = 5 cm. Cela donne du SENS avant la formalisation."
+  },
+  {
+    id: 9,
+    question: "Calculer (2³)² = ?",
+    options: [
+      "2⁵",
+      "2⁶",
+      "2⁹",
+      "4³"
+    ],
+    correctIndex: 1,
+    explication: "Puissance de puissance : on MULTIPLIE les exposants. (aᵐ)ⁿ = aᵐˣⁿ. Donc (2³)² = 2³ˣ² = 2⁶ = 64."
+  },
+  {
+    id: 10,
+    question: "Un élève écrit √9 + √16 = √25. Quelle est son erreur ?",
+    options: [
+      "Il n'y a pas d'erreur, c'est correct",
+      "Il a confondu addition et multiplication sous la racine",
+      "Il a mal calculé √25",
+      "Il aurait dû écrire √9 × √16 = √25"
+    ],
+    correctIndex: 1,
+    explication: "L'élève applique à tort √a + √b = √(a+b). C'est FAUX ! √9 + √16 = 3 + 4 = 7, pas √25 = 5. La racine ne se distribue que sur × et ÷, jamais sur + et -."
+  }
+];
+
+<QuizFiche 
+  ficheId="puissances-racines-carrees" 
+  matiere="maths"
+  questions={questions} 
+/>

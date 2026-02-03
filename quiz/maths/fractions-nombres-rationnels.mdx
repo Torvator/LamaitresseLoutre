@@ -1,0 +1,152 @@
+---
+sidebar_position: 2
+title: "Quiz : Fractions et nombres rationnels"
+description: Quiz de validation CRPE - Mathématiques - Fractions et nombres rationnels
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Fractions et nombres rationnels
+
+<LienFiche 
+  fichePath="/fiches/maths/fractions-nombres-rationnels" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Qu'est-ce qu'une fraction irréductible ?",
+    options: [
+      "Une fraction dont le numérateur est plus petit que le dénominateur",
+      "Une fraction dont le numérateur et le dénominateur n'ont aucun diviseur commun autre que 1",
+      "Une fraction inférieure à 1",
+      "Une fraction qui ne peut pas être transformée en nombre décimal"
+    ],
+    correctIndex: 1,
+    explication: "Une fraction est IRRÉDUCTIBLE quand le numérateur et le dénominateur sont PREMIERS ENTRE EUX (leur PGCD = 1). On ne peut plus la simplifier. Exemple : 2/3 est irréductible, mais 4/6 ne l'est pas (on peut simplifier par 2)."
+  },
+  {
+    id: 2,
+    question: "Un élève écrit : 1/2 + 1/3 = 2/5. Quelle erreur a-t-il commise ?",
+    options: [
+      "Il a inversé numérateur et dénominateur",
+      "Il a additionné les numérateurs ET les dénominateurs séparément",
+      "Il a multiplié au lieu d'additionner",
+      "Il a oublié de simplifier"
+    ],
+    correctIndex: 1,
+    explication: "L'élève a additionné 1+1=2 pour le numérateur et 2+3=5 pour le dénominateur. C'est FAUX ! Pour additionner des fractions, il faut d'abord les mettre au MÊME DÉNOMINATEUR : 1/2 = 3/6, 1/3 = 2/6, donc 1/2 + 1/3 = 5/6."
+  },
+  {
+    id: 3,
+    question: "Comment comparer 3/5 et 2/3 ?",
+    options: [
+      "3/5 > 2/3 car 5 > 3",
+      "3/5 < 2/3 car 9/15 < 10/15 après réduction au même dénominateur",
+      "3/5 = 2/3 car 3×3 = 2×5",
+      "On ne peut pas les comparer"
+    ],
+    correctIndex: 1,
+    explication: "On réduit au même dénominateur (15 = PPCM de 5 et 3) : 3/5 = 9/15 et 2/3 = 10/15. Comme 9 < 10, on a 3/5 < 2/3."
+  },
+  {
+    id: 4,
+    question: "Comment diviser par une fraction ?",
+    options: [
+      "On divise les numérateurs et les dénominateurs",
+      "On multiplie par l'inverse de cette fraction",
+      "On additionne après mise au même dénominateur",
+      "On soustrait le dénominateur du numérateur"
+    ],
+    correctIndex: 1,
+    explication: "Diviser par une fraction revient à MULTIPLIER PAR SON INVERSE. Exemple : 3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8. L'inverse de a/b est b/a."
+  },
+  {
+    id: 5,
+    question: "Parmi ces nombres, lequel est IRRATIONNEL ?",
+    options: [
+      "0,75",
+      "1/3",
+      "√2",
+      "-5"
+    ],
+    correctIndex: 2,
+    explication: "√2 ≈ 1,41421356... est IRRATIONNEL : il ne peut pas s'écrire sous forme de fraction et ses décimales sont infinies et non périodiques. Les autres sont rationnels : 0,75 = 3/4, 1/3 = 0,333..., -5 = -5/1."
+  },
+  {
+    id: 6,
+    question: "À quel cycle les fractions sont-elles introduites en France ?",
+    options: [
+      "Cycle 1 (maternelle)",
+      "Cycle 2 (CP-CE2) pour les fractions simples, approfondi au Cycle 3",
+      "Cycle 4 (collège) uniquement",
+      "Uniquement en 6ème"
+    ],
+    correctIndex: 1,
+    explication: "Les fractions simples (1/2, 1/4) sont abordées dès le Cycle 2 (CE1-CE2) dans des contextes concrets (partage). Le Cycle 3 (CM1-6ème) approfondit avec les opérations, la comparaison et le lien avec les décimaux."
+  },
+  {
+    id: 7,
+    question: "Quelle manipulation concrète utiliser pour montrer que 1/3 > 1/4 à des élèves de CE2 ?",
+    options: [
+      "Faire des calculs au tableau",
+      "Plier deux feuilles identiques (l'une en 3, l'autre en 4) et comparer les parts",
+      "Donner la règle : plus le dénominateur est grand, plus c'est petit",
+      "Utiliser une calculatrice pour convertir en décimaux"
+    ],
+    correctIndex: 1,
+    explication: "La manipulation concrète (pliage de feuilles) permet de VISUALISER que la part 1/3 est plus grande que 1/4. C'est essentiel avant toute formalisation. La règle vient APRÈS l'observation."
+  },
+  {
+    id: 8,
+    question: "Simplifier 24/36. Quelle est la forme irréductible ?",
+    options: [
+      "4/6",
+      "12/18",
+      "2/3",
+      "8/12"
+    ],
+    correctIndex: 2,
+    explication: "PGCD(24, 36) = 12. Donc 24/36 = (24÷12)/(36÷12) = 2/3. On peut vérifier que 2 et 3 sont premiers entre eux (PGCD = 1), donc 2/3 est bien irréductible."
+  },
+  {
+    id: 9,
+    question: "Calculer 2/3 × 4/5. Quel est le résultat ?",
+    options: [
+      "6/8",
+      "8/15",
+      "2/15",
+      "8/8"
+    ],
+    correctIndex: 1,
+    explication: "Pour multiplier des fractions, on multiplie les numérateurs entre eux et les dénominateurs entre eux : (2×4)/(3×5) = 8/15. Pas besoin de dénominateur commun pour la multiplication !"
+  },
+  {
+    id: 10,
+    question: "Pourquoi est-il important de vérifier la cohérence d'un résultat sur les fractions ?",
+    options: [
+      "Pour impressionner le professeur",
+      "Car les erreurs sur les dénominateurs sont fréquentes et donnent des résultats absurdes",
+      "Ce n'est pas nécessaire si on applique bien les règles",
+      "Uniquement pour les fractions supérieures à 1"
+    ],
+    correctIndex: 1,
+    explication: "L'erreur 1/2 + 1/3 = 2/5 donne 0,4 au lieu de ≈0,83. Vérifier permet de détecter ces absurdités. Par exemple : 1/2 + 1/3 devrait être PLUS GRAND que 1/2 (soit 0,5), or 2/5 = 0,4 < 0,5. Incohérent !"
+  }
+];
+
+<QuizFiche 
+  ficheId="fractions-nombres-rationnels" 
+  matiere="maths"
+  questions={questions} 
+/>

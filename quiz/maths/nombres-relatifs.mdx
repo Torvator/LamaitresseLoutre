@@ -1,0 +1,152 @@
+---
+sidebar_position: 3
+title: "Quiz : Nombres relatifs"
+description: Quiz de validation CRPE - Mathématiques - Nombres relatifs
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Nombres relatifs
+
+<LienFiche 
+  fichePath="/fiches/maths/nombres-relatifs" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Quel est le résultat de (-5) + (-3) ?",
+    options: [
+      "+8",
+      "-8",
+      "+2",
+      "-2"
+    ],
+    correctIndex: 1,
+    explication: "Deux nombres négatifs : on ADDITIONNE les valeurs absolues (5+3=8) et on garde le signe NÉGATIF. Donc (-5) + (-3) = -8."
+  },
+  {
+    id: 2,
+    question: "Comparer -10 et -3. Lequel est le plus grand ?",
+    options: [
+      "-10 car 10 > 3",
+      "-3 car elle est plus proche de 0",
+      "Ils sont égaux",
+      "On ne peut pas comparer des nombres négatifs"
+    ],
+    correctIndex: 1,
+    explication: "Entre deux nombres NÉGATIFS, le plus grand est celui qui a la plus PETITE valeur absolue (le plus proche de 0). Donc -3 > -10. Sur la droite graduée, -3 est à DROITE de -10."
+  },
+  {
+    id: 3,
+    question: "Que signifie « soustraire un nombre » en termes d'opération ?",
+    options: [
+      "Multiplier par -1",
+      "Diviser par ce nombre",
+      "Additionner son opposé",
+      "Prendre sa valeur absolue"
+    ],
+    correctIndex: 2,
+    explication: "Soustraire un nombre revient à ADDITIONNER SON OPPOSÉ. C'est la règle fondamentale : a - b = a + (-b). Exemple : 5 - 8 = 5 + (-8) = -3."
+  },
+  {
+    id: 4,
+    question: "Quelle est la règle des signes pour la multiplication (-) × (-) ?",
+    options: [
+      "Le résultat est négatif",
+      "Le résultat est positif",
+      "Le résultat est nul",
+      "Cela dépend des valeurs"
+    ],
+    correctIndex: 1,
+    explication: "(-) × (-) = (+). Deux signes IDENTIQUES donnent un résultat POSITIF. Deux signes DIFFÉRENTS donnent un résultat NÉGATIF. Exemple : (-4) × (-2) = +8."
+  },
+  {
+    id: 5,
+    question: "Calculer (-2) × (-3) × (-4). Quel est le résultat ?",
+    options: [
+      "+24",
+      "-24",
+      "+12",
+      "-12"
+    ],
+    correctIndex: 1,
+    explication: "On compte les signes négatifs : il y en a 3 (nombre IMPAIR) → résultat NÉGATIF. Puis 2 × 3 × 4 = 24. Donc (-2) × (-3) × (-4) = -24."
+  },
+  {
+    id: 6,
+    question: "Quelle situation concrète permet d'introduire les nombres négatifs au Cycle 3 ?",
+    options: [
+      "Le calcul de surfaces",
+      "Les températures en dessous de zéro",
+      "Les fractions",
+      "Les pourcentages"
+    ],
+    correctIndex: 1,
+    explication: "Les TEMPÉRATURES sont idéales pour introduire les nombres relatifs : -5°C (en dessous de 0) a un sens concret pour les élèves. Autres contextes : altitudes (sous-marin), comptes bancaires (découvert), chronologie (av. J.-C.)."
+  },
+  {
+    id: 7,
+    question: "Qu'est-ce que la valeur absolue de -7 ?",
+    options: [
+      "-7",
+      "7",
+      "0",
+      "1/7"
+    ],
+    correctIndex: 1,
+    explication: "La valeur absolue d'un nombre est sa DISTANCE À ZÉRO sur la droite graduée. Elle est toujours positive ou nulle. |-7| = 7 car -7 est à 7 unités de 0."
+  },
+  {
+    id: 8,
+    question: "Un élève calcule (+5) - (-3) = +2. Quelle est son erreur ?",
+    options: [
+      "Il a bien calculé, c'est correct",
+      "Il a oublié que « moins moins » donne « plus », le résultat est +8",
+      "Il aurait dû trouver -8",
+      "Il aurait dû trouver 0"
+    ],
+    correctIndex: 1,
+    explication: "(+5) - (-3) = (+5) + (+3) = +8. L'élève a oublié la règle « moins moins égale plus ». Soustraire un nombre négatif revient à additionner son opposé positif."
+  },
+  {
+    id: 9,
+    question: "À quel cycle les nombres relatifs sont-ils introduits dans les programmes ?",
+    options: [
+      "Cycle 2 (CP-CE2)",
+      "Cycle 3 (CM1-6ème)",
+      "Cycle 4 (5ème-3ème) pour les opérations",
+      "Cycles 3 et 4 : découverte au C3, opérations au C4"
+    ],
+    correctIndex: 3,
+    explication: "Les nombres relatifs sont DÉCOUVERTS au Cycle 3 (repérage, contextes concrets). Les OPÉRATIONS (addition, soustraction, multiplication, division) sont travaillées au Cycle 4, principalement en 5ème et 4ème."
+  },
+  {
+    id: 10,
+    question: "Ranger dans l'ordre CROISSANT : -7, +3, 0, -2",
+    options: [
+      "-7 < -2 < 0 < +3",
+      "+3 < 0 < -2 < -7",
+      "-2 < -7 < 0 < +3",
+      "0 < -2 < -7 < +3"
+    ],
+    correctIndex: 0,
+    explication: "Ordre croissant = du plus petit au plus grand. Sur la droite graduée, de gauche à droite : -7 (le plus à gauche) < -2 < 0 < +3 (le plus à droite)."
+  }
+];
+
+<QuizFiche 
+  ficheId="nombres-relatifs" 
+  matiere="maths"
+  questions={questions} 
+/>

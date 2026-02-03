@@ -1,0 +1,152 @@
+---
+sidebar_position: 9
+title: "Quiz : Géométrie plane"
+description: Quiz de validation CRPE - Mathématiques - Géométrie plane
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Géométrie plane
+
+<LienFiche 
+  fichePath="/fiches/maths/geometrie-plane" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Quelle est la somme des angles d'un triangle ?",
+    options: [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    correctIndex: 1,
+    explication: "La somme des angles d'un triangle vaut TOUJOURS 180°. C'est une propriété fondamentale. Exemple : si deux angles mesurent 45° et 60°, le troisième vaut 180° - 45° - 60° = 75°."
+  },
+  {
+    id: 2,
+    question: "Qu'est-ce que la médiatrice d'un segment ?",
+    options: [
+      "La droite qui passe par le milieu du segment",
+      "La droite perpendiculaire au segment en son milieu",
+      "La droite qui joint les extrémités du segment",
+      "La droite parallèle au segment"
+    ],
+    correctIndex: 1,
+    explication: "La médiatrice est la droite PERPENDICULAIRE au segment ET passant par son MILIEU. Propriété clé : tous les points de la médiatrice sont équidistants des extrémités du segment."
+  },
+  {
+    id: 3,
+    question: "Peut-on construire un triangle de côtés 3 cm, 4 cm et 10 cm ?",
+    options: [
+      "Oui, c'est un triangle quelconque",
+      "Oui, c'est un triangle rectangle",
+      "Non, car l'inégalité triangulaire n'est pas respectée",
+      "Oui, mais il sera aplati"
+    ],
+    correctIndex: 2,
+    explication: "Inégalité triangulaire : la somme de deux côtés doit être SUPÉRIEURE au troisième. Ici : 3 + 4 = 7 < 10. C'est IMPOSSIBLE de construire ce triangle."
+  },
+  {
+    id: 4,
+    question: "Quelles sont les propriétés du carré ?",
+    options: [
+      "4 côtés égaux et 4 angles droits",
+      "4 côtés égaux seulement",
+      "4 angles droits seulement",
+      "Côtés opposés égaux"
+    ],
+    correctIndex: 0,
+    explication: "Le carré a 4 côtés ÉGAUX et 4 angles DROITS. C'est à la fois un rectangle (4 angles droits) et un losange (4 côtés égaux). Ses diagonales sont égales ET perpendiculaires."
+  },
+  {
+    id: 5,
+    question: "Deux angles supplémentaires ont une somme de :",
+    options: [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    correctIndex: 1,
+    explication: "Angles SUPPLÉMENTAIRES : somme = 180°. Angles COMPLÉMENTAIRES : somme = 90°. Mnémotechnique : Supplémentaire commence par S comme Straight (180° = angle plat)."
+  },
+  {
+    id: 6,
+    question: "À quel cycle introduit-on le théorème de Pythagore ?",
+    options: [
+      "Cycle 2 (CE2)",
+      "Cycle 3 (CM2)",
+      "Cycle 4 (4ᵉ)",
+      "Lycée uniquement"
+    ],
+    correctIndex: 2,
+    explication: "Le théorème de Pythagore est introduit au Cycle 4, en classe de 4ᵉ. Au Cycle 3, on prépare avec le vocabulaire (hypoténuse, triangle rectangle) mais sans le théorème."
+  },
+  {
+    id: 7,
+    question: "Dans un triangle isocèle, quels éléments sont égaux ?",
+    options: [
+      "Les trois côtés",
+      "Deux côtés et les angles à la base",
+      "Les trois angles",
+      "Uniquement les angles"
+    ],
+    correctIndex: 1,
+    explication: "Triangle ISOCÈLE = 2 côtés égaux. Conséquence : les ANGLES À LA BASE (face aux côtés égaux) sont aussi égaux. Triangle ÉQUILATÉRAL = 3 côtés égaux et 3 angles de 60°."
+  },
+  {
+    id: 8,
+    question: "Si une homothétie a un rapport k = 2, comment évoluent les aires ?",
+    options: [
+      "×2",
+      "×4",
+      "×8",
+      "÷2"
+    ],
+    correctIndex: 1,
+    explication: "Pour une homothétie de rapport k : longueurs ×k, aires ×k², volumes ×k³. Ici k = 2, donc les aires sont multipliées par 2² = 4."
+  },
+  {
+    id: 9,
+    question: "Quelle transformation conserve les longueurs ET l'orientation ?",
+    options: [
+      "Symétrie axiale",
+      "Translation",
+      "Symétrie centrale",
+      "Homothétie"
+    ],
+    correctIndex: 1,
+    explication: "La TRANSLATION conserve tout : longueurs, angles ET orientation. La symétrie axiale conserve longueurs et angles mais INVERSE l'orientation. L'homothétie ne conserve pas les longueurs (sauf si k=1)."
+  },
+  {
+    id: 10,
+    question: "Les diagonales d'un losange sont :",
+    options: [
+      "Égales et non perpendiculaires",
+      "Perpendiculaires mais pas forcément égales",
+      "Égales et perpendiculaires",
+      "Ni égales ni perpendiculaires"
+    ],
+    correctIndex: 1,
+    explication: "Les diagonales d'un LOSANGE sont PERPENDICULAIRES mais pas forcément égales. Les diagonales d'un RECTANGLE sont ÉGALES mais pas perpendiculaires. Les diagonales d'un CARRÉ sont les deux (égales ET perpendiculaires)."
+  }
+];
+
+<QuizFiche 
+  ficheId="geometrie-plane" 
+  matiere="maths"
+  questions={questions} 
+/>

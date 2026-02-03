@@ -1,0 +1,152 @@
+---
+sidebar_position: 1
+title: "Quiz : Nombres entiers et décimaux"
+description: Quiz de validation CRPE - Mathématiques - Nombres entiers et décimaux
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Nombres entiers et décimaux
+
+<LienFiche 
+  fichePath="/fiches/maths/nombres-entiers-decimaux" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Quel critère permet de savoir si un nombre est divisible par 9 ?",
+    options: [
+      "Le nombre se termine par 9",
+      "La somme de ses chiffres est divisible par 9",
+      "Les deux derniers chiffres sont divisibles par 9",
+      "Le nombre est impair"
+    ],
+    correctIndex: 1,
+    explication: "Un nombre est divisible par 9 si la SOMME de ses chiffres est divisible par 9. Exemple : 234 → 2+3+4 = 9, et 9÷9 = 1, donc 234 est divisible par 9."
+  },
+  {
+    id: 2,
+    question: "Pourquoi 1 n'est-il PAS un nombre premier ?",
+    options: [
+      "Parce qu'il est trop petit",
+      "Parce qu'il est impair",
+      "Parce qu'il n'a qu'un seul diviseur (lui-même)",
+      "Parce qu'il est divisible par tous les nombres"
+    ],
+    correctIndex: 2,
+    explication: "Par définition, un nombre premier a EXACTEMENT deux diviseurs distincts : 1 et lui-même. Or, 1 n'a qu'UN seul diviseur (lui-même). Donc 1 n'est pas premier. C'est un piège classique au CRPE !"
+  },
+  {
+    id: 3,
+    question: "Quelle est la décomposition en facteurs premiers de 60 ?",
+    options: [
+      "2 × 30",
+      "4 × 15",
+      "2² × 3 × 5",
+      "6 × 10"
+    ],
+    correctIndex: 2,
+    explication: "60 = 2 × 30 = 2 × 2 × 15 = 2 × 2 × 3 × 5 = 2² × 3 × 5. On décompose jusqu'à n'avoir que des nombres PREMIERS (2, 3, 5 sont premiers)."
+  },
+  {
+    id: 4,
+    question: "Un élève écrit 3,45 + 2,8 = 5,53. Quelle est l'origine probable de son erreur ?",
+    options: [
+      "Il a fait une erreur de retenue",
+      "Il n'a pas aligné les virgules correctement",
+      "Il a inversé les chiffres",
+      "Il a confondu addition et multiplication"
+    ],
+    correctIndex: 1,
+    explication: "L'élève n'a pas ALIGNÉ LES VIRGULES. La bonne méthode : écrire 2,8 comme 2,80, aligner les virgules, puis additionner. Résultat correct : 6,25. C'est une erreur très fréquente à connaître pour la remédiation."
+  },
+  {
+    id: 5,
+    question: "À quel cycle les nombres décimaux sont-ils introduits selon les programmes ?",
+    options: [
+      "Cycle 1 (maternelle)",
+      "Cycle 2 (CP-CE2)",
+      "Cycle 3 (CM1-6ème)",
+      "Cycle 4 (5ème-3ème)"
+    ],
+    correctIndex: 2,
+    explication: "Les nombres décimaux sont introduits au Cycle 3, principalement en CM1. Une initiation peut avoir lieu en fin de CE2, mais l'enseignement formel commence au CM1 avec le lien fractions décimales / écriture à virgule."
+  },
+  {
+    id: 6,
+    question: "Comment calculer le PGCD de 48 et 36 par décomposition en facteurs premiers ?",
+    options: [
+      "Prendre tous les facteurs avec les plus grands exposants",
+      "Prendre les facteurs communs avec les plus petits exposants",
+      "Additionner les exposants",
+      "Multiplier les deux nombres"
+    ],
+    correctIndex: 1,
+    explication: "PGCD = facteurs COMMUNS avec les PLUS PETITS exposants. 48 = 2⁴ × 3 et 36 = 2² × 3². Facteurs communs : 2 et 3. Plus petits exposants : 2² et 3¹. Donc PGCD = 2² × 3 = 12."
+  },
+  {
+    id: 7,
+    question: "Quelle formule relie PGCD et PPCM de deux nombres a et b ?",
+    options: [
+      "PGCD + PPCM = a + b",
+      "PGCD × PPCM = a × b",
+      "PGCD - PPCM = a - b",
+      "PGCD ÷ PPCM = a ÷ b"
+    ],
+    correctIndex: 1,
+    explication: "PGCD(a,b) × PPCM(a,b) = a × b. Cette formule permet de vérifier rapidement un calcul de PGCD ou PPCM, ou de trouver l'un si on connaît l'autre."
+  },
+  {
+    id: 8,
+    question: "Un élève de CM1 pense que 3,9 < 3,15 car « 15 > 9 ». Quelle remédiation proposer ?",
+    options: [
+      "Lui faire réciter la règle de comparaison",
+      "Utiliser un tableau de numération pour comparer position par position",
+      "Lui dire simplement qu'il a tort",
+      "Passer aux fractions directement"
+    ],
+    correctIndex: 1,
+    explication: "Utiliser un TABLEAU DE NUMÉRATION permet de visualiser que 3,9 = 3,90 (9 dixièmes = 90 centièmes). En comparant position par position : 9 dixièmes > 1 dixième, donc 3,9 > 3,15. La manipulation visuelle aide à corriger cette erreur fréquente."
+  },
+  {
+    id: 9,
+    question: "Quelle est l'écriture scientifique de 0,00234 ?",
+    options: [
+      "2,34 × 10³",
+      "2,34 × 10⁻³",
+      "23,4 × 10⁻²",
+      "234 × 10⁻⁵"
+    ],
+    correctIndex: 1,
+    explication: "En notation scientifique, on écrit a × 10ⁿ avec 1 ≤ a < 10. On déplace la virgule de 3 rangs vers la DROITE pour obtenir 2,34, donc l'exposant est NÉGATIF : 2,34 × 10⁻³."
+  },
+  {
+    id: 10,
+    question: "Quelle situation concrète utiliser pour introduire la notion de diviseur en CM2 ?",
+    options: [
+      "Calculer des distances astronomiques",
+      "Ranger des objets en parts égales (bonbons dans des boîtes)",
+      "Mesurer des temps de course",
+      "Convertir des devises"
+    ],
+    correctIndex: 1,
+    explication: "Le partage équitable (ranger 24 bonbons en boîtes égales) est idéal pour les diviseurs : les diviseurs de 24 (1, 2, 3, 4, 6, 8, 12, 24) correspondent aux nombres de boîtes possibles pour un partage exact. C'est concret et manipulable."
+  }
+];
+
+<QuizFiche 
+  ficheId="nombres-entiers-decimaux" 
+  matiere="maths"
+  questions={questions} 
+/>

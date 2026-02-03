@@ -1,0 +1,152 @@
+---
+sidebar_position: 6
+title: "Quiz : Durées et calculs"
+description: Quiz de validation CRPE - Mathématiques - Durées et calculs de temps
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Durées et calculs
+
+<LienFiche 
+  fichePath="/fiches/maths/durees-calculs" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Combien y a-t-il de secondes dans 1 heure ?",
+    options: [
+      "60",
+      "360",
+      "3 600",
+      "6 000"
+    ],
+    correctIndex: 2,
+    explication: "1 heure = 60 minutes et 1 minute = 60 secondes. Donc 1 heure = 60 × 60 = 3 600 secondes."
+  },
+  {
+    id: 2,
+    question: "Convertir 2 h 30 min en heures décimales :",
+    options: [
+      "2,3 h",
+      "2,5 h",
+      "2,30 h",
+      "230 h"
+    ],
+    correctIndex: 1,
+    explication: "30 minutes = 30/60 heure = 0,5 heure. Donc 2 h 30 min = 2 + 0,5 = 2,5 h. Attention : 2,30 h n'a pas de sens en système décimal !"
+  },
+  {
+    id: 3,
+    question: "Calculer 2 h 45 min + 1 h 35 min =",
+    options: [
+      "3 h 80 min",
+      "4 h 20 min",
+      "3 h 20 min",
+      "4 h 80 min"
+    ],
+    correctIndex: 1,
+    explication: "2h + 1h = 3h et 45min + 35min = 80min. Or 80 min = 1h 20min. Donc 3h + 1h 20min = 4 h 20 min. Il faut toujours convertir si ≥ 60 min."
+  },
+  {
+    id: 4,
+    question: "Un film commence à 14h25 et finit à 16h10. Quelle est sa durée ?",
+    options: [
+      "1 h 45 min",
+      "1 h 85 min",
+      "2 h 15 min",
+      "1 h 35 min"
+    ],
+    correctIndex: 0,
+    explication: "De 14h25 à 15h = 35 min, puis de 15h à 16h = 1h, puis de 16h à 16h10 = 10 min. Total : 35 + 60 + 10 = 105 min = 1 h 45 min."
+  },
+  {
+    id: 5,
+    question: "Pourquoi les calculs de durées sont-ils difficiles pour les élèves ?",
+    options: [
+      "Parce que les nombres sont trop grands",
+      "Parce que le système n'est pas décimal (base 60 au lieu de 10)",
+      "Parce qu'ils n'ont pas de montre",
+      "Parce que les heures sont abstraites"
+    ],
+    correctIndex: 1,
+    explication: "Le système horaire utilise la BASE 60 (60 min = 1h, 60 s = 1 min) et non la base 10. Les élèves habitués au système décimal font des erreurs comme écrire 2h75min au lieu de 3h15min."
+  },
+  {
+    id: 6,
+    question: "Convertir 195 minutes en heures et minutes :",
+    options: [
+      "1 h 95 min",
+      "3 h 15 min",
+      "2 h 75 min",
+      "19 h 5 min"
+    ],
+    correctIndex: 1,
+    explication: "195 ÷ 60 = 3 reste 15. Donc 195 min = 3 h 15 min. On fait la division euclidienne par 60."
+  },
+  {
+    id: 7,
+    question: "Calculer 5 h 10 min - 2 h 35 min =",
+    options: [
+      "3 h 25 min",
+      "2 h 35 min",
+      "2 h 75 min",
+      "3 h 35 min"
+    ],
+    correctIndex: 1,
+    explication: "On ne peut pas soustraire 35 de 10. On emprunte 1h : 5h10min = 4h70min. Puis 4h70min - 2h35min = 2 h 35 min."
+  },
+  {
+    id: 8,
+    question: "À quel cycle les calculs de durées sont-ils introduits ?",
+    options: [
+      "Cycle 1 uniquement",
+      "Cycle 2 (lecture de l'heure) puis Cycle 3 (calculs de durées)",
+      "Uniquement au collège",
+      "Cycle 4"
+    ],
+    correctIndex: 1,
+    explication: "Cycle 2 : lecture de l'heure, vocabulaire (heures, minutes). Cycle 3 : calculs de durées, conversions, problèmes. Les calculs avec secondes viennent au Cycle 4."
+  },
+  {
+    id: 9,
+    question: "Un train part à 22h45 et arrive à 1h20 le lendemain. Quelle est la durée du trajet ?",
+    options: [
+      "2 h 35 min",
+      "3 h 25 min",
+      "21 h 35 min",
+      "2 h 25 min"
+    ],
+    correctIndex: 0,
+    explication: "On passe par minuit. De 22h45 à minuit = 1h15, puis de minuit à 1h20 = 1h20. Total : 1h15 + 1h20 = 2 h 35 min."
+  },
+  {
+    id: 10,
+    question: "Un élève écrit 3h + 45min = 3,45h. Quelle est son erreur ?",
+    options: [
+      "Il n'y a pas d'erreur",
+      "Il a confondu écriture sexagésimale et décimale : 45min = 0,75h, pas 0,45h",
+      "Il aurait dû écrire 345 min",
+      "Il a oublié les secondes"
+    ],
+    correctIndex: 1,
+    explication: "Erreur classique ! 45 min = 45/60 h = 0,75 h (pas 0,45). Donc 3h45min = 3,75 h. L'élève confond la notation 3h45 avec un nombre décimal."
+  }
+];
+
+<QuizFiche 
+  ficheId="durees-calculs" 
+  matiere="maths"
+  questions={questions} 
+/>

@@ -1,0 +1,152 @@
+---
+sidebar_position: 8
+title: "Quiz : Grandeurs et mesures"
+description: Quiz de validation CRPE - Mathématiques - Grandeurs et mesures
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Grandeurs et mesures
+
+<LienFiche 
+  fichePath="/fiches/maths/grandeurs-mesures" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Combien y a-t-il de cm² dans 1 m² ?",
+    options: [
+      "100 cm²",
+      "1 000 cm²",
+      "10 000 cm²",
+      "100 000 cm²"
+    ],
+    correctIndex: 2,
+    explication: "Pour les AIRES, on multiplie par 100 (et non 10) entre unités consécutives. 1 m² = 100 dm² = 10 000 cm². Car 1 m = 100 cm, donc 1 m² = (100 cm)² = 10 000 cm²."
+  },
+  {
+    id: 2,
+    question: "Quelle est la formule de l'aire d'un triangle ?",
+    options: [
+      "A = base × hauteur",
+      "A = (base × hauteur) ÷ 2",
+      "A = base + hauteur",
+      "A = 2 × base × hauteur"
+    ],
+    correctIndex: 1,
+    explication: "Aire du triangle = (base × hauteur) / 2. On peut retenir que le triangle est la \"moitié\" d'un parallélogramme de même base et hauteur."
+  },
+  {
+    id: 3,
+    question: "Quelle est la relation entre le litre et le dm³ ?",
+    options: [
+      "1 L = 10 dm³",
+      "1 L = 1 dm³",
+      "1 L = 0,1 dm³",
+      "1 L = 100 dm³"
+    ],
+    correctIndex: 1,
+    explication: "1 L = 1 dm³. C'est une relation fondamentale à connaître ! De même : 1 mL = 1 cm³."
+  },
+  {
+    id: 4,
+    question: "Quelle est la formule du périmètre d'un cercle ?",
+    options: [
+      "P = π × r²",
+      "P = 2 × π × r",
+      "P = 2 × r",
+      "P = π × r"
+    ],
+    correctIndex: 1,
+    explication: "Périmètre (ou circonférence) d'un cercle = 2πr = πd (avec d = diamètre). Attention : π × r² est l'AIRE du disque, pas le périmètre !"
+  },
+  {
+    id: 5,
+    question: "Combien y a-t-il de m² dans 1 hectare ?",
+    options: [
+      "100 m²",
+      "1 000 m²",
+      "10 000 m²",
+      "100 000 m²"
+    ],
+    correctIndex: 2,
+    explication: "1 hectare (ha) = 10 000 m² = 1 hm². C'est un carré de 100 m de côté. 1 are = 100 m² (carré de 10 m de côté)."
+  },
+  {
+    id: 6,
+    question: "Un élève confond périmètre et aire. Comment l'aider ?",
+    options: [
+      "Lui donner plus d'exercices de calcul",
+      "Utiliser du matériel : ficelle pour le périmètre (contour), pavages pour l'aire (surface)",
+      "Lui faire apprendre les formules par cœur",
+      "Éviter les problèmes avec les deux notions"
+    ],
+    correctIndex: 1,
+    explication: "Manipuler concrètement aide à distinguer : le PÉRIMÈTRE = contour (on peut le mesurer avec une ficelle), l'AIRE = surface (on peut la paver avec des carrés unités). Le périmètre est une LONGUEUR (en m), l'aire une SURFACE (en m²)."
+  },
+  {
+    id: 7,
+    question: "Quelle est la formule du volume d'un pavé droit (parallélépipède rectangle) ?",
+    options: [
+      "V = L + l + h",
+      "V = L × l × h",
+      "V = 2 × (L + l + h)",
+      "V = L × l"
+    ],
+    correctIndex: 1,
+    explication: "Volume du pavé droit = Longueur × largeur × hauteur = L × l × h. On multiplie les trois dimensions."
+  },
+  {
+    id: 8,
+    question: "Convertir 3,5 m en cm :",
+    options: [
+      "35 cm",
+      "350 cm",
+      "3 500 cm",
+      "0,035 cm"
+    ],
+    correctIndex: 1,
+    explication: "1 m = 100 cm. Donc 3,5 m = 3,5 × 100 = 350 cm. On multiplie par 100 (ou on déplace la virgule de 2 rangs vers la droite)."
+  },
+  {
+    id: 9,
+    question: "À quel cycle les formules d'aires sont-elles introduites ?",
+    options: [
+      "Cycle 1",
+      "Cycle 2 (rectangle et carré) puis Cycle 3 (triangle, disque)",
+      "Uniquement au Cycle 4",
+      "Dès la maternelle"
+    ],
+    correctIndex: 1,
+    explication: "Cycle 2 : aires par pavage, puis formules du rectangle et du carré. Cycle 3 : formules du triangle, du parallélogramme, du disque. Cycle 4 : volumes des solides (pyramide, cône, sphère)."
+  },
+  {
+    id: 10,
+    question: "Calculer l'aire d'un disque de rayon 5 cm (prendre π ≈ 3,14) :",
+    options: [
+      "15,7 cm²",
+      "31,4 cm²",
+      "78,5 cm²",
+      "157 cm²"
+    ],
+    correctIndex: 2,
+    explication: "Aire du disque = π × r². Donc A = 3,14 × 5² = 3,14 × 25 = 78,5 cm². Attention : c'est r² (rayon au carré), pas 2r !"
+  }
+];
+
+<QuizFiche 
+  ficheId="grandeurs-mesures" 
+  matiere="maths"
+  questions={questions} 
+/>

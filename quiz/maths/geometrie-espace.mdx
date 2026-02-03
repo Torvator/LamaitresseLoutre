@@ -1,0 +1,152 @@
+---
+sidebar_position: 10
+title: "Quiz : Géométrie dans l'espace"
+description: Quiz de validation CRPE - Mathématiques - Géométrie dans l'espace
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Géométrie dans l'espace
+
+<LienFiche 
+  fichePath="/fiches/maths/geometrie-espace" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Combien de faces, d'arêtes et de sommets possède un cube ?",
+    options: [
+      "6 faces, 8 arêtes, 12 sommets",
+      "6 faces, 12 arêtes, 8 sommets",
+      "8 faces, 12 arêtes, 6 sommets",
+      "4 faces, 6 arêtes, 4 sommets"
+    ],
+    correctIndex: 1,
+    explication: "Un cube possède 6 FACES carrées, 12 ARÊTES égales et 8 SOMMETS. Formule d'Euler : S - A + F = 2, soit 8 - 12 + 6 = 2 ✓"
+  },
+  {
+    id: 2,
+    question: "Quelle est la formule du volume d'un cylindre ?",
+    options: [
+      "V = 2πr × h",
+      "V = πr² × h",
+      "V = πr × h²",
+      "V = (πr² × h) ÷ 3"
+    ],
+    correctIndex: 1,
+    explication: "Volume du cylindre = Aire de la base × hauteur = πr² × h. Attention : V = (πr² × h) ÷ 3 est la formule du CÔNE (un tiers du cylindre)."
+  },
+  {
+    id: 3,
+    question: "Quelle section obtient-on en coupant un cylindre perpendiculairement à son axe ?",
+    options: [
+      "Un rectangle",
+      "Un cercle",
+      "Une ellipse",
+      "Un carré"
+    ],
+    correctIndex: 1,
+    explication: "Un cylindre coupé PERPENDICULAIREMENT à son axe donne un CERCLE (de même rayon que la base). Coupé PARALLÈLEMENT à l'axe, il donne un rectangle."
+  },
+  {
+    id: 4,
+    question: "Qu'est-ce qu'un prisme droit ?",
+    options: [
+      "Un solide avec une seule base et des faces triangulaires",
+      "Un solide avec deux bases polygonales parallèles et des faces latérales rectangulaires",
+      "Un solide avec toutes les faces carrées",
+      "Un solide de révolution"
+    ],
+    correctIndex: 1,
+    explication: "Un PRISME DROIT a 2 bases polygonales PARALLÈLES et SUPERPOSABLES, reliées par des faces latérales RECTANGULAIRES perpendiculaires aux bases."
+  },
+  {
+    id: 5,
+    question: "Quelle est la formule du volume d'une pyramide ?",
+    options: [
+      "V = Aire base × hauteur",
+      "V = (Aire base × hauteur) ÷ 2",
+      "V = (Aire base × hauteur) ÷ 3",
+      "V = Aire base × hauteur²"
+    ],
+    correctIndex: 2,
+    explication: "Volume de la pyramide = (Aire de la base × hauteur) ÷ 3. C'est le TIERS du prisme de même base et même hauteur. Idem pour le cône (tiers du cylindre)."
+  },
+  {
+    id: 6,
+    question: "À quel cycle travaille-t-on la reconnaissance et le vocabulaire des solides usuels ?",
+    options: [
+      "Cycle 1 uniquement",
+      "Cycles 2 et 3 (du CP à la 6ᵉ)",
+      "Cycle 4 uniquement (collège)",
+      "Lycée uniquement"
+    ],
+    correctIndex: 1,
+    explication: "La reconnaissance des solides (cube, pavé, cylindre, cône, boule, pyramide) commence au Cycle 2 et se poursuit au Cycle 3. Le Cycle 4 approfondit avec les sections et les calculs de volumes."
+  },
+  {
+    id: 7,
+    question: "En perspective cavalière, comment représente-t-on les arêtes fuyantes ?",
+    options: [
+      "À leur vraie dimension",
+      "À 45° et réduites de moitié",
+      "Perpendiculaires à la face avant",
+      "En pointillés uniquement"
+    ],
+    correctIndex: 1,
+    explication: "En perspective cavalière : la face avant est en vraies dimensions, les arêtes fuyantes sont tracées à 45° (ou 30°) et leur longueur est réduite de MOITIÉ (coefficient 0,5)."
+  },
+  {
+    id: 8,
+    question: "Quelle est la formule du volume d'une boule (sphère) ?",
+    options: [
+      "V = 4πr²",
+      "V = (4/3)πr³",
+      "V = πr³",
+      "V = (4/3)πr²"
+    ],
+    correctIndex: 1,
+    explication: "Volume de la boule : V = (4/3)πr³ ou V = (4πr³)/3. Attention : 4πr² est la formule de l'AIRE de la sphère (surface), pas du volume."
+  },
+  {
+    id: 9,
+    question: "Un prisme à base triangulaire possède combien de faces ?",
+    options: [
+      "4 faces",
+      "5 faces",
+      "6 faces",
+      "3 faces"
+    ],
+    correctIndex: 1,
+    explication: "Un prisme à base triangulaire a 5 FACES : 2 bases triangulaires + 3 faces latérales rectangulaires. Il a aussi 9 arêtes et 6 sommets."
+  },
+  {
+    id: 10,
+    question: "Si on double le rayon d'une boule, comment évolue son volume ?",
+    options: [
+      "Il double (×2)",
+      "Il quadruple (×4)",
+      "Il est multiplié par 8",
+      "Il reste le même"
+    ],
+    correctIndex: 2,
+    explication: "Le volume est proportionnel à r³. Si r est multiplié par 2, le volume est multiplié par 2³ = 8. Règle générale : longueurs ×k → volumes ×k³."
+  }
+];
+
+<QuizFiche 
+  ficheId="geometrie-espace" 
+  matiere="maths"
+  questions={questions} 
+/>

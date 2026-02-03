@@ -17,10 +17,19 @@ const QUIZ_DISPONIBLES = [
   'francais/expression-ecrite',
   'francais/expression-orale',
   
-  // 🔢 Mathématiques (à venir)
-  // 'maths/nombres-entiers-decimaux',
-  // 'maths/fractions-nombres-rationnels',
-  // ...
+  // 🔢 Mathématiques (12 quiz)
+  'maths/nombres-entiers-decimaux',
+  'maths/fractions-nombres-rationnels',
+  'maths/nombres-relatifs',
+  'maths/puissances-racines-carrees',
+  'maths/calcul-litteral',
+  'maths/durees-calculs',
+  'maths/organisation-gestion-donnees',
+  'maths/grandeurs-mesures',
+  'maths/geometrie-plane',
+  'maths/geometrie-espace',
+  'maths/reperage',
+  'maths/algorithmique-programmation',
   
   // 📜 Histoire (à venir)
   // 'histoire/prehistoire',

@@ -1,0 +1,152 @@
+---
+sidebar_position: 5
+title: "Quiz : Calcul littéral"
+description: Quiz de validation CRPE - Mathématiques - Calcul littéral et algèbre
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Calcul littéral
+
+<LienFiche 
+  fichePath="/fiches/maths/calcul-litteral" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Réduire l'expression 5x + 3x =",
+    options: [
+      "8x²",
+      "8x",
+      "15x",
+      "53x"
+    ],
+    correctIndex: 1,
+    explication: "5x et 3x sont des termes SEMBLABLES (même partie littérale). On additionne les coefficients : 5 + 3 = 8. Donc 5x + 3x = 8x."
+  },
+  {
+    id: 2,
+    question: "Développer 3(x + 5) =",
+    options: [
+      "3x + 5",
+      "3x + 15",
+      "3x + 8",
+      "x + 15"
+    ],
+    correctIndex: 1,
+    explication: "On applique la DISTRIBUTIVITÉ : k(a + b) = ka + kb. Donc 3(x + 5) = 3×x + 3×5 = 3x + 15."
+  },
+  {
+    id: 3,
+    question: "Quelle est l'identité remarquable (a + b)² ?",
+    options: [
+      "a² + b²",
+      "a² + 2ab + b²",
+      "a² - 2ab + b²",
+      "2a² + 2b²"
+    ],
+    correctIndex: 1,
+    explication: "(a + b)² = a² + 2ab + b². C'est le carré d'une somme. Attention à ne pas oublier le DOUBLE PRODUIT 2ab ! Erreur fréquente : écrire seulement a² + b²."
+  },
+  {
+    id: 4,
+    question: "Factoriser x² - 9 =",
+    options: [
+      "(x - 3)²",
+      "(x + 3)²",
+      "(x + 3)(x - 3)",
+      "x(x - 9)"
+    ],
+    correctIndex: 2,
+    explication: "x² - 9 = x² - 3² est une DIFFÉRENCE DE DEUX CARRÉS. L'identité remarquable : a² - b² = (a + b)(a - b). Donc x² - 9 = (x + 3)(x - 3)."
+  },
+  {
+    id: 5,
+    question: "Simplifier 5x - (3x - 2) =",
+    options: [
+      "2x - 2",
+      "2x + 2",
+      "8x - 2",
+      "8x + 2"
+    ],
+    correctIndex: 1,
+    explication: "Avec un signe MOINS devant la parenthèse, on CHANGE TOUS LES SIGNES à l'intérieur : 5x - (3x - 2) = 5x - 3x + 2 = 2x + 2."
+  },
+  {
+    id: 6,
+    question: "Qu'est-ce qu'un terme semblable ?",
+    options: [
+      "Des termes qui ont le même coefficient",
+      "Des termes qui ont la même partie littérale (même variable avec même exposant)",
+      "Des termes qui sont tous positifs",
+      "Des termes qui se simplifient"
+    ],
+    correctIndex: 1,
+    explication: "Deux termes sont SEMBLABLES s'ils ont la MÊME PARTIE LITTÉRALE. Exemples : 5x et 3x (semblables), 2x² et 7x² (semblables), mais 3x et 5y ne le sont pas."
+  },
+  {
+    id: 7,
+    question: "Développer (x + 3)(x - 3) =",
+    options: [
+      "x² - 9",
+      "x² + 9",
+      "x² - 6x + 9",
+      "2x"
+    ],
+    correctIndex: 0,
+    explication: "C'est l'identité (a + b)(a - b) = a² - b². Donc (x + 3)(x - 3) = x² - 3² = x² - 9. Les termes en x s'annulent (+3x - 3x = 0)."
+  },
+  {
+    id: 8,
+    question: "Un élève écrit (x + 2)² = x² + 4. Quelle est son erreur ?",
+    options: [
+      "Il n'y a pas d'erreur",
+      "Il a oublié le double produit 2×x×2 = 4x",
+      "Il aurait dû écrire 2x² + 4",
+      "Il a mal calculé 2²"
+    ],
+    correctIndex: 1,
+    explication: "L'erreur classique ! (x + 2)² = x² + 2×x×2 + 2² = x² + 4x + 4. L'élève a oublié le DOUBLE PRODUIT 4x. C'est l'erreur la plus fréquente sur les identités remarquables."
+  },
+  {
+    id: 9,
+    question: "À quel cycle le calcul littéral est-il principalement enseigné ?",
+    options: [
+      "Cycle 2 (CP-CE2)",
+      "Cycle 3 (CM1-6ème) avec introduction, Cycle 4 pour l'approfondissement",
+      "Uniquement au lycée",
+      "Cycle 1 (maternelle)"
+    ],
+    correctIndex: 1,
+    explication: "Le calcul littéral est INTRODUIT au Cycle 3 (utilisation de lettres pour des formules simples comme périmètre = 2×L + 2×l). L'APPROFONDISSEMENT (développement, factorisation, équations) se fait au Cycle 4."
+  },
+  {
+    id: 10,
+    question: "Factoriser 6x + 9 =",
+    options: [
+      "3(2x + 3)",
+      "6(x + 9)",
+      "3(2x + 9)",
+      "15x"
+    ],
+    correctIndex: 0,
+    explication: "On cherche le FACTEUR COMMUN. PGCD(6, 9) = 3. On met 3 en facteur : 6x + 9 = 3×2x + 3×3 = 3(2x + 3)."
+  }
+];
+
+<QuizFiche 
+  ficheId="calcul-litteral" 
+  matiere="maths"
+  questions={questions} 
+/>

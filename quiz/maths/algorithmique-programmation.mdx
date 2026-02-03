@@ -1,0 +1,152 @@
+---
+sidebar_position: 12
+title: "Quiz : Algorithmique et programmation"
+description: Quiz de validation CRPE - Mathématiques - Algorithmique et programmation
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 🔢 Quiz : Algorithmique et programmation
+
+<LienFiche 
+  fichePath="/fiches/maths/algorithmique-programmation" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Qu'est-ce qu'un algorithme ?",
+    options: [
+      "Un programme informatique uniquement",
+      "Une suite d'instructions précises et ordonnées pour résoudre un problème",
+      "Un calcul mathématique complexe",
+      "Un langage de programmation"
+    ],
+    correctIndex: 1,
+    explication: "Un ALGORITHME est une suite d'instructions PRÉCISES et ORDONNÉES permettant de résoudre un problème. Exemples quotidiens : recette de cuisine, mode d'emploi, itinéraire. Ce n'est PAS limité à l'informatique."
+  },
+  {
+    id: 2,
+    question: "Quelles sont les trois structures de base en algorithmique ?",
+    options: [
+      "Variable, fonction, classe",
+      "Séquence, boucle (répétition), test (condition)",
+      "Entrée, traitement, sortie",
+      "Scratch, Python, JavaScript"
+    ],
+    correctIndex: 1,
+    explication: "Les 3 structures fondamentales : SÉQUENCE (instructions à la suite), BOUCLE (répéter n fois, tant que...), TEST (si...alors...sinon). Avec ces 3 structures, on peut écrire n'importe quel algorithme."
+  },
+  {
+    id: 3,
+    question: "Dans Scratch, que fait ce programme : « Répéter 4 fois : Avancer de 100, Tourner de 90° » ?",
+    options: [
+      "Dessine un cercle",
+      "Dessine un carré",
+      "Dessine un triangle",
+      "Fait une ligne droite"
+    ],
+    correctIndex: 1,
+    explication: "Répéter 4 fois : avancer puis tourner de 90° → dessine un CARRÉ. Logique : 4 côtés, 4 angles de 90° (360° ÷ 4 = 90°). Pour un triangle équilatéral : 3 fois, tourner de 120° (360° ÷ 3 = 120°)."
+  },
+  {
+    id: 4,
+    question: "Qu'est-ce qu'une variable en programmation ?",
+    options: [
+      "Un nombre qui ne change jamais",
+      "Un espace mémoire qui stocke une valeur pouvant être modifiée",
+      "Une instruction qui se répète",
+      "Un type de boucle"
+    ],
+    correctIndex: 1,
+    explication: "Une VARIABLE est un espace mémoire qui stocke une valeur. Cette valeur peut être modifiée pendant l'exécution. Exemple : score = 0, puis score = score + 10 → score vaut maintenant 10."
+  },
+  {
+    id: 5,
+    question: "Qu'est-ce qu'une activité « unplugged » (débranchée) ?",
+    options: [
+      "Une activité avec un ordinateur éteint",
+      "Une activité d'algorithmique SANS ordinateur (manipulation, jeu du robot...)",
+      "Une activité avec tablette",
+      "Une activité de programmation avancée"
+    ],
+    correctIndex: 1,
+    explication: "Une activité UNPLUGGED (débranchée) permet de travailler l'algorithmique SANS ordinateur : jeu du robot, pixel art avec consignes, tri de cartes, chasse au trésor. Essentiel pour comprendre les concepts avant de coder."
+  },
+  {
+    id: 6,
+    question: "À quel cycle commence-t-on l'initiation à l'algorithmique selon les programmes ?",
+    options: [
+      "Cycle 1 (maternelle)",
+      "Cycle 2 (CP-CE2)",
+      "Cycle 3 (CM1-6e)",
+      "Cycle 4 (5e-3e) uniquement"
+    ],
+    correctIndex: 1,
+    explication: "L'algorithmique est introduite dès le Cycle 2 avec des activités unplugged et des robots simples (Bee-Bot). Au Cycle 3, on utilise Scratch. Au Cycle 4, on approfondit avec Python."
+  },
+  {
+    id: 7,
+    question: "Quel robot programmable est adapté au Cycle 2 ?",
+    options: [
+      "Lego Mindstorms",
+      "Bee-Bot / Blue-Bot",
+      "Thymio avancé",
+      "Arduino"
+    ],
+    correctIndex: 1,
+    explication: "BEE-BOT et BLUE-BOT sont des robots simples adaptés au Cycle 2 : on programme des séquences de déplacements (avancer, tourner) avec des boutons physiques. Thymio est plutôt Cycle 3, Lego Mindstorms Cycle 4."
+  },
+  {
+    id: 8,
+    question: "Dans un test « Si...Alors...Sinon », qu'est-ce que la condition ?",
+    options: [
+      "L'action à effectuer",
+      "Une expression qui est vraie ou fausse (booléen)",
+      "Le résultat du programme",
+      "Une variable"
+    ],
+    correctIndex: 1,
+    explication: "La CONDITION est une expression BOOLÉENNE (vraie ou fausse). Exemple : « Si température > 25 » → la condition est « température > 25 », qui est soit vraie soit fausse."
+  },
+  {
+    id: 9,
+    question: "Pourquoi l'algorithmique est-elle enseignée en mathématiques ?",
+    options: [
+      "Pour apprendre à utiliser un ordinateur",
+      "Pour développer le raisonnement logique et la résolution de problèmes",
+      "Pour remplacer les calculs",
+      "Uniquement pour préparer aux métiers informatiques"
+    ],
+    correctIndex: 1,
+    explication: "L'algorithmique développe le RAISONNEMENT LOGIQUE, la DÉCOMPOSITION de problèmes, et la RIGUEUR. Elle a des liens forts avec les maths : géométrie (dessins avec Scratch), calculs, logique. Ce n'est pas qu'une compétence informatique."
+  },
+  {
+    id: 10,
+    question: "Qu'est-ce que le « débogage » ?",
+    options: [
+      "Supprimer un programme",
+      "Chercher et corriger les erreurs dans un programme",
+      "Accélérer un programme",
+      "Copier un programme"
+    ],
+    correctIndex: 1,
+    explication: "Le DÉBOGAGE consiste à identifier et corriger les ERREURS (bugs) dans un programme. C'est une compétence essentielle : tester, observer, comprendre l'erreur, corriger. L'essai-erreur fait partie de l'apprentissage."
+  }
+];
+
+<QuizFiche 
+  ficheId="algorithmique-programmation" 
+  matiere="maths"
+  questions={questions} 
+/>
