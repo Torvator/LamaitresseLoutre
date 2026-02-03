@@ -1,78 +1,140 @@
-/**
- * sidebarsQuiz.js - Navigation pour la section Quiz
- * 
- * IMPORTANT : N'ajouter une catégorie que quand elle contient au moins 1 quiz !
- * Sinon Docusaurus plante au build.
- */
-
-module.exports = {
+/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
   quizSidebar: [
     'intro',
     {
       type: 'category',
-      label: '🔬 Sciences',
+      label: '📝 Français',
+      collapsed: false,
       items: [
-        'sciences/matiere-etats-changements',
+        'francais/grammaire',
+        'francais/lecture',
+        'francais/culture-litteraire',
+        'francais/expression-ecrite',
+        'francais/expression-orale',
       ],
     },
-    // ============================================
-    // DÉCOMMENTER AU FUR ET À MESURE QUE TU AJOUTES DES QUIZ
-    // ============================================
-    // {
-    //   type: 'category',
-    //   label: '📝 Français',
-    //   items: [
-    //     'francais/grammaire',
-    //   ],
-    // },
+    // ========== À DÉCOMMENTER AU FUR ET À MESURE ==========
     // {
     //   type: 'category',
     //   label: '🔢 Mathématiques',
+    //   collapsed: false,
     //   items: [
     //     'maths/nombres-entiers-decimaux',
+    //     'maths/fractions-nombres-rationnels',
+    //     'maths/nombres-relatifs',
+    //     'maths/puissances-racines-carrees',
+    //     'maths/calcul-litteral',
+    //     'maths/durees-calculs',
+    //     'maths/organisation-gestion-donnees',
+    //     'maths/grandeurs-mesures',
+    //     'maths/geometrie-plane',
+    //     'maths/geometrie-espace',
+    //     'maths/reperage',
+    //     'maths/algorithmique-programmation',
     //   ],
     // },
     // {
     //   type: 'category',
     //   label: '📜 Histoire',
+    //   collapsed: false,
     //   items: [
     //     'histoire/prehistoire',
+    //     'histoire/premieres-civilisations',
+    //     'histoire/grece-antique',
+    //     'histoire/rome',
+    //     'histoire/moyen-age-societe-feodale',
+    //     'histoire/eglise-moyen-age',
+    //     'histoire/renaissance',
+    //     'histoire/grandes-decouvertes',
+    //     'histoire/revolution-empire',
+    //     'histoire/xixe-siecle',
+    //     'histoire/guerres-mondiales',
+    //     'histoire/monde-depuis-1945',
     //   ],
     // },
     // {
     //   type: 'category',
     //   label: '🌍 Géographie',
+    //   collapsed: false,
     //   items: [
     //     'geographie/geo_lieux_habite',
+    //     'geographie/geo_loger_travailler',
+    //     'geographie/geo_consommer',
+    //     'geographie/geo_demographie_developpement',
+    //     'geographie/geo_ressources',
+    //     'geographie/geo_risques_climat',
+    //     'geographie/geo_urbanisation_mobilites',
+    //     'geographie/geo_france_ue_mondialisation',
     //   ],
     // },
     // {
     //   type: 'category',
     //   label: '🌈 EMC',
+    //   collapsed: false,
     //   items: [
     //     'emc/emc_sensibilite',
+    //     'emc/emc_droit_regle',
+    //     'emc/emc_jugement',
+    //     'emc/emc_engagement',
+    //     'emc/emc_laicite',
+    //     'emc/emc_egalite_discriminations',
+    //   ],
+    // },
+    // {
+    //   type: 'category',
+    //   label: '🔬 Sciences',
+    //   collapsed: false,
+    //   items: [
+    //     'sciences/matiere-etats-changements',
+    //     'sciences/melanges-solutions',
+    //     'sciences/atomes-molecules-reactions',
+    //     'sciences/energie-sources-conversions',
+    //     'sciences/electricite',
+    //     'sciences/mouvement-forces',
+    //     'sciences/lumiere-optique',
+    //     'sciences/son',
+    //     'sciences/vivant-classification-biodiversite',
+    //     'sciences/fonctions-nutrition',
+    //     'sciences/reproduction-developpement',
+    //     'sciences/ecosystemes-environnement',
+    //     'sciences/corps-humain-sante',
+    //     'sciences/terre-systeme-solaire',
+    //     'sciences/objets-techniques-programmation',
     //   ],
     // },
     // {
     //   type: 'category',
     //   label: '🎨 Arts',
+    //   collapsed: false,
     //   items: [
     //     'arts/arts-plastiques-fondamentaux',
+    //     'arts/arts-plastiques-oeuvres-2026',
+    //     'arts/education-musicale-fondamentaux',
+    //     'arts/education-musicale-oeuvres-2026',
+    //     'arts/histoire-des-arts-2026',
     //   ],
     // },
     // {
     //   type: 'category',
     //   label: '⚽ EPS',
+    //   collapsed: false,
     //   items: [
     //     'eps/eps-didactique-developpement',
+    //     'eps/eps-apsa-champs-apprentissage',
     //   ],
     // },
     // {
     //   type: 'category',
     //   label: '🇬🇧 Anglais',
+    //   collapsed: false,
     //   items: [
     //     'anglais/anglais-grammaire',
+    //     'anglais/anglais-didactique',
+    //     'anglais/anglais-vocabulaire-culture',
     //   ],
     // },
   ],
 };
+
+module.exports = sidebars;

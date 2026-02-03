@@ -1,0 +1,152 @@
+---
+sidebar_position: 1
+title: "Quiz : Grammaire et étude de la langue"
+description: Quiz de validation CRPE - Français - Grammaire
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 📝 Quiz : Grammaire et étude de la langue
+
+<LienFiche 
+  fichePath="/fiches/francais/grammaire" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Combien existe-t-il de classes de mots (natures grammaticales) en français ?",
+    options: [
+      "7 classes",
+      "8 classes",
+      "9 classes",
+      "10 classes"
+    ],
+    correctIndex: 2,
+    explication: "Il existe 9 classes de mots en français : 5 variables (nom, déterminant, adjectif, pronom, verbe) et 4 invariables (adverbe, préposition, conjonction, interjection)."
+  },
+  {
+    id: 2,
+    question: "Dans la phrase « Le chat dort sur le canapé », quelle est la FONCTION du groupe « sur le canapé » ?",
+    options: [
+      "Complément d'objet direct (COD)",
+      "Complément d'objet indirect (COI)",
+      "Complément circonstanciel de lieu (CCL)",
+      "Complément du nom"
+    ],
+    correctIndex: 2,
+    explication: "« Sur le canapé » précise OÙ le chat dort. C'est un complément circonstanciel de lieu (CCL). Il est déplaçable et supprimable, caractéristiques des CC."
+  },
+  {
+    id: 3,
+    question: "Quelle est la différence fondamentale entre NATURE et FONCTION d'un mot ?",
+    options: [
+      "La nature décrit le rôle du mot, la fonction son identité",
+      "La nature est l'identité permanente du mot, la fonction est son rôle dans la phrase",
+      "Nature et fonction sont deux termes synonymes",
+      "La nature concerne les mots variables, la fonction les mots invariables"
+    ],
+    correctIndex: 1,
+    explication: "La NATURE (classe grammaticale) est l'identité permanente du mot (ex: « Marie » est toujours un nom propre). La FONCTION est le rôle du mot dans une phrase donnée (ex: « Marie » peut être sujet ou COD selon la phrase)."
+  },
+  {
+    id: 4,
+    question: "Au Cycle 2 (CE2), quelles classes de mots les élèves doivent-ils savoir identifier selon les programmes ?",
+    options: [
+      "Toutes les 9 classes de mots",
+      "Verbe, nom, déterminant, adjectif qualificatif, pronom personnel sujet",
+      "Uniquement le verbe et le nom",
+      "Verbe, nom, adjectif, adverbe, préposition"
+    ],
+    correctIndex: 1,
+    explication: "Les attendus de fin de Cycle 2 précisent que les élèves doivent identifier : le verbe, le nom, l'article (déterminant), l'adjectif qualificatif et le pronom personnel (formes sujet uniquement)."
+  },
+  {
+    id: 5,
+    question: "Un élève écrit : « Les fleurs que j'ai cueilli sont belles ». Quelle est l'erreur et sa cause probable ?",
+    options: [
+      "Erreur sur « sont » : confusion avec « son »",
+      "Erreur sur « cueilli » : l'élève accorde avec le sujet au lieu du COD placé avant",
+      "Erreur sur « belles » : l'adjectif devrait être au masculin",
+      "Erreur sur « que » : il faudrait écrire « qu'est-ce que »"
+    ],
+    correctIndex: 1,
+    explication: "L'élève a oublié d'accorder le participe passé « cueilli » avec le COD « les fleurs » placé avant. Il devrait écrire « cueillies ». Cette erreur est fréquente car l'élève accorde instinctivement avec le sujet « j' » au lieu du COD antéposé."
+  },
+  {
+    id: 6,
+    question: "Quelle approche pédagogique est recommandée pour enseigner la grammaire ?",
+    options: [
+      "Donner la règle puis faire des exercices d'application",
+      "Manipulation et observation avant formalisation de la règle",
+      "Apprendre par cœur les définitions puis les réciter",
+      "Uniquement des dictées pour automatiser les accords"
+    ],
+    correctIndex: 1,
+    explication: "Les programmes préconisent la manipulation avant la formalisation : trier, classer, transformer des phrases AVANT de donner la règle. L'élève construit ainsi ses connaissances par l'observation et la réflexion."
+  },
+  {
+    id: 7,
+    question: "Parmi ces mots, lequel est un ADVERBE ?",
+    options: [
+      "rapide",
+      "rapidement",
+      "rapidité",
+      "rapider"
+    ],
+    correctIndex: 1,
+    explication: "« Rapidement » est un adverbe de manière (formé avec le suffixe -ment). « Rapide » est un adjectif, « rapidité » est un nom, et « rapider » n'existe pas."
+  },
+  {
+    id: 8,
+    question: "Dans « Je lui donne un livre », quelles sont les fonctions de « lui » et « un livre » ?",
+    options: [
+      "lui = COD, un livre = COI",
+      "lui = COI (ou COS), un livre = COD",
+      "lui = sujet, un livre = attribut",
+      "lui = CC, un livre = COD"
+    ],
+    correctIndex: 1,
+    explication: "« Un livre » répond à « Je donne QUOI ? » → COD. « Lui » répond à « Je donne À QUI ? » → COI (ou COS car il y a déjà un COD). Le COS est un second complément d'objet introduit par une préposition."
+  },
+  {
+    id: 9,
+    question: "En CE1, quelle activité de manipulation est pertinente pour faire comprendre le groupe nominal ?",
+    options: [
+      "Faire apprendre par cœur la définition du GN",
+      "Remplacer le déterminant dans un GN : « le chat » → « un chat » → « mon chat » → « ce chat »",
+      "Faire conjuguer le verbe du GN à tous les temps",
+      "Faire analyser des phrases complexes avec subordonnées"
+    ],
+    correctIndex: 1,
+    explication: "En CE1, la manipulation de GN par substitution du déterminant permet de comprendre intuitivement que le déterminant accompagne le nom. C'est une approche concrète adaptée au niveau des élèves."
+  },
+  {
+    id: 10,
+    question: "Un élève confond systématiquement « a » et « à ». Quelle remédiation proposer ?",
+    options: [
+      "Lui faire copier 100 fois la règle",
+      "Lui apprendre l'astuce : remplacer par « avait » – si ça fonctionne, c'est « a » (verbe avoir)",
+      "Lui dire que c'est une faute grave et qu'il doit faire attention",
+      "Supprimer tous les « à » de ses textes"
+    ],
+    correctIndex: 1,
+    explication: "L'astuce de substitution est efficace : si on peut remplacer par « avait », c'est le verbe avoir (« a »). Sinon, c'est la préposition (« à »). Exemple : « Il a faim » → « Il avait faim » ✓ / « Il va à Paris » → « Il va avait Paris » ✗"
+  }
+];
+
+<QuizFiche 
+  ficheId="grammaire" 
+  matiere="francais"
+  questions={questions} 
+/>

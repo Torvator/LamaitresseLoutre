@@ -1,60 +1,56 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 title: Quiz de validation
-description: Teste tes connaissances avec des quiz exigeants pour chaque fiche CRPE
+description: Quiz pour valider tes connaissances CRPE
 ---
 
 # 📝 Quiz de validation
 
-Bienvenue dans la section Quiz ! Ici, tu peux tester tes connaissances sur chaque fiche de révision.
+Bienvenue dans la section **Quiz** ! 🎯
+
+Ces quiz te permettent de **valider ta maîtrise** de chaque fiche de révision.
 
 ---
 
-## 🎯 Objectif
+## 🎯 Objectif : 10/10
 
-Chaque quiz contient **10 questions** sur une fiche spécifique. Pour valider une compétence, tu dois obtenir **10/10**.
+Chaque quiz contient **10 questions** couvrant :
+- 📚 **Connaissances** : les savoirs essentiels
+- 🧠 **Compréhension** : expliquer, interpréter
+- 👩‍🏫 **Pédagogie** : les attendus des programmes par cycle
+- 🎓 **Didactique** : comment enseigner, erreurs fréquentes des élèves
 
-:::info Pourquoi 10/10 ?
-Le CRPE demande une maîtrise solide des notions. Un score parfait garantit que tu as bien assimilé tous les aspects de la fiche : connaissances, pédagogie et didactique.
+:::info Validation automatique
+Quand tu obtiens **10/10**, la fiche correspondante est automatiquement marquée comme **"Maîtrisée"** dans ton suivi !
 :::
 
 ---
 
-## 🧠 Types de questions
+## 📋 Quiz disponibles
 
-Les quiz ne sont pas de simples QCM de mémorisation. Tu trouveras :
-
-| Type | Description | Exemple |
-|------|-------------|---------|
-| **Connaissance** | Faits, définitions, chiffres | "À quelle température l'eau bout-elle ?" |
-| **Compréhension** | Expliquer un phénomène | "Pourquoi le volume de l'eau augmente-t-il lors de la solidification ?" |
-| **Pédagogie** | Attendus de cycle, progressions | "Quel attendu de fin de cycle 2 concerne les états de la matière ?" |
-| **Didactique** | Démarches, séquences | "Quelle est la première étape de la démarche d'investigation ?" |
-| **Piège** | Erreurs courantes à éviter | Questions avec des formulations proches |
+### 📝 Français
+- [Grammaire et étude de la langue](./francais/grammaire)
+- [Lecture et compréhension](./francais/lecture)
+- [Culture littéraire](./francais/culture-litteraire)
+- [Expression écrite](./francais/expression-ecrite)
+- [Expression orale](./francais/expression-orale)
 
 ---
 
-## 📊 Suivi de progression
+## 💡 Conseils
 
-Quand tu réussis un quiz (10/10) :
-
-1. ✅ La fiche passe automatiquement en **"Maîtrisé"**
-2. 📝 Un badge **"Quiz ✓"** apparaît
-3. ✨ La fiche est **mise en surbrillance** dans ton suivi
-
-Tu peux refaire les quiz autant de fois que tu veux pour t'entraîner !
+1. **Révise d'abord la fiche** avant de faire le quiz
+2. **Lis bien chaque question** et toutes les réponses
+3. **Ne te précipite pas** : réfléchis avant de valider
+4. **Recommence** si tu n'as pas 10/10 — tu peux le refaire autant de fois que nécessaire !
 
 ---
 
-## 📚 Par où commencer ?
-
-Choisis une matière dans le menu de gauche, ou retourne aux fiches pour réviser avant de te tester.
-
-<div style={{textAlign: 'center', marginTop: '3rem', padding: '2rem', backgroundColor: '#fff9f0', borderRadius: '16px'}}>
-  <p style={{fontSize: '1.3rem', marginBottom: '0.5rem'}}>
-    🦦 <strong>Bon courage Marie !</strong>
+<div style={{textAlign: 'center', marginTop: '2rem', padding: '1.5rem', backgroundColor: '#e8f5e9', borderRadius: '12px'}}>
+  <p style={{fontSize: '1.2rem', marginBottom: '0.5rem'}}>
+    🦦 <strong>Tu es prête ?</strong>
   </p>
-  <p style={{color: '#666'}}>
-    Chaque quiz réussi est un pas de plus vers le CRPE ! 💪
+  <p style={{color: '#666', fontSize: '0.9rem'}}>
+    Choisis un quiz ci-dessus et prouve que tu maîtrises le sujet !
   </p>
 </div>

@@ -1,0 +1,152 @@
+---
+sidebar_position: 4
+title: "Quiz : Expression écrite"
+description: Quiz de validation CRPE - Français - Expression écrite et rédaction
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 📝 Quiz : Expression écrite
+
+<LienFiche 
+  fichePath="/fiches/francais/expression-ecrite" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Quelles sont les 5 étapes du schéma narratif ?",
+    options: [
+      "Introduction, développement, conclusion, épilogue, morale",
+      "Situation initiale, élément perturbateur, péripéties, élément de résolution, situation finale",
+      "Exposition, nœud, climax, dénouement, chute",
+      "Début, action, réaction, solution, fin"
+    ],
+    correctIndex: 1,
+    explication: "Le schéma narratif classique comprend : 1) Situation initiale (équilibre de départ), 2) Élément perturbateur (ce qui déclenche l'histoire), 3) Péripéties (les actions), 4) Élément de résolution (ce qui résout le problème), 5) Situation finale (nouvel équilibre)."
+  },
+  {
+    id: 2,
+    question: "Quelle est la structure d'un texte argumentatif ?",
+    options: [
+      "Description, narration, conclusion",
+      "Introduction + thèse, développement avec arguments et exemples, conclusion",
+      "Situation initiale, péripéties, situation finale",
+      "Définition, explication, illustration"
+    ],
+    correctIndex: 1,
+    explication: "Un texte argumentatif suit une structure logique : introduction (présentation du sujet + thèse), développement (arguments soutenus par des exemples), conclusion (synthèse et éventuellement ouverture)."
+  },
+  {
+    id: 3,
+    question: "Comment s'appelle le procédé qui permet d'éviter les répétitions en remplaçant un nom par un pronom, un synonyme ou une périphrase ?",
+    options: [
+      "La progression thématique",
+      "Les connecteurs logiques",
+      "Les reprises anaphoriques",
+      "La cohésion syntaxique"
+    ],
+    correctIndex: 2,
+    explication: "Les reprises anaphoriques permettent de désigner une personne ou une chose déjà mentionnée sans la répéter. Exemple : « Pierre → il → le jeune homme → ce dernier ». On utilise des pronoms, synonymes, périphrases, hyperonymes ou hyponymes."
+  },
+  {
+    id: 4,
+    question: "Quel verbe introducteur de dialogue exprime une ÉMOTION ?",
+    options: [
+      "Dire",
+      "Répondre",
+      "S'exclamer",
+      "Demander"
+    ],
+    correctIndex: 2,
+    explication: "« S'exclamer » exprime une émotion (surprise, joie, colère). De même : soupirer, balbutier, hurler, murmurer... « Dire », « répondre », « demander » sont des verbes basiques qui ne précisent pas l'émotion."
+  },
+  {
+    id: 5,
+    question: "En CE1, quelle longueur de texte peut-on attendre d'un élève en production d'écrit ?",
+    options: [
+      "Une phrase simple",
+      "Un court texte de 3 à 5 phrases",
+      "Un texte de 15 à 20 lignes",
+      "Une rédaction argumentative"
+    ],
+    correctIndex: 1,
+    explication: "La progression des programmes : CP = phrases simples, CE1 = court texte (3-5 phrases), CE2 = texte court (10 lignes), CM1 = texte structuré (15-20 lignes), CM2/6e = textes variés et plus longs."
+  },
+  {
+    id: 6,
+    question: "« La maison est grande. Le salon est spacieux. La cuisine est moderne. » Quel type de progression thématique est illustré ici ?",
+    options: [
+      "Progression à thème constant",
+      "Progression à thème linéaire",
+      "Progression à thème dérivé (ou éclaté)",
+      "Progression chronologique"
+    ],
+    correctIndex: 2,
+    explication: "C'est une progression à thème dérivé : on développe différents aspects (salon, cuisine) d'un thème principal (la maison). Dans la progression constante, on parle toujours du même sujet. Dans la linéaire, chaque nouveau thème vient du propos précédent."
+  },
+  {
+    id: 7,
+    question: "Quel connecteur exprime une CONSÉQUENCE ?",
+    options: [
+      "Car",
+      "Pourtant",
+      "Donc",
+      "De plus"
+    ],
+    correctIndex: 2,
+    explication: "« Donc » (ainsi, c'est pourquoi, par conséquent) exprime la conséquence. « Car » = cause. « Pourtant » = opposition. « De plus » = addition."
+  },
+  {
+    id: 8,
+    question: "Quelle est la différence entre COMPARAISON et MÉTAPHORE ?",
+    options: [
+      "La comparaison utilise des adjectifs, la métaphore des verbes",
+      "La comparaison utilise un outil de comparaison (comme), la métaphore non",
+      "La comparaison est positive, la métaphore est négative",
+      "La comparaison est courte, la métaphore est longue"
+    ],
+    correctIndex: 1,
+    explication: "La COMPARAISON utilise un outil de comparaison (comme, tel que, semblable à) : « Il est fort COMME un lion ». La MÉTAPHORE compare SANS outil : « C'est un lion » = il est courageux."
+  },
+  {
+    id: 9,
+    question: "Quelles étapes doit suivre un élève AVANT de commencer à écrire son texte ?",
+    options: [
+      "Recopier un modèle au propre",
+      "Préparer un plan, lister des idées, chercher du vocabulaire",
+      "Écrire directement au propre sans brouillon",
+      "Corriger l'orthographe et la ponctuation"
+    ],
+    correctIndex: 1,
+    explication: "AVANT l'écriture : préparer un plan, lister des idées, chercher du vocabulaire. PENDANT : utiliser des outils d'aide, relire régulièrement. APRÈS : relire pour corriger orthographe, ponctuation et améliorer le style."
+  },
+  {
+    id: 10,
+    question: "Pour enrichir le style, par quoi peut-on remplacer le verbe passe-partout « dire » ?",
+    options: [
+      "Faire, mettre, voir",
+      "Affirmer, murmurer, s'exclamer, chuchoter",
+      "Marcher, courir, sauter",
+      "Penser, croire, imaginer"
+    ],
+    correctIndex: 1,
+    explication: "« Dire » est un verbe passe-partout à remplacer par des verbes plus précis selon le contexte : affirmer, déclarer (neutre), murmurer, chuchoter (volume bas), crier, hurler (volume fort), s'exclamer, soupirer (émotion)."
+  }
+];
+
+<QuizFiche 
+  ficheId="expression-ecrite" 
+  matiere="francais"
+  questions={questions} 
+/>

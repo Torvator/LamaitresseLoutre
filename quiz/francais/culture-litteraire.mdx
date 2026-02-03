@@ -1,0 +1,152 @@
+---
+sidebar_position: 3
+title: "Quiz : Culture littéraire"
+description: Quiz de validation CRPE - Français - Culture littéraire et genres
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 📝 Quiz : Culture littéraire
+
+<LienFiche 
+  fichePath="/fiches/francais/culture-litteraire" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Quels sont les 5 grands genres littéraires ?",
+    options: [
+      "Roman, nouvelle, essai, biographie, autobiographie",
+      "Roman, poésie, théâtre, conte, argumentation",
+      "Tragédie, comédie, drame, farce, opéra",
+      "Épique, lyrique, didactique, satirique, élégiaque"
+    ],
+    correctIndex: 1,
+    explication: "Les 5 grands genres littéraires sont : le roman (récit long en prose), la poésie (forme versifiée), le théâtre (texte joué), le conte (récit court merveilleux), et l'argumentation (défendre une thèse)."
+  },
+  {
+    id: 2,
+    question: "Qu'est-ce qu'un alexandrin ?",
+    options: [
+      "Un vers de 8 syllabes",
+      "Un vers de 10 syllabes",
+      "Un vers de 12 syllabes",
+      "Un vers libre sans contrainte"
+    ],
+    correctIndex: 2,
+    explication: "L'alexandrin est un vers de 12 syllabes, le plus noble en poésie française classique. Exemple : « Demain, dès l'aube, à l'heure où blanchit la campagne » (Victor Hugo)."
+  },
+  {
+    id: 3,
+    question: "Quelle est la structure d'un sonnet ?",
+    options: [
+      "3 strophes de 4 vers",
+      "2 quatrains + 2 tercets (14 vers au total)",
+      "4 distiques",
+      "5 strophes de rimes croisées"
+    ],
+    correctIndex: 1,
+    explication: "Le sonnet est composé de 14 vers répartis en 2 quatrains (4 vers) suivis de 2 tercets (3 vers). Cette forme fixe a été popularisée par Ronsard, du Bellay, puis Baudelaire."
+  },
+  {
+    id: 4,
+    question: "Quel genre littéraire se caractérise par une « hésitation entre le réel et le surnaturel » ?",
+    options: [
+      "Le roman réaliste",
+      "Le conte merveilleux",
+      "Le roman fantastique",
+      "Le roman de science-fiction"
+    ],
+    correctIndex: 2,
+    explication: "Le fantastique se définit par l'hésitation du lecteur entre une explication rationnelle et une explication surnaturelle. Exemples : « Le Horla » de Maupassant, « La Vénus d'Ille » de Mérimée. À ne pas confondre avec le merveilleux où le surnaturel est accepté d'emblée (contes de fées)."
+  },
+  {
+    id: 5,
+    question: "« Il était une fois un roi très riche qui avait trois filles... » : à quel genre appartient ce début ?",
+    options: [
+      "Roman policier",
+      "Nouvelle réaliste",
+      "Conte merveilleux",
+      "Roman historique"
+    ],
+    correctIndex: 2,
+    explication: "La formule « Il était une fois » est la marque typique du conte merveilleux. Elle place le récit dans un temps et un lieu indéfinis, ouvrant la porte au monde magique."
+  },
+  {
+    id: 6,
+    question: "En Cycle 2, quels types de textes littéraires doit-on principalement faire découvrir aux élèves ?",
+    options: [
+      "Les romans du XIXe siècle et les tragédies classiques",
+      "Les contes, poésies simples et albums",
+      "Les essais philosophiques et les autobiographies",
+      "Les romans policiers et les nouvelles fantastiques"
+    ],
+    correctIndex: 1,
+    explication: "Au Cycle 2 (CP-CE2), les programmes préconisent la découverte de textes variés : contes traditionnels (Perrault, Grimm), poésies simples à mémoriser, et albums de littérature jeunesse."
+  },
+  {
+    id: 7,
+    question: "Quelle figure de style consiste à attribuer des caractéristiques humaines à un animal ou un objet ?",
+    options: [
+      "La métaphore",
+      "La comparaison",
+      "La personnification",
+      "L'hyperbole"
+    ],
+    correctIndex: 2,
+    explication: "La personnification attribue des caractéristiques humaines (sentiments, parole, comportements) à des animaux, des objets ou des idées abstraites. Exemple : « Le vent gémit » ou les animaux qui parlent dans les fables."
+  },
+  {
+    id: 8,
+    question: "Quelle est la différence principale entre un roman et une nouvelle ?",
+    options: [
+      "Le roman est en vers, la nouvelle en prose",
+      "Le roman est long avec plusieurs intrigues, la nouvelle est courte et concentrée sur une intrigue",
+      "Le roman est fictif, la nouvelle est autobiographique",
+      "Le roman est ancien, la nouvelle est moderne"
+    ],
+    correctIndex: 1,
+    explication: "Le roman est un récit LONG, complexe, avec plusieurs intrigues et personnages. La nouvelle est COURTE, concentrée sur un événement unique, avec peu de personnages et souvent une chute finale surprenante."
+  },
+  {
+    id: 9,
+    question: "Quel schéma de rimes correspond à ABAB ?",
+    options: [
+      "Rimes plates (suivies)",
+      "Rimes croisées (alternées)",
+      "Rimes embrassées",
+      "Rimes libres"
+    ],
+    correctIndex: 1,
+    explication: "ABAB = rimes croisées (ou alternées) : les rimes alternent. AABB = rimes plates (suivies). ABBA = rimes embrassées (la rime B est « embrassée » par la rime A)."
+  },
+  {
+    id: 10,
+    question: "Quel auteur est associé aux fables mettant en scène des animaux avec une morale ?",
+    options: [
+      "Molière",
+      "Victor Hugo",
+      "Jean de La Fontaine",
+      "Charles Perrault"
+    ],
+    correctIndex: 2,
+    explication: "Jean de La Fontaine (1621-1695) est célèbre pour ses Fables (« Le Corbeau et le Renard », « La Cigale et la Fourmi »...). Chaque fable met en scène des animaux et se termine par une morale. C'est un genre poétique dit « apologue »."
+  }
+];
+
+<QuizFiche 
+  ficheId="culture-litteraire" 
+  matiere="francais"
+  questions={questions} 
+/>

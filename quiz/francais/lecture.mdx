@@ -1,0 +1,152 @@
+---
+sidebar_position: 2
+title: "Quiz : Lecture et compréhension"
+description: Quiz de validation CRPE - Français - Lecture et compréhension
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 📝 Quiz : Lecture et compréhension
+
+<LienFiche 
+  fichePath="/fiches/francais/lecture" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Quelle est la différence fondamentale entre lecture littérale et lecture inférentielle ?",
+    options: [
+      "Littérale = lecture silencieuse / Inférentielle = lecture à voix haute",
+      "Littérale = informations explicites du texte / Inférentielle = déduction d'informations implicites",
+      "Littérale = lecture lente / Inférentielle = lecture rapide",
+      "Littérale = lecture au cycle 2 / Inférentielle = lecture au cycle 3"
+    ],
+    correctIndex: 1,
+    explication: "La lecture littérale consiste à repérer les informations explicitement écrites dans le texte. La lecture inférentielle demande de DÉDUIRE des informations implicites en croisant les indices du texte avec ses connaissances personnelles."
+  },
+  {
+    id: 2,
+    question: "Dans la phrase « Marie regarde par la fenêtre, les yeux rouges », quelle information est IMPLICITE ?",
+    options: [
+      "Marie regarde par la fenêtre",
+      "Les yeux de Marie sont rouges",
+      "Marie a pleuré",
+      "Marie est à l'intérieur"
+    ],
+    correctIndex: 2,
+    explication: "Le texte ne dit PAS explicitement que Marie a pleuré. C'est une inférence que le lecteur fait à partir de l'indice « les yeux rouges » + ses connaissances (yeux rouges = signe de larmes)."
+  },
+  {
+    id: 3,
+    question: "Quel type de texte a pour fonction de CONVAINCRE et défendre une opinion ?",
+    options: [
+      "Le texte narratif",
+      "Le texte descriptif",
+      "Le texte argumentatif",
+      "Le texte injonctif"
+    ],
+    correctIndex: 2,
+    explication: "Le texte argumentatif vise à convaincre et persuader. Il présente une thèse (opinion), des arguments et des exemples. On le reconnaît aux connecteurs logiques (car, donc, en effet, c'est pourquoi)."
+  },
+  {
+    id: 4,
+    question: "En CP, comment doit-on principalement travailler la compréhension de textes ?",
+    options: [
+      "Par des questionnaires écrits individuels",
+      "Par la lecture autonome de textes longs",
+      "Par l'écoute de textes lus par l'enseignant et des questions orales",
+      "Par l'analyse de textes argumentatifs"
+    ],
+    correctIndex: 2,
+    explication: "En CP, le décodage prend beaucoup d'énergie cognitive. La compréhension se travaille donc principalement à l'ORAL, à partir de textes lus par l'enseignant (lectures offertes), avec des questions orales."
+  },
+  {
+    id: 5,
+    question: "Quelles sont les 5 étapes du schéma narratif ?",
+    options: [
+      "Introduction, développement, conclusion, morale, épilogue",
+      "Situation initiale, élément perturbateur, péripéties, élément de résolution, situation finale",
+      "Début, milieu, fin, suite, préquelle",
+      "Exposition, nœud, climax, dénouement, chute"
+    ],
+    correctIndex: 1,
+    explication: "Le schéma narratif comprend 5 étapes : 1) Situation initiale (équilibre), 2) Élément perturbateur (déclencheur), 3) Péripéties (actions), 4) Élément de résolution (solution), 5) Situation finale (nouvel équilibre)."
+  },
+  {
+    id: 6,
+    question: "Un élève répond aux questions de lecture sans jamais chercher dans le texte. Quelle remédiation proposer ?",
+    options: [
+      "Lui donner des textes plus faciles",
+      "L'obliger à surligner dans le texte le passage qui justifie sa réponse",
+      "Supprimer les questionnaires de lecture",
+      "Le faire lire à voix haute devant la classe"
+    ],
+    correctIndex: 1,
+    explication: "Pour ancrer l'habitude de chercher la réponse dans le texte, on demande à l'élève de SURLIGNER ou SOULIGNER le passage qui justifie sa réponse. La consigne « Montre-moi où c'est écrit » est très efficace."
+  },
+  {
+    id: 7,
+    question: "Qu'est-ce que la « progression thématique linéaire » dans un texte ?",
+    options: [
+      "Le texte parle toujours du même sujet",
+      "Le nouveau thème de chaque phrase vient de ce qui précède",
+      "Le texte développe différents aspects d'un thème principal",
+      "Le texte présente les idées dans l'ordre chronologique"
+    ],
+    correctIndex: 1,
+    explication: "Dans la progression linéaire, le nouveau thème provient du propos précédent. Exemple : « Pierre arrive. Son arrivée surprend Marie. La surprise la fait sourire. » Chaque phrase enchaîne sur la précédente."
+  },
+  {
+    id: 8,
+    question: "Quel outil pédagogique est recommandé pour enseigner la compréhension au Cycle 2 ?",
+    options: [
+      "Hunger Games",
+      "Lectorino & Lectorinette (Retz)",
+      "Les classiques de la littérature du XIXe siècle",
+      "Des questionnaires de 30 questions"
+    ],
+    correctIndex: 1,
+    explication: "Lectorino & Lectorinette (éditions Retz) est une méthode conçue pour enseigner explicitement la compréhension au Cycle 2. Lector & Lectrix existe pour le Cycle 3. Narramus aide à comprendre et raconter."
+  },
+  {
+    id: 9,
+    question: "Pourquoi est-il important de continuer à lire à voix haute aux élèves, même au Cycle 3 ?",
+    options: [
+      "Parce que les élèves ne savent pas encore lire seuls",
+      "Parce que cela développe le plaisir de lire et permet d'accéder à des textes complexes sans l'effort du décodage",
+      "Parce que c'est obligatoire dans les programmes",
+      "Parce que cela évite aux élèves de faire des efforts"
+    ],
+    correctIndex: 1,
+    explication: "La lecture à voix haute par l'enseignant, même au Cycle 3, développe le PLAISIR de lire, permet d'accéder à des textes plus complexes que ce que l'élève pourrait lire seul, et libère la charge cognitive du décodage pour se concentrer sur la COMPRÉHENSION."
+  },
+  {
+    id: 10,
+    question: "Quel est le registre littéraire qui cherche à susciter la pitié et la terreur face à un destin inéluctable ?",
+    options: [
+      "Le registre comique",
+      "Le registre fantastique",
+      "Le registre tragique",
+      "Le registre lyrique"
+    ],
+    correctIndex: 2,
+    explication: "Le registre tragique vise à susciter pitié et terreur. Il met en scène des personnages confrontés à la fatalité, au destin inéluctable, aux dilemmes moraux. Exemples : les tragédies de Racine et Corneille."
+  }
+];
+
+<QuizFiche 
+  ficheId="lecture" 
+  matiere="francais"
+  questions={questions} 
+/>

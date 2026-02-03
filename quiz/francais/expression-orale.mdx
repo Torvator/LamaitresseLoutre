@@ -1,0 +1,152 @@
+---
+sidebar_position: 5
+title: "Quiz : Expression orale"
+description: Quiz de validation CRPE - Français - Expression orale et communication
+---
+
+import LienFiche from '@site/src/components/LienFiche';
+import QuizFiche from '@site/src/components/QuizFiche';
+
+# 📝 Quiz : Expression orale
+
+<LienFiche 
+  fichePath="/fiches/francais/expression-orale" 
+  titre="la fiche"
+/>
+
+---
+
+:::caution Attention
+Ce quiz est exigeant ! Il teste tes connaissances, ta compréhension de la pédagogie et ta maîtrise de la didactique. Objectif : **10/10**.
+:::
+
+---
+
+export const questions = [
+  {
+    id: 1,
+    question: "Quelle est la différence entre « réciter » et « dire » à l'oral ?",
+    options: [
+      "Réciter = lire un texte / Dire = parler sans texte",
+      "Réciter = dire de mémoire un texte appris / Dire = lire à voix haute avec expressivité",
+      "Réciter = parler fort / Dire = parler doucement",
+      "Réciter = pour les poésies / Dire = pour les récits"
+    ],
+    correctIndex: 1,
+    explication: "RÉCITER = dire DE MÉMOIRE un texte appris (poésie, fable, extrait de théâtre). DIRE = LIRE un texte à voix haute avec expressivité, fluidité et intonation."
+  },
+  {
+    id: 2,
+    question: "Quels sont les critères d'évaluation d'une récitation ?",
+    options: [
+      "Rapidité et volume uniquement",
+      "Texte su par cœur, volume suffisant, articulation claire, intonation expressive, posture correcte",
+      "Longueur du texte et originalité",
+      "Présence d'un support visuel et gestes"
+    ],
+    correctIndex: 1,
+    explication: "Une bonne récitation se caractérise par : texte mémorisé sans erreur, volume adapté à la salle, articulation distincte, intonation qui donne du sens, et posture/regard vers le public."
+  },
+  {
+    id: 3,
+    question: "Quels connecteurs temporels utilise-t-on pour raconter à l'oral ?",
+    options: [
+      "Car, donc, ainsi, c'est pourquoi",
+      "D'abord, ensuite, puis, enfin",
+      "Mais, pourtant, cependant",
+      "De plus, en outre, par ailleurs"
+    ],
+    correctIndex: 1,
+    explication: "Pour raconter de façon chronologique, on utilise des connecteurs TEMPORELS : d'abord, ensuite, puis, alors, enfin, soudain, tout à coup. Les autres options sont des connecteurs de cause, conséquence, opposition ou addition."
+  },
+  {
+    id: 4,
+    question: "Au Cycle 1 (maternelle), quel est l'objectif principal en expression orale ?",
+    options: [
+      "Réciter des poèmes longs de mémoire",
+      "Oser prendre la parole et raconter un événement vécu",
+      "Présenter des exposés structurés",
+      "Participer à des débats argumentés"
+    ],
+    correctIndex: 1,
+    explication: "Au Cycle 1, l'objectif fondamental est d'OSER prendre la parole devant le groupe, de raconter des événements vécus, de parler pour être compris. Les compétences complexes (exposés, débats) viennent aux cycles suivants."
+  },
+  {
+    id: 5,
+    question: "Quelle est la structure d'un exposé oral au CM ?",
+    options: [
+      "Lire un texte écrit du début à la fin",
+      "Introduction (présentation du sujet), développement (2-3 idées), conclusion",
+      "Simplement répondre aux questions du public",
+      "Montrer des images sans commentaire"
+    ],
+    correctIndex: 1,
+    explication: "Un exposé suit une structure en 3 parties : 1) Introduction (« Je vais vous parler de... »), 2) Développement (2-3 idées principales avec exemples), 3) Conclusion (« Pour conclure... »). On peut ajouter un temps de questions."
+  },
+  {
+    id: 6,
+    question: "Quelles sont les règles à respecter lors d'un débat ?",
+    options: [
+      "Parler fort pour couvrir les autres",
+      "Écouter sans interrompre, attendre son tour, respecter les opinions différentes, argumenter calmement",
+      "Imposer son point de vue à tout prix",
+      "Ne jamais changer d'avis"
+    ],
+    correctIndex: 1,
+    explication: "Un débat civilisé repose sur l'ÉCOUTE des autres, le RESPECT des tours de parole, le respect des opinions différentes même si on n'est pas d'accord, et une argumentation CALME et construite."
+  },
+  {
+    id: 7,
+    question: "Quelle activité rituelle permet de travailler l'oral au quotidien en classe ?",
+    options: [
+      "La dictée quotidienne",
+      "Le « Quoi de neuf ? » (raconter un événement vécu)",
+      "La copie au tableau",
+      "Les exercices de grammaire"
+    ],
+    correctIndex: 1,
+    explication: "Le « Quoi de neuf ? » est un rituel quotidien où les élèves racontent un événement vécu devant la classe. Autres rituels oraux : poésie de la semaine, présentation d'un livre lu, météo des émotions."
+  },
+  {
+    id: 8,
+    question: "Pour préparer une lecture à voix haute expressive, quelles étapes doit-on suivre ?",
+    options: [
+      "Lire directement à voix haute devant le public",
+      "Lire silencieusement, repérer la ponctuation, identifier les passages à mettre en valeur, s'entraîner",
+      "Mémoriser le texte par cœur",
+      "Écrire un résumé du texte"
+    ],
+    correctIndex: 1,
+    explication: "Préparation d'une lecture à voix haute : 1) Lire silencieusement pour comprendre, 2) Repérer la ponctuation (pauses), 3) Identifier les passages à mettre en valeur, 4) S'entraîner plusieurs fois, 5) Lire devant un public."
+  },
+  {
+    id: 9,
+    question: "Quelle formule utiliser pour exprimer un désaccord dans un débat de façon respectueuse ?",
+    options: [
+      "« Tu as tort ! »",
+      "« C'est n'importe quoi ! »",
+      "« Je ne suis pas d'accord car... »",
+      "« Tu ne comprends rien ! »"
+    ],
+    correctIndex: 2,
+    explication: "Pour exprimer un désaccord de façon respectueuse : « Je ne suis pas d'accord car... », « À mon avis... », « Je pense que... ». On argumente sans attaquer la personne."
+  },
+  {
+    id: 10,
+    question: "Quel est le rôle du « président » dans un débat de classe ?",
+    options: [
+      "Donner son opinion en premier",
+      "Distribuer la parole et faire respecter le temps",
+      "Noter les arguments des participants",
+      "Convaincre tout le monde de son point de vue"
+    ],
+    correctIndex: 1,
+    explication: "Le PRÉSIDENT distribue la parole équitablement et fait respecter le temps/les règles. Le SECRÉTAIRE note les arguments. Les PARTICIPANTS argumentent. Chaque rôle est important pour un débat organisé."
+  }
+];
+
+<QuizFiche 
+  ficheId="expression-orale" 
+  matiere="francais"
+  questions={questions} 
+/>
